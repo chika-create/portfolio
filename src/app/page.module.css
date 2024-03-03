@@ -5,11 +5,15 @@
 }
 
 .main {
+  width: 1000px;
   background-color: white;
+  margin: 0 auto;
 }
 
 .footer {
+  width: 1000px;
   background-color: white;
+  margin: 0 auto;
 }
 
 .businessCard {

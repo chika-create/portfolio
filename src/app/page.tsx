@@ -7,18 +7,24 @@ export default function Home() {
         <p>Hello world</p>
         <section>
           <div className={styles.businessCard}>
-            <p>Web Creater</p>
-            <h1>本告 智香</h1>
-            <p>CHIKA MOTOORI</p>
-            <ul>
-              <li>
-                <a href="#">GitHub</a>
+            <p className={styles.businessCard__job}>Web Creater</p>
+            <h1 className={styles.businessCard__name}>本告 智香</h1>
+            <p className={styles.businessCard__ruby}>CHIKA MOTOORI</p>
+            <ul className={styles.businessCard__sns}>
+              <li className={styles.businessCard__snsItem}>
+                <a href="#" className={styles.businessCard__snsItem__github}>
+                  GitHub
+                </a>
               </li>
-              <li>
-                <a href="#">Qiita</a>
+              <li className={styles.businessCard__snsItem}>
+                <a href="#" className={styles.businessCard__snsItem__qiita}>
+                  Qiita
+                </a>
               </li>
-              <li>
-                <a href="#">X</a>
+              <li className={styles.businessCard__snsItem}>
+                <a href="#" className={styles.businessCard__snsItem__x}>
+                  X
+                </a>
               </li>
             </ul>
           </div>
