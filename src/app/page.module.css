@@ -1,14 +1,18 @@
 .header {
-  background-color: pink;
+  background-color: #F4F4F5;
+  padding: 128px 0;
+  text-align: center;
 }
 
 .main {
-  background-color: orange;
+  background-color: white;
 }
 
 .footer {
-  background-color: gray;
+  background-color: white;
 }
 
-
+.businessCard {
+  background-color: white;
+}
 

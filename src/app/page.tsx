@@ -6,7 +6,7 @@ export default function Home() {
       <header className={styles.header}>
         <p>Hello world</p>
         <section>
-          <div>
+          <div className={styles.businessCard}>
             <p>Web Creater</p>
             <h1>本告 智香</h1>
             <p>CHIKA MOTOORI</p>
