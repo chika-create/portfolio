@@ -91,7 +91,7 @@ export default function Home() {
           <li>AboutMe</li>
           <li>MySkillSet</li>
         </ul>
-        <small>©️CHIKA MOTOORI 2024</small>
+        <small>&copy; CHIKA MOTOORI 2024</small>
       </footer>
     </>
   );

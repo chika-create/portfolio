@@ -20,6 +20,7 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   font-size: 16px;
+  font-family: 'Helvetica Neue', Arial,'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
   line-height: 2;
 }
 
