@@ -36,9 +36,7 @@ export default function Home() {
         <section>
           <Title level="h2">制作事例</Title>
           <code>const portfolio = () = </code>
-          <div>
-            <PortfolioList />
-          </div>
+          <PortfolioList />
           <button>return morePortfolio;</button>
           <code>閉じタグ</code>
         </section>

@@ -1,0 +1,12 @@
+.box {
+  display: flex;
+  gap: 48px;
+}
+
+.content {
+  flex: 1;
+}
+
+.image {
+  width: 100%;
+}

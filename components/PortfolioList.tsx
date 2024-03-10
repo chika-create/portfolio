@@ -1,25 +1,34 @@
 import Title from "./Title";
+import portfolioList from "../styles/portfolioList.module.css";
 
 function PortfolioList() {
   return (
-    <>
-      <div>
+    <div className={portfolioList.box}>
+      <div className={portfolioList.content}>
         <figure>
-          <img src="https://placehold.jp/412x260.png" alt="" />
+          <img
+            src="https://placehold.jp/412x260.png"
+            alt=""
+            className={portfolioList.image}
+          />
         </figure>
         <Title level="h3">ポートフォリオサイト</Title>
         <p>
           React, TypeScript, Next, storybook, ESLint, Prettier, Vercel, hogefuga
         </p>
       </div>
-      <div>
+      <div className={portfolioList.content}>
         <figure>
-          <img src="https://placehold.jp/412x260.png" alt="" />
+          <img
+            src="https://placehold.jp/412x260.png"
+            alt=""
+            className={portfolioList.image}
+          />
         </figure>
         <Title level="h3">おにぎり計算機</Title>
         <p>React, TypeScript, MUI, ESLint, Prettier, Vercel</p>
       </div>
-    </>
+    </div>
   );
 }
 
