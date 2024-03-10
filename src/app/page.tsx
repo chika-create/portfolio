@@ -9,7 +9,7 @@ export default function Home() {
         <section>
           <div className={styles.businessCard}>
             <p className={styles.businessCard__job}>Web Creater</p>
-            <h1 className={styles.businessCard__name}>本告 智香</h1>
+            <Title level="h1">本告 智香</Title>
             <p className={styles.businessCard__ruby}>CHIKA MOTOORI</p>
             <ul className={styles.businessCard__sns}>
               <li className={styles.businessCard__snsItem}>
