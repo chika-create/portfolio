@@ -1,5 +1,6 @@
 import styles from "../../styles/page.module.css";
 import Title from "../../components/Title";
+import PortfolioList from "../../components/PortfolioList";
 
 export default function Home() {
   return (
@@ -36,23 +37,7 @@ export default function Home() {
           <Title level="h2">制作事例</Title>
           <code>const portfolio = () = </code>
           <div>
-            <div>
-              <figure>
-                <img src="https://placehold.jp/412x260.png" alt="" />
-              </figure>
-              <Title level="h3">ポートフォリオサイト</Title>
-              <p>
-                React, TypeScript, Next, storybook, ESLint, Prettier, Vercel,
-                hogefuga
-              </p>
-            </div>
-            <div>
-              <figure>
-                <img src="https://placehold.jp/412x260.png" alt="" />
-              </figure>
-              <Title level="h3">おにぎり計算機</Title>
-              <p>React, TypeScript, MUI, ESLint, Prettier, Vercel</p>
-            </div>
+            <PortfolioList />
           </div>
           <button>return morePortfolio;</button>
           <code>閉じタグ</code>
