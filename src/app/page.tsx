@@ -40,7 +40,7 @@ export default function Home() {
               <figure>
                 <img src="https://placehold.jp/412x260.png" alt="" />
               </figure>
-              <h3>ポートフォリオサイト</h3>
+              <Title level="h3">ポートフォリオサイト</Title>
               <p>
                 React, TypeScript, Next, storybook, ESLint, Prettier, Vercel,
                 hogefuga
@@ -50,7 +50,7 @@ export default function Home() {
               <figure>
                 <img src="https://placehold.jp/412x260.png" alt="" />
               </figure>
-              <h3>おにぎり計算機</h3>
+              <Title level="h3">おにぎり計算機</Title>
               <p>React, TypeScript, MUI, ESLint, Prettier, Vercel</p>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
           <code>閉じタグ</code>
         </section>
         <section>
-          <h2>私について</h2>
+          <Title level="h2">私について</Title>
           <code>const aboutMe = () =</code>
           <div>
             <p>

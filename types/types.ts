@@ -5,5 +5,5 @@ export interface TextData {
 }
 
 export interface TitleProps extends TextData {
-  level: "h1" | "h2";
+  level: "h1" | "h2" | "h3";
 }
