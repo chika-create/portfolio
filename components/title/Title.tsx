@@ -1,7 +1,8 @@
-import { TextData } from "../../types/types";
+import { TitleProps } from "../../types/types";
 
-function Title({ children }: TextData) {
-  return <h2>{children}</h2>;
+function Title({ children, level }: TitleProps) {
+  const HeadingTag = level;
+  return <HeadingTag>{children}</HeadingTag>;
 }
 
 export default Title;
