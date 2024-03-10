@@ -1,4 +1,4 @@
-import { TitleProps } from "../../types/types";
+import { TitleProps } from "../types/types";
 import styles from "../../styles/title.module.css";
 
 function Title({ level, children }: TitleProps) {

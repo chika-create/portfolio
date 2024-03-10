@@ -1,5 +1,5 @@
 import styles from "../../styles/page.module.css";
-import Title from "../../components/title/Title";
+import Title from "../../components/Title";
 
 export default function Home() {
   return (
