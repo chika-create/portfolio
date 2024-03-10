@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "../../styles/page.module.css";
 import Title from "../../components/title/Title";
 
 export default function Home() {
