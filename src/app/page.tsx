@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Title from "../../components/title/Title";
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <section>
-          <h2>制作事例</h2>
+          <Title>制作事例</Title>
           <code>const portfolio = () = </code>
           <div>
             <div>
