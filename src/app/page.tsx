@@ -33,7 +33,7 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <section>
-          <Title level="h1">制作事例</Title>
+          <Title level="h2">制作事例</Title>
           <code>const portfolio = () = </code>
           <div>
             <div>

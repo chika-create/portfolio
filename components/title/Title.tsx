@@ -1,8 +1,10 @@
 import { TitleProps } from "../../types/types";
+import styles from "../../styles/title.module.css";
 
-function Title({ children, level }: TitleProps) {
+function Title({ level, children }: TitleProps) {
   const HeadingTag = level;
-  return <HeadingTag>{children}</HeadingTag>;
+  const headingClassName = styles[level];
+  return <HeadingTag className={headingClassName}>{children}</HeadingTag>;
 }
 
 export default Title;
