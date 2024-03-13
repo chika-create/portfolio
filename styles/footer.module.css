@@ -3,3 +3,8 @@
   background-color: white;
   margin: 0 auto;
 }
+
+.menuList {
+  display: flex;
+  list-style: none;
+}

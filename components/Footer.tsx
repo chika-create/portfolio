@@ -3,7 +3,7 @@ import styles from "../styles/footer.module.css";
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <ul>
+      <ul className={styles.menuList}>
         <li>TOP</li>
         <li>Portfolio</li>
         <li>AboutMe</li>
