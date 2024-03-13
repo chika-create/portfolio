@@ -1,6 +1,7 @@
 import styles from "../../styles/page.module.css";
 import Title from "../../components/Title";
 import PortfolioList from "../../components/PortfolioList";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
@@ -68,6 +69,7 @@ export default function Home() {
           <code>閉じタグ</code>
         </section>
       </main>
+      <Footer />
       <footer className={styles.footer}>
         <ul>
           <li>TOP</li>
