@@ -1,5 +1,5 @@
 .header {
-  background-color: #F4F4F5;
+  background-color: #f4f4f5;
   padding: 128px 0;
   text-align: center;
 }
@@ -10,13 +10,6 @@
   margin: 0 auto;
 }
 
-.footer {
-  width: 1000px;
-  background-color: white;
-  margin: 0 auto;
-}
-
 .businessCard {
   background-color: white;
 }
-

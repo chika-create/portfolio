@@ -70,15 +70,6 @@ export default function Home() {
         </section>
       </main>
       <Footer />
-      <footer className={styles.footer}>
-        <ul>
-          <li>TOP</li>
-          <li>Portfolio</li>
-          <li>AboutMe</li>
-          <li>MySkillSet</li>
-        </ul>
-        <small>&copy; CHIKA MOTOORI 2024</small>
-      </footer>
     </>
   );
 }
