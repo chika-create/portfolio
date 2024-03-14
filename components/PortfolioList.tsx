@@ -1,5 +1,5 @@
 import Title from "@components/Title";
-import portfolioList from "@styles/portfolioList.module.css";
+import portfolioList from "@styles/portfolioList.module.scss";
 
 function PortfolioList() {
   return (
