@@ -1,5 +1,5 @@
 import { TitleProps } from "../types/types";
-import styles from "../styles/title.module.css";
+import styles from "@styles/title.module.css";
 
 function Title({ level, children }: TitleProps) {
   const HeadingTag = level;
