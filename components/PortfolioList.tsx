@@ -1,4 +1,4 @@
-import Title from "./Title";
+import Title from "@components/Title";
 import portfolioList from "../styles/portfolioList.module.css";
 
 function PortfolioList() {

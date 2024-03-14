@@ -1,7 +1,7 @@
 import styles from "../../styles/page.module.css";
-import Title from "../../components/Title";
-import PortfolioList from "../../components/PortfolioList";
-import Footer from "../../components/Footer";
+import Title from "@components/Title";
+import PortfolioList from "@components/PortfolioList";
+import Footer from "@components/Footer";
 
 export default function Home() {
   return (
