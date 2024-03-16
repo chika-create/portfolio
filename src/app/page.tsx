@@ -1,5 +1,6 @@
 import styles from "@styles/page.module.scss";
 import Title from "@components/parts/Title";
+import LinkButton from "@components/parts/LinkButton";
 import PortfolioList from "@components/portfolio/PortfolioList";
 import Footer from "@components/Footer";
 
@@ -38,7 +39,7 @@ export default function Home() {
           <Title level="h2">制作事例</Title>
           <code>const portfolio = () = </code>
           <PortfolioList />
-          <button>return morePortfolio;</button>
+          <LinkButton />
           <code>閉じタグ</code>
         </section>
         <section>
