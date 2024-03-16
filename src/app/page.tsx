@@ -1,4 +1,4 @@
-import styles from "@styles/page.module.scss";
+import styles from "@styles/common/page.module.scss";
 import Title from "@components/parts/Title";
 import LinkButton from "@components/parts/LinkButton";
 import PortfolioList from "@components/portfolio/PortfolioList";
