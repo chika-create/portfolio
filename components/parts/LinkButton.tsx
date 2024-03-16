@@ -1,5 +1,7 @@
-function LinkButton() {
-  return <button>return morePortfolio;</button>;
+import { LinkButtonProps } from "../../types/types";
+
+function LinkButton({ children }: LinkButtonProps) {
+  return <button>{children}</button>;
 }
 
 export default LinkButton;
