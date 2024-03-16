@@ -1,6 +1,6 @@
 import styles from "@styles/page.module.scss";
-import Title from "@components/Title";
-import PortfolioList from "@components/PortfolioList";
+import Title from "@components/parts/Title";
+import PortfolioList from "@components/portfolio/PortfolioList";
 import Footer from "@components/Footer";
 
 export default function Home() {
