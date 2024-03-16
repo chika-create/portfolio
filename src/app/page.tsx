@@ -61,10 +61,10 @@ export default function Home() {
           </div>
           <ul>
             <li>
-              <button>return moreAbout;</button>
+              <LinkButton>return moreAbout;</LinkButton>
             </li>
             <li>
-              <button>return mySkillSet;</button>
+              <LinkButton>return mySkillSet;</LinkButton>
             </li>
           </ul>
           <code>閉じタグ</code>
