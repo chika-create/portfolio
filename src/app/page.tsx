@@ -59,7 +59,7 @@ export default function Home() {
               チームで働くこととフロントエンドが好きです。
             </p>
           </div>
-          <ul>
+          <ul className={styles.flexBox}>
             <li>
               <LinkButton>return moreAbout;</LinkButton>
             </li>
