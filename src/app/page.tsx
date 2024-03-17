@@ -1,40 +1,15 @@
 import styles from "@styles/common/page.module.scss";
-import topstyle from "@styles/top.module.scss";
+import top from "@styles/top.module.scss";
 import Title from "@components/parts/Title";
 import LinkButton from "@components/parts/LinkButton";
+import BusinessCard from "@components/top/BusinessCard";
 import PortfolioList from "@components/portfolio/PortfolioList";
 import Footer from "@components/Footer";
 
 export default function Home() {
   return (
     <>
-      <header className={styles.header}>
-        <p>Hello world</p>
-        <section>
-          <div className={topstyle.businessCard}>
-            <p className={styles.businessCard__job}>Web Creater</p>
-            <Title level="h1">本告 智香</Title>
-            <p className={styles.businessCard__ruby}>CHIKA MOTOORI</p>
-            <ul className={styles.businessCard__sns}>
-              <li className={styles.businessCard__snsItem}>
-                <a href="#" className={styles.businessCard__snsItem__github}>
-                  GitHub
-                </a>
-              </li>
-              <li className={styles.businessCard__snsItem}>
-                <a href="#" className={styles.businessCard__snsItem__qiita}>
-                  Qiita
-                </a>
-              </li>
-              <li className={styles.businessCard__snsItem}>
-                <a href="#" className={styles.businessCard__snsItem__x}>
-                  X
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </header>
+      <BusinessCard />
       <main className={styles.main}>
         <section>
           <Title level="h2">制作事例</Title>
@@ -60,7 +35,7 @@ export default function Home() {
               チームで働くこととフロントエンドが好きです。
             </p>
           </div>
-          <ul className={topstyle.flexBox}>
+          <ul className={top.flexBox}>
             <li>
               <LinkButton>return moreAbout;</LinkButton>
             </li>
