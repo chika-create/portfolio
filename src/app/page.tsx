@@ -1,5 +1,5 @@
 import styles from "@styles/common/page.module.scss";
-import top from "@styles/top.module.scss";
+import top from "@styles/top/top.module.scss";
 import Title from "@components/parts/Title";
 import LinkButton from "@components/parts/LinkButton";
 import BusinessCard from "@components/top/BusinessCard";

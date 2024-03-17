@@ -1,5 +1,5 @@
 import styles from "@styles/common/page.module.scss";
-import top from "@styles/top.module.scss";
+import businessCard from "@styles/top/businessCard.module.scss";
 import Title from "@components/parts/Title";
 
 function BusinessCard() {
@@ -7,23 +7,26 @@ function BusinessCard() {
     <header className={styles.header}>
       <p>Hello world</p>
       <section>
-        <div className={top.businessCard}>
-          <p className={top.businessCard__job}>Web Creater</p>
+        <div className={businessCard.businessCard}>
+          <p className={businessCard.businessCard__job}>Web Creater</p>
           <Title level="h1">本告 智香</Title>
-          <p className={top.businessCard__ruby}>CHIKA MOTOORI</p>
-          <ul className={top.businessCard__sns}>
-            <li className={top.businessCard__snsItem}>
-              <a href="#" className={top.businessCard__snsItem__github}>
+          <p className={businessCard.businessCard__ruby}>CHIKA MOTOORI</p>
+          <ul className={businessCard.businessCard__sns}>
+            <li className={businessCard.businessCard__snsItem}>
+              <a
+                href="#"
+                className={businessCard.businessCard__snsItem__github}
+              >
                 GitHub
               </a>
             </li>
-            <li className={top.businessCard__snsItem}>
-              <a href="#" className={top.businessCard__snsItem__qiita}>
+            <li className={businessCard.businessCard__snsItem}>
+              <a href="#" className={businessCard.businessCard__snsItem__qiita}>
                 Qiita
               </a>
             </li>
-            <li className={top.businessCard__snsItem}>
-              <a href="#" className={top.businessCard__snsItem__x}>
+            <li className={businessCard.businessCard__snsItem}>
+              <a href="#" className={businessCard.businessCard__snsItem__x}>
                 X
               </a>
             </li>
