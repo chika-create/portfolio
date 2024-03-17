@@ -1,10 +1,9 @@
-import styles from "@styles/common/page.module.scss";
 import businessCard from "@styles/top/businessCard.module.scss";
 import Title from "@components/parts/Title";
 
 function BusinessCard() {
   return (
-    <header className={styles.header}>
+    <header className={businessCard.header}>
       <p>Hello world</p>
       <section>
         <div className={businessCard.businessCard}>
