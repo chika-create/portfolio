@@ -1,4 +1,5 @@
 import styles from "@styles/common/page.module.scss";
+import topstyle from "@styles/top.module.scss";
 import Title from "@components/parts/Title";
 import LinkButton from "@components/parts/LinkButton";
 import PortfolioList from "@components/portfolio/PortfolioList";
@@ -10,7 +11,7 @@ export default function Home() {
       <header className={styles.header}>
         <p>Hello world</p>
         <section>
-          <div className={styles.businessCard}>
+          <div className={topstyle.businessCard}>
             <p className={styles.businessCard__job}>Web Creater</p>
             <Title level="h1">本告 智香</Title>
             <p className={styles.businessCard__ruby}>CHIKA MOTOORI</p>
@@ -59,7 +60,7 @@ export default function Home() {
               チームで働くこととフロントエンドが好きです。
             </p>
           </div>
-          <ul className={styles.flexBox}>
+          <ul className={topstyle.flexBox}>
             <li>
               <LinkButton>return moreAbout;</LinkButton>
             </li>
