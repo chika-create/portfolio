@@ -13,14 +13,14 @@ export default function Home() {
       <main className={styles.main}>
         <section>
           <Title level="h2">制作事例</Title>
-          <code>const portfolio = () = </code>
+          <code className={styles.codeText}>const portfolio = () = </code>
           <PortfolioList />
           <LinkButton>return morePortfolio;</LinkButton>
-          <code>閉じタグ</code>
+          <code className={styles.codeText}>閉じタグ</code>
         </section>
         <section>
           <Title level="h2">私について</Title>
-          <code>const aboutMe = () =</code>
+          <code className={styles.codeText}>const aboutMe = () =</code>
           <div>
             <p>
               1988年、兵庫在住のWeb制作者です。
@@ -43,7 +43,7 @@ export default function Home() {
               <LinkButton>return mySkillSet;</LinkButton>
             </li>
           </ul>
-          <code>閉じタグ</code>
+          <code className={styles.codeText}>閉じタグ</code>
         </section>
       </main>
       <Footer />
