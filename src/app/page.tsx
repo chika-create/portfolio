@@ -16,7 +16,7 @@ export default function Home() {
           <code className={styles.codeText}>const portfolio = () = </code>
           <PortfolioList />
           <LinkButton>return morePortfolio;</LinkButton>
-          <code className={styles.codeText}>閉じタグ</code>
+          <code className={styles.codeText}>{"}"}</code>
         </section>
         <section>
           <Title level="h2">私について</Title>
@@ -43,7 +43,7 @@ export default function Home() {
               <LinkButton>return mySkillSet;</LinkButton>
             </li>
           </ul>
-          <code className={styles.codeText}>閉じタグ</code>
+          <code className={styles.codeText}>{"}"}</code>
         </section>
       </main>
       <Footer />
