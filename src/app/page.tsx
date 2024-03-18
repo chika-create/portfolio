@@ -21,7 +21,7 @@ export default function Home() {
         <section>
           <Title level="h2">私について</Title>
           <code className={styles.codeText}>const aboutMe = () =</code>
-          <div>
+          <div className={top.aboutText}>
             <p>
               1988年、兵庫在住のWeb制作者です。
               2011年に神戸のweb制作会社に6年働き、その後エイチームに転職し2024年現在7年目です。
