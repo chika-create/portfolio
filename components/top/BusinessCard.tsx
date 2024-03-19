@@ -1,11 +1,11 @@
 import businessCard from "@styles/top/businessCard.module.scss";
 import Title from "@components/parts/Title";
 
-const snsLinks = {
-  GitHub: "https://github.com/chika-create",
-  Qiita: "https://qiita.com/chika_hoge",
-  X: "https://twitter.com/chika_hoge",
-};
+const snsLinks = [
+  { name: "GitHub", url: "https://github.com/chika-create" },
+  { name: "Qiita", url: "https://qiita.com/chika_hoge" },
+  { name: "X", url: "https://twitter.com/chika_hoge" },
+];
 
 function BusinessCard() {
   return (
@@ -17,24 +17,17 @@ function BusinessCard() {
           <Title level="h1">本告 智香</Title>
           <p className={businessCard.businessCard__ruby}>CHIKA MOTOORI</p>
           <ul className={businessCard.businessCard__sns}>
-            <li className={businessCard.businessCard__snsItem}>
-              <a
-                href="#"
-                className={businessCard.businessCard__snsItem__github}
-              >
-                GitHub
-              </a>
-            </li>
-            <li className={businessCard.businessCard__snsItem}>
-              <a href="#" className={businessCard.businessCard__snsItem__qiita}>
-                Qiita
-              </a>
-            </li>
-            <li className={businessCard.businessCard__snsItem}>
-              <a href="#" className={businessCard.businessCard__snsItem__x}>
-                X
-              </a>
-            </li>
+            {snsLinks.map((link) => (
+              <li className={businessCard.businessCard__snsItem}>
+                <a
+                  href={link.url}
+                  className={businessCard.businessCard__snsItem__github}
+                  target="_blank"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
