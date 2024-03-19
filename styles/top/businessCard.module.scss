@@ -1,4 +1,5 @@
 $shadow-xl: 0px 20px 25px 0 rgba(0, 0, 0, 0.1);
+$shadow-base: 0px 1px 3px 0 rgba(0, 0, 0, 0.1);
 
 .header {
   /* background-color: map-get($gray, 100); */
@@ -17,4 +18,17 @@ $shadow-xl: 0px 20px 25px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: $shadow-xl;
   -ms-box-shadow: $shadow-xl;
   box-shadow: $shadow-xl;
+  &__sns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    &Item {
+      padding: 0.25rem;
+      /*filter: drop-shadow(0px 20px 25px #000000);*/
+      -moz-box-shadow: $shadow-base;
+      -webkit-box-shadow: $shadow-base;
+      -ms-box-shadow: $shadow-base;
+      box-shadow: $shadow-base;
+    }
+  }
 }

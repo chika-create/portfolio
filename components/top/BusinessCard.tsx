@@ -13,10 +13,10 @@ function BusinessCard() {
           <p className={businessCard.businessCard__ruby}>CHIKA MOTOORI</p>
           <ul className={businessCard.businessCard__sns}>
             {snsLinks.map((link) => (
-              <li className={businessCard.businessCard__snsItem}>
+              <li>
                 <a
                   href={link.url}
-                  className={businessCard.businessCard__snsItem__github}
+                  className={businessCard.businessCard__snsItem}
                   target="_blank"
                 >
                   {link.name}
