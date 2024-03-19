@@ -1,6 +1,12 @@
 import businessCard from "@styles/top/businessCard.module.scss";
 import Title from "@components/parts/Title";
 
+const snsLinks = {
+  GitHub: "https://github.com/chika-create",
+  Qiita: "https://qiita.com/chika_hoge",
+  X: "https://twitter.com/chika_hoge",
+};
+
 function BusinessCard() {
   return (
     <header className={businessCard.header}>
