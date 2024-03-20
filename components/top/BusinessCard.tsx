@@ -19,7 +19,12 @@ function BusinessCard() {
                   className={businessCard.businessCard__snsItem}
                   target="_blank"
                 >
-                  {link.name}
+                  <img
+                    src={`/images/` + link.image}
+                    className={businessCard.businessCard__snsItemIcon}
+                    width="auto"
+                    height={16}
+                  />
                 </a>
               </li>
             ))}
