@@ -1,8 +1,7 @@
 @use "../common/colors.scss" as *;
 
 .header {
-  /* background-color: map-get($gray, 100); */
-  background-color: #f4f4f5;
+  background-color: map-get($gray, "100");
   padding: 128px 0;
   text-align: center;
 }
