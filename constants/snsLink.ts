@@ -1,5 +1,5 @@
 export const snsLinks = [
-  { id: "X", url: "https://twitter.com/chika_hoge", image: "icon_x.svg" },
+  { id: "X", url: "https://twitter.com/chika_hoge", image: "icon_x.png" },
   {
     id: "GitHub",
     url: "https://github.com/chika-create",
