@@ -1,6 +1,5 @@
 @use "../common/colors.scss" as *;
-$shadow-xl: 0px 20px 25px 0 rgba(0, 0, 0, 0.1);
-$shadow-base: 0px 1px 3px 0 rgba(0, 0, 0, 0.1);
+@import "../common/variables.scss";
 
 .header {
   background-color: map-get($gray, "100");
@@ -13,10 +12,9 @@ $shadow-base: 0px 1px 3px 0 rgba(0, 0, 0, 0.1);
   margin: 5rem auto 0;
   padding: 1.5rem;
   background-color: white;
-  /*filter: drop-shadow(0px 20px 25px #000000);*/
-  -moz-box-shadow: $shadow-xl;
+  /* -moz-box-shadow: $shadow-xl;
   -webkit-box-shadow: $shadow-xl;
-  -ms-box-shadow: $shadow-xl;
+  -ms-box-shadow: $shadow-xl;*/
   box-shadow: $shadow-xl;
   &__job {
     font-size: 1.5rem;
@@ -37,10 +35,9 @@ $shadow-base: 0px 1px 3px 0 rgba(0, 0, 0, 0.1);
     &Item {
       &Link {
         padding: 0.4rem;
-        /*filter: drop-shadow(0px 20px 25px #000000);*/
-        -moz-box-shadow: $shadow-base;
+        /* -moz-box-shadow: $shadow-base;
         -webkit-box-shadow: $shadow-base;
-        -ms-box-shadow: $shadow-base;
+        -ms-box-shadow: $shadow-base;*/
         box-shadow: $shadow-base;
         display: flex;
         align-items: center;
