@@ -1,12 +1,22 @@
+@use "./common/colors.scss" as *;
+
 .footer {
   width: 1000px;
   background-color: white;
-  margin: 0 auto;
+  margin: 8rem auto 0;
+  padding: 2.5rem 0;
+  border-top: 1px solid map-get($gray, "300");
 }
 
 .menuList {
   display: flex;
+  gap: 3rem;
   &__item {
-    margin-right: 20px;
   }
+}
+
+.copyright {
+  color: map-get($gray, "400");
+  font-size: 0.875rem;
+  margin-top: 2.5rem;
 }
