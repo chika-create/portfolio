@@ -25,11 +25,13 @@ export default function profile() {
                   株式会社エイチームライフデザイン 所属
                 </li>
                 <li className={styles.profile__listItem}>
-                  <Link href="https://www.16personalities.com/ja/esfj%E5%9E%8B%E3%81%AE%E6%80%A7%E6%A0%BC">
-                    <a target="_blank" rel="noopener noreferrer">
-                      ESFJ
-                    </a>
-                  </Link>
+                  <a
+                    href="https://www.16personalities.com/ja/esfj%E5%9E%8B%E3%81%AE%E6%80%A7%E6%A0%BC"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    ESFJ
+                  </a>
                 </li>
               </ul>
               <ul>
