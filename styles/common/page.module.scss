@@ -32,10 +32,15 @@
   &__list {
     margin: 0;
     list-style: none;
-    &Item::before {
-      content: "-";
-      display: inline-block;
-      width: 1em
+    &Item {
+      &::before {
+        content: "-";
+        display: inline-block;
+        width: 1em;
+      }
+      &Time {
+        color: map-get($gray, "400");
+      }
     }
   }
 }

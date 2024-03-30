@@ -45,21 +45,38 @@ export default function profile() {
             <dd>
               <ul className={styles.profile__list}>
                 <li className={styles.profile__listItem}>
-                  <time datetime="2007-04-01">2007年</time> -{" "}
-                  <time datetime="2011-03-31">2011年</time>
-                  <br />
-                  HAL大阪 WEB開発学科
+                  <span className={styles.profile__listItemTime}>
+                    <time datetime="2007-04-01">2007年</time> -{" "}
+                    <time datetime="2011-03-31">2011年</time>
+                  </span>
+                  <p>HAL大阪 WEB開発学科</p>
+                  <p>
+                    プログラミングの基礎、JAVA、PHP、javascript
+                    などを使用しWebプロフラミングの基礎を学習しました。
+                  </p>
                 </li>
                 <li className={styles.profile__listItem}>
-                  <time datetime="2011-04-01">2011年</time> -{" "}
-                  <time datetime="2017-04-31">2017年</time>
-                  <br />
-                  株式会社ドアズ
+                  <span className={styles.profile__listItemTime}>
+                    <time datetime="2011-04-01">2011年</time> -{" "}
+                    <time datetime="2017-04-31">2017年</time>
+                  </span>
+                  <p>株式会社ドアズ</p>
+                  <p>
+                    Web制作とメンズシルバーアクセサリーの自社ブランドの2事業があり、
+                    前者では教育・医療・食品関係を中心にサイトの制作・運用を担当していました。
+                    後者では楽天やAmazonなどのモール運営、特集ページの企画、商品企画、広告などの販促など広く担当していました。
+                  </p>
                 </li>
                 <li className={styles.profile__listItem}>
-                  <time datetime="2017-05-01">2017年</time> -
-                  <br />
-                  株式会社エイチーム
+                  <span className={styles.profile__listItemTime}>
+                    <time datetime="2017-05-01">2017年</time> -
+                  </span>
+                  <p>株式会社エイチーム</p>
+                  <p>
+                    主に金融系のアフィリエイトサイトのサイト分析・改善を担当していました。
+                    <br />
+                    小規模デザイナーチームのマネジメントを担当し、育成に力を入れました。
+                  </p>
                 </li>
               </ul>
             </dd>
