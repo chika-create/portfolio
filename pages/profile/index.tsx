@@ -40,6 +40,30 @@ export default function profile() {
               </ul>
             </dd>
           </dl>
+          <dl className={styles.profile}>
+            <dt className={styles.profile__title}>History</dt>
+            <dd>
+              <ul className={styles.profile__list}>
+                <li className={styles.profile__listItem}>
+                  <time datetime="2007-04-01">2007年</time> -{" "}
+                  <time datetime="2011-03-31">2011年</time>
+                  <br />
+                  HAL大阪 WEB開発学科
+                </li>
+                <li className={styles.profile__listItem}>
+                  <time datetime="2011-04-01">2011年</time> -{" "}
+                  <time datetime="2017-04-31">2017年</time>
+                  <br />
+                  株式会社ドアズ
+                </li>
+                <li className={styles.profile__listItem}>
+                  <time datetime="2017-05-01">2017年</time> -
+                  <br />
+                  株式会社エイチーム
+                </li>
+              </ul>
+            </dd>
+          </dl>
           <LinkButton>return morePortfolio;</LinkButton>
           <code className={styles.codeText}>{"}"}</code>
         </section>
