@@ -4,7 +4,7 @@ import { snsLinks } from "../../constants/snsLink";
 export const BusinessCard = () => {
   return (
     <header className={businessCard.header}>
-      <p>Hello world</p>
+      <p className={businessCard.introduction}>Hello world</p>
       <section>
         <div className={businessCard.businessCard}>
           <p className={businessCard.businessCard__job}>Web Creator</p>
