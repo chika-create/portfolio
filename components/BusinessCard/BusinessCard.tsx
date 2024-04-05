@@ -1,13 +1,13 @@
 import businessCard from "@styles/top/businessCard.module.scss";
 import { snsLinks } from "../../constants/snsLink";
 
-function BusinessCard() {
+export const BusinessCard = () => {
   return (
     <header className={businessCard.header}>
-      <p>Hello world</p>
+      <p className={businessCard.introduction}>Hello world</p>
       <section>
         <div className={businessCard.businessCard}>
-          <p className={businessCard.businessCard__job}>Web Creater</p>
+          <p className={businessCard.businessCard__job}>Web Creator</p>
           <h1 className={businessCard.businessCard__name}>本告 智香</h1>
           <p className={businessCard.businessCard__ruby}>CHIKA MOTOORI</p>
           <ul className={businessCard.businessCard__sns}>
@@ -32,6 +32,6 @@ function BusinessCard() {
       </section>
     </header>
   );
-}
+};
 
-export default BusinessCard;
+// export default BusinessCard;
