@@ -1,0 +1,24 @@
+@use "../common/colors.scss" as *;
+
+.profile {
+  margin-top: 1.25rem;
+  display: flex;
+  &__title {
+    font-size: 1.25rem;
+    font-weight: normal;
+  }
+  &__list {
+    margin: 0;
+    list-style: none;
+    &Item {
+      &::before {
+        content: "-";
+        display: inline-block;
+        width: 1em;
+      }
+      &Time {
+        color: map-get($gray, "400");
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
-import Link from "next/link";
 import styles from "@styles/common/page.module.scss";
+import profileStyles from "@styles/profile/profile.module.scss";
 import Title from "@components/parts/Title";
 import LinkButton from "@components/parts/LinkButton";
 import Footer from "@components/Footer";
@@ -12,19 +12,21 @@ export default function profile() {
         <section>
           <Title level="h2">私について</Title>
           <code className={styles.codeText}>const AboutMe = () = </code>
-          <dl className={styles.profile}>
-            <dt className={styles.profile__title}>Personal</dt>
+          <dl className={profileStyles.profile}>
+            <dt className={profileStyles.profile__title}>Personal</dt>
             <dd>
-              <ul className={styles.profile__list}>
-                <li className={styles.profile__listItem}>
+              <ul className={profileStyles.profile__list}>
+                <li className={profileStyles.profile__listItem}>
                   本告 智香（モトオリ チカ）
                 </li>
-                <li className={styles.profile__listItem}>兵庫県在住</li>
-                <li className={styles.profile__listItem}>1988年11月生まれ</li>
-                <li className={styles.profile__listItem}>
+                <li className={profileStyles.profile__listItem}>兵庫県在住</li>
+                <li className={profileStyles.profile__listItem}>
+                  1988年11月生まれ
+                </li>
+                <li className={profileStyles.profile__listItem}>
                   株式会社エイチームライフデザイン 所属
                 </li>
-                <li className={styles.profile__listItem}>
+                <li className={profileStyles.profile__listItem}>
                   <a
                     href="https://www.16personalities.com/ja/esfj%E5%9E%8B%E3%81%AE%E6%80%A7%E6%A0%BC"
                     target="_blank"
@@ -40,12 +42,12 @@ export default function profile() {
               </ul>
             </dd>
           </dl>
-          <div className={styles.profile}>
+          <div className={profileStyles.profile}>
             <Title level="h3">History</Title>
             <div>
-              <dl className={styles.profile__list}>
-                <dt className={styles.profile__listItem}>
-                  <span className={styles.profile__listItemTime}>
+              <dl className={profileStyles.profile__list}>
+                <dt className={profileStyles.profile__listItem}>
+                  <span className={profileStyles.profile__listItemTime}>
                     - <time datetime="2011-03-31">2011年</time>
                   </span>
                   <p>HAL大阪専門学校 WEB開発学科 卒</p>
@@ -53,8 +55,8 @@ export default function profile() {
                 <dd>
                   基本情報技術者試験の資格取得やPHP、JavaScriptなどを使用しプロフラミングの基礎などを学習しました。
                 </dd>
-                <dt className={styles.profile__listItem}>
-                  <span className={styles.profile__listItemTime}>
+                <dt className={profileStyles.profile__listItem}>
+                  <span className={profileStyles.profile__listItemTime}>
                     <time datetime="2011-04-01">2011年</time> -{" "}
                     <time datetime="2017-04-31">2017年</time>
                   </span>
@@ -70,8 +72,8 @@ export default function profile() {
                     <img src="https://placehold.jp/412x260.png" alt="" />
                   </figure>
                 </dd>
-                <dt className={styles.profile__listItem}>
-                  <span className={styles.profile__listItemTime}>
+                <dt className={profileStyles.profile__listItem}>
+                  <span className={profileStyles.profile__listItemTime}>
                     <time datetime="2017-05-01">2017年</time> -
                   </span>
                   <p>株式会社エイチームライフデザイン（現職）</p>
@@ -97,28 +99,28 @@ export default function profile() {
           </div>
           <section>
             <Title level="h3">大切にしていること</Title>
-            <dl className={styles.profile}>
-              <dt className={styles.profile__title}>Business</dt>
+            <dl className={profileStyles.profile}>
+              <dt className={profileStyles.profile__title}>Business</dt>
               <dd>
-                <ul className={styles.profile__list}>
-                  <li className={styles.profile__listItem}>
+                <ul className={profileStyles.profile__list}>
+                  <li className={profileStyles.profile__listItem}>
                     チームで一体感を持って仕事をする
                   </li>
-                  <li className={styles.profile__listItem}>
+                  <li className={profileStyles.profile__listItem}>
                     双方で配慮、尊重をする
                   </li>
-                  <li className={styles.profile__listItem}>
+                  <li className={profileStyles.profile__listItem}>
                     目的意識を持って仕事をする
                   </li>
                 </ul>
               </dd>
-              <dt className={styles.profile__title}>Create</dt>
+              <dt className={profileStyles.profile__title}>Create</dt>
               <dd>
-                <ul className={styles.profile__list}>
-                  <li className={styles.profile__listItem}>
+                <ul className={profileStyles.profile__list}>
+                  <li className={profileStyles.profile__listItem}>
                     品質とスピードのバランスを考える
                   </li>
-                  <li className={styles.profile__listItem}>
+                  <li className={profileStyles.profile__listItem}>
                     今後の運用を考えて開発をする
                   </li>
                 </ul>
@@ -127,21 +129,21 @@ export default function profile() {
           </section>
           <section>
             <Title level="h3">苦手なこと</Title>
-            <dl className={styles.profile}>
-              <dt className={styles.profile__title}>Business</dt>
+            <dl className={profileStyles.profile}>
+              <dt className={profileStyles.profile__title}>Business</dt>
               <dd>
-                <ul className={styles.profile__list}>
-                  <li className={styles.profile__listItem}>
+                <ul className={profileStyles.profile__list}>
+                  <li className={profileStyles.profile__listItem}>
                     ビジョンを描くこと
                   </li>
                 </ul>
               </dd>
             </dl>
-            <dl className={styles.profile}>
-              <dt className={styles.profile__title}>Create</dt>
+            <dl className={profileStyles.profile}>
+              <dt className={profileStyles.profile__title}>Create</dt>
               <dd>
-                <ul className={styles.profile__list}>
-                  <li className={styles.profile__listItem}>デザイン</li>
+                <ul className={profileStyles.profile__list}>
+                  <li className={profileStyles.profile__listItem}>デザイン</li>
                 </ul>
               </dd>
             </dl>
