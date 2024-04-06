@@ -37,14 +37,15 @@ export const Profile = () => {
       <div className={profileStyles.profile}>
         <Title level="h3">History</Title>
         <div>
-          <dl className={profileStyles.profile__list}>
-            <dt className={profileStyles.profile__listItem}>
-              <span className={profileStyles.profile__listItemTime}>
-                - <time datetime="2011-03-31">2011年</time>
-              </span>
-              <p>HAL大阪専門学校 WEB開発学科 卒</p>
+          <dl className={profileStyles.history}>
+            <dt className={profileStyles.history__title}>
+              <time datetime="2007-04-01">2007年</time> -{" "}
+              <time datetime="2011-03-31">2011年</time>
+              <p className={profileStyles.history__titleText}>
+                HAL大阪専門学校 WEB開発学科
+              </p>
             </dt>
-            <dd>
+            <dd className={profileStyles.history__text}>
               基本情報技術者試験の資格取得やPHP、JavaScriptなどを使用しプロフラミングの基礎などを学習しました。
             </dd>
             <dt className={profileStyles.profile__listItem}>

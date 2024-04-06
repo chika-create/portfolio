@@ -22,3 +22,17 @@
     }
   }
 }
+
+.history {
+  margin: 1.25rem 0 0 1rem;
+  &__title {
+    display: flex;
+    gap: 1rem;
+    &Text {
+      margin: 0;
+    }
+  }
+  &__text {
+    margin: .5rem 0 0;
+  }
+}
