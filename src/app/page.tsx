@@ -1,7 +1,7 @@
 import styles from "@styles/common/page.module.scss";
 import top from "@styles/top/top.module.scss";
 import Title from "@components/parts/Title";
-import LinkButton from "@components/parts/LinkButton";
+import LinkButton from "@components/parts/button/Button";
 import { BusinessCard } from "@components/BusinessCard";
 import PortfolioList from "@components/portfolio/PortfolioList";
 import Footer from "@components/Footer";
