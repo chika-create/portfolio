@@ -1,8 +1,6 @@
-import { LinkButtonProps } from "../../../types/types";
-import styles from "@styles/parts/linkButton.module.scss";
+import { ButtonProps } from "../../../types/types";
+import styles from "@styles/parts/button.module.scss";
 
-function LinkButton({ children }: LinkButtonProps) {
-  return <button className={styles.linkButton}>{children}</button>;
-}
-
-export default LinkButton;
+export const Button = ({ children }: ButtonProps) => {
+  return <button className={styles.Button}>{children}</button>;
+};
