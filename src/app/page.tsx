@@ -1,6 +1,6 @@
 import styles from "@styles/common/page.module.scss";
 import top from "@styles/top/top.module.scss";
-import { Title } from "@components/parts/title/Title";
+import { Title } from "@components/parts/title/index";
 import { Button } from "@components/parts/button/index";
 import { BusinessCard } from "@components/BusinessCard";
 import PortfolioList from "@components/portfolio/PortfolioList";
