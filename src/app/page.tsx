@@ -3,7 +3,7 @@ import topStyles from "@styles/top/top.module.scss";
 import { Title } from "@components/parts/title/index";
 import { Button } from "@components/parts/button/index";
 import { BusinessCard } from "@components/BusinessCard";
-import { PortfolioList } from "@components/portfolio/PortfolioList";
+import { PortfolioList } from "@components/portfolioList/index";
 import Footer from "@components/Footer";
 
 export default function Home() {
