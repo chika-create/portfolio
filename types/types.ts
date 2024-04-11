@@ -8,6 +8,6 @@ export interface TitleProps extends TextData {
   level: "h1" | "h2" | "h3";
 }
 
-export interface LinkButtonProps {
+export interface ButtonProps {
   children: string;
 }

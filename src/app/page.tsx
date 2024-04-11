@@ -1,7 +1,7 @@
 import styles from "@styles/common/page.module.scss";
-import top from "@styles/top/top.module.scss";
-import Title from "@components/parts/Title";
-import LinkButton from "@components/parts/LinkButton";
+import topStyles from "@styles/top/top.module.scss";
+import { Title } from "@components/parts/title/index";
+import { Button } from "@components/parts/button/index";
 import { BusinessCard } from "@components/BusinessCard";
 import PortfolioList from "@components/portfolio/PortfolioList";
 import Footer from "@components/Footer";
@@ -15,13 +15,13 @@ export default function Home() {
           <Title level="h2">制作事例</Title>
           <code className={styles.codeText}>const portfolio = () = </code>
           <PortfolioList />
-          <LinkButton>return morePortfolio;</LinkButton>
+          <Button>return morePortfolio;</Button>
           <code className={styles.codeText}>{"}"}</code>
         </section>
         <section>
           <Title level="h2">私について</Title>
           <code className={styles.codeText}>const aboutMe = () =</code>
-          <div className={top.aboutText}>
+          <div className={topStyles.aboutText}>
             <p>
               1988年、兵庫在住のWeb制作者です。
               2011年に神戸のweb制作会社に6年働き、その後エイチームに転職し2024年現在7年目です。
@@ -35,12 +35,12 @@ export default function Home() {
               チームで働くこととフロントエンドが好きです。
             </p>
           </div>
-          <ul className={top.flexBox}>
+          <ul className={topStyles.flexBox}>
             <li>
-              <LinkButton>return moreAbout;</LinkButton>
+              <Button>return moreAbout;</Button>
             </li>
             <li>
-              <LinkButton>return mySkillSet;</LinkButton>
+              <Button>return mySkillSet;</Button>
             </li>
           </ul>
           <code className={styles.codeText}>{"}"}</code>

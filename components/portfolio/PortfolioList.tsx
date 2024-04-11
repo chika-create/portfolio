@@ -1,15 +1,15 @@
-import Title from "@components/parts/Title";
-import portfolioList from "@styles/portfolio/portfolioList.module.scss";
+import { Title } from "@components/parts/title/index";
+import portfolioListStyles from "@styles/portfolio/portfolioList.module.scss";
 
 function PortfolioList() {
   return (
-    <div className={portfolioList.box}>
-      <div className={portfolioList.content}>
+    <div className={portfolioListStyles.box}>
+      <div className={portfolioListStyles.content}>
         <figure>
           <img
             src="https://placehold.jp/412x260.png"
             alt=""
-            className={portfolioList.image}
+            className={portfolioListStyles.image}
           />
         </figure>
         <Title level="h3">ポートフォリオサイト</Title>
@@ -17,12 +17,12 @@ function PortfolioList() {
           React, TypeScript, Next, storybook, ESLint, Prettier, Vercel, hogefuga
         </p>
       </div>
-      <div className={portfolioList.content}>
+      <div className={portfolioListStyles.content}>
         <figure>
           <img
             src="https://placehold.jp/412x260.png"
             alt=""
-            className={portfolioList.image}
+            className={portfolioListStyles.image}
           />
         </figure>
         <Title level="h3">おにぎり計算機</Title>
