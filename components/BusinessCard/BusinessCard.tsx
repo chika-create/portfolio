@@ -33,5 +33,3 @@ export const BusinessCard = () => {
     </header>
   );
 };
-
-// export default BusinessCard;
