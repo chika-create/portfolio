@@ -1,4 +1,4 @@
-import { Title } from "@components/parts/Title/index";
+import { Title } from "@components/parts/Title/";
 import profileStyles from "@styles/profile/profile.module.scss";
 
 export const Profile = () => {
@@ -62,9 +62,9 @@ export const Profile = () => {
             前者ではコーポレート・EC・医療・食品・自治体などの様々な種類のサイトの制作・運用を担当していました。
             <br />
             後者では楽天やAmazonなどのモール運営、特集ページの企画、商品企画、広告など広く担当していました。
-            <figure>
+            {/* <figure>
               <img src="https://placehold.jp/412x260.png" alt="" />
-            </figure>
+            </figure> */}
           </p>
         </div>
         <p className={profileStyles.profile__hoge6}>
