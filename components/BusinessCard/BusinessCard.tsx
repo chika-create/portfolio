@@ -1,5 +1,5 @@
 import businessCardStyles from "@styles/top/businessCard.module.scss";
-import { snsLinks } from "../../constants/snsLink";
+import { snsLinks } from "@constants/snsLink";
 
 export const BusinessCard = () => {
   return (
@@ -33,5 +33,3 @@ export const BusinessCard = () => {
     </header>
   );
 };
-
-// export default BusinessCard;

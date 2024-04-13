@@ -1,7 +1,7 @@
 import { Title } from "@components/parts/title/index";
 import portfolioListStyles from "@styles/portfolio/portfolioList.module.scss";
 
-function PortfolioList() {
+export const PortfolioList = () => {
   return (
     <div className={portfolioListStyles.box}>
       <div className={portfolioListStyles.content}>
@@ -30,6 +30,4 @@ function PortfolioList() {
       </div>
     </div>
   );
-}
-
-export default PortfolioList;
+};
