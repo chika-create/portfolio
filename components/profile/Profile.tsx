@@ -1,4 +1,4 @@
-import Title from "@components/parts/Title";
+import { Title } from "@components/parts/Title/index";
 import profileStyles from "@styles/profile/profile.module.scss";
 
 export const Profile = () => {

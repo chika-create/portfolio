@@ -1,8 +1,8 @@
 import styles from "@styles/common/page.module.scss";
-import Title from "@components/parts/Title";
-import LinkButton from "@components/parts/LinkButton";
+import { Title } from "@components/parts/Title/index";
+import { Button } from "@components/parts/Button/index";
 import Footer from "@components/Footer";
-import { Profile } from "@components/profile/";
+import { Profile } from "@components/Profile/index";
 
 export default function profile() {
   return (
@@ -13,7 +13,7 @@ export default function profile() {
           <Title level="h2">私について</Title>
           <code className={styles.codeText}>const AboutMe = () = </code>
           <Profile />
-          <LinkButton>return morePortfolio;</LinkButton>
+          <Button>return morePortfolio;</Button>
           <code className={styles.codeText}>{"}"}</code>
         </section>
       </main>
