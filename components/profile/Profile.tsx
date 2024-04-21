@@ -5,10 +5,10 @@ export const Profile = () => {
   return (
     <>
       <div className={profileStyles.profile}>
-        <div className={profileStyles.profile__fuga}>
+        <div className={profileStyles[`profile__title--personal`]}>
           <Title level="h3">Personal</Title>
         </div>
-        <div className={profileStyles.profile__hoge}>
+        <div className={profileStyles[`profile--personal`]}>
           <ul className={profileStyles.profile__list}>
             <li className={profileStyles.profile__listItem}>
               本告 智香（モトオリ チカ）
@@ -35,14 +35,14 @@ export const Profile = () => {
             <li>GitHub</li>
           </ul>
         </div>
-        <div className={profileStyles.profile__fuga2}>
+        <div className={profileStyles[`profile__title--history`]}>
           <Title level="h3">History</Title>
         </div>
-        <p className={profileStyles.profile__hoge2}>
+        <p className={profileStyles[`profile__historyYear--student`]}>
           <time datetime="2007-04-01">2007年</time> -{" "}
           <time datetime="2011-03-31">2011年</time>
         </p>
-        <div className={profileStyles.profile__hoge3}>
+        <div className={profileStyles[`profile__history--student`]}>
           <p className={profileStyles.history__titleText}>
             HAL大阪専門学校 WEB開発学科
           </p>
@@ -50,11 +50,11 @@ export const Profile = () => {
             基本情報技術者試験の資格取得やPHP、JavaScriptなどを使用しプロフラミングの基礎などを学習しました。
           </p>
         </div>
-        <p className={profileStyles.profile__hoge4}>
+        <p className={profileStyles[`profile__historyYear--newGraduate`]}>
           <time datetime="2011-04-01">2011年</time> -{" "}
           <time datetime="2017-04-31">2017年</time>
         </p>
-        <div className={profileStyles.profile__hoge5}>
+        <div className={profileStyles[`profile__history--newGraduate`]}>
           <p>株式会社ドアズ</p>
           <p>
             Web制作とメンズシルバーアクセサリーの自社ブランドの2事業があり、
@@ -62,15 +62,12 @@ export const Profile = () => {
             前者ではコーポレート・EC・医療・食品・自治体などの様々な種類のサイトの制作・運用を担当していました。
             <br />
             後者では楽天やAmazonなどのモール運営、特集ページの企画、商品企画、広告など広く担当していました。
-            {/* <figure>
-              <img src="https://placehold.jp/412x260.png" alt="" />
-            </figure> */}
           </p>
         </div>
-        <p className={profileStyles.profile__hoge6}>
+        <p className={profileStyles[`profile__historyYear--currentJob`]}>
           <time datetime="2017-05-01">2017年</time> -
         </p>
-        <div className={profileStyles.profile__hoge7}>
+        <div className={profileStyles[`profile__history--currentJob`]}>
           <p>株式会社エイチームライフデザイン（現職）</p>
           <p>
             主にクレジットカードやFX、カードローンなど金融系アフィリエイトサイトの分析・改善を担当していました。
