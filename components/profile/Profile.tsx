@@ -1,4 +1,5 @@
 import { Title } from "@components/parts/Title/";
+import { snsLinks } from "@constants/snsLink";
 import profileStyles from "@styles/profile/profile.module.scss";
 
 export const Profile = () => {
@@ -31,8 +32,13 @@ export const Profile = () => {
             </li>
           </ul>
           <ul>
-            <li>X</li>
-            <li>GitHub</li>
+            {snsLinks.map((link) => (
+              <li>
+                <a href={link.url} target="_blank">
+                  <img src={`/images/` + link.image} width="auto" height={16} />
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <div className={profileStyles[`profile__title--history`]}>
