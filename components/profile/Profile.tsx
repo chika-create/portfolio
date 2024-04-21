@@ -39,8 +39,8 @@ export const Profile = () => {
           <Title level="h3">History</Title>
         </div>
         <p className={profileStyles[`profile__historyYear--student`]}>
-          <time datetime="2007-04-01">2007年</time> -{" "}
-          <time datetime="2011-03-31">2011年</time>
+          <time dateTime="2007-04-01">2007年</time> -{" "}
+          <time dateTime="2011-03-31">2011年</time>
         </p>
         <div className={profileStyles[`profile__history--student`]}>
           <p className={profileStyles.history__titleText}>
@@ -51,8 +51,8 @@ export const Profile = () => {
           </p>
         </div>
         <p className={profileStyles[`profile__historyYear--newGraduate`]}>
-          <time datetime="2011-04-01">2011年</time> -{" "}
-          <time datetime="2017-04-31">2017年</time>
+          <time dateTime="2011-04-01">2011年</time> -{" "}
+          <time dateTime="2017-04-31">2017年</time>
         </p>
         <div className={profileStyles[`profile__history--newGraduate`]}>
           <p>株式会社ドアズ</p>
@@ -65,7 +65,7 @@ export const Profile = () => {
           </p>
         </div>
         <p className={profileStyles[`profile__historyYear--currentJob`]}>
-          <time datetime="2017-05-01">2017年</time> -
+          <time dateTime="2017-05-01">2017年</time> -
         </p>
         <div className={profileStyles[`profile__history--currentJob`]}>
           <p>株式会社エイチームライフデザイン（現職）</p>
