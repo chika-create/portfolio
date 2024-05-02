@@ -1,0 +1,21 @@
+@use "../common/colors.scss" as *;
+
+.header {
+  background-color: map-get($gray, "100");
+  padding: 128px 0;
+  text-align: center;
+}
+
+.main {
+  width: 1000px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.codeText {
+  display: block;
+  color: #a1a1aa;
+  font-size: 1.125rem;
+  line-height: 2;
+  margin-top: 1.125rem;
+}

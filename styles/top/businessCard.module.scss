@@ -1,0 +1,57 @@
+@use "../common/colors.scss" as *;
+@import "../common/variables.scss";
+
+.header {
+  background-color: map-get($gray, "100");
+  padding: 128px 0;
+  text-align: center;
+}
+
+.introduction {
+  font-size: 1.875rem;
+}
+
+.businessCard {
+  width: 36.125rem;
+  margin: 5rem auto 0;
+  padding: 1.5rem;
+  background-color: white;
+  /* -moz-box-shadow: $shadow-xl;
+  -webkit-box-shadow: $shadow-xl;
+  -ms-box-shadow: $shadow-xl;*/
+  box-shadow: $shadow-xl;
+  &__job {
+    font-size: 1.5rem;
+    margin-top: 3.25rem;
+  }
+  &__name {
+    font-size: 3rem;
+    font-weight: normal;
+  }
+  &__ruby {
+    font-size: 1.125rem;
+  }
+  &__sns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2.75rem;
+    &Item {
+      &Link {
+        padding: 0.4rem;
+        /* -moz-box-shadow: $shadow-base;
+        -webkit-box-shadow: $shadow-base;
+        -ms-box-shadow: $shadow-base;*/
+        box-shadow: $shadow-base;
+        display: flex;
+        align-items: center;
+        &Icon {
+          vertical-align: middle;
+        }
+      }
+      &:nth-child(-n + 2) .businessCard__snsItemLink {
+        padding: 0.4rem 0.55rem;
+      }
+    }
+  }
+}
