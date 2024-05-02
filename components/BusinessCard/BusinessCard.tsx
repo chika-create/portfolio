@@ -1,5 +1,5 @@
-import businessCardStyles from "../../styles/top/businessCard.module.scss";
-import { snsLinks } from "../../constants/snsLink";
+import businessCardStyles from "@styles/top/businessCard.module.scss";
+import { snsLinks } from "@constants/snsLink";
 
 export const BusinessCard = () => {
   return (
