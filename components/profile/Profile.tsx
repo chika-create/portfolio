@@ -1,6 +1,6 @@
-import { Title } from "@components/parts/Title/";
-import { snsLinks } from "@constants/snsLink";
-import profileStyles from "@styles/profile/profile.module.scss";
+import { Title } from "../../components/parts/Title/";
+import { snsLinks } from "../../constants/snsLink";
+import profileStyles from "../../styles/profile/profile.module.scss";
 
 export const Profile = () => {
   return (
