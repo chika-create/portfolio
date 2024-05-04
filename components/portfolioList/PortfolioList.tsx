@@ -1,4 +1,4 @@
-import { Title } from "@components/parts/Title/";
+import { Title } from "@components/parts/Title";
 import portfolioListStyles from "@styles/portfolio/portfolioList.module.scss";
 
 export const PortfolioList = () => {

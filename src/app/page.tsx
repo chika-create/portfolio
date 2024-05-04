@@ -1,9 +1,9 @@
 import styles from "@styles/common/page.module.scss";
 import topStyles from "@styles/top/top.module.scss";
-import { Title } from "@components/parts/Title/";
-import { Button } from "@components/parts/Button/";
+import { Title } from "@components/parts/Title";
+import { Button } from "@components/parts/Button";
 import { BusinessCard } from "@components/BusinessCard";
-import { PortfolioList } from "@components/PortfolioList/";
+import { PortfolioList } from "@components/PortfolioList";
 import { Footer } from "@components/Footer/";
 
 export default function Home() {
