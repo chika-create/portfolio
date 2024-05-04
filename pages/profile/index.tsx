@@ -1,7 +1,7 @@
 import styles from "@styles/common/page.module.scss";
 import { Title } from "@components/parts/Title";
 import { Button } from "@components/parts/Button";
-import { Footer } from "@components/Footer/";
+import { Footer } from "@components/Footer";
 import { Profile } from "@components/Profile";
 
 export default function profile() {
