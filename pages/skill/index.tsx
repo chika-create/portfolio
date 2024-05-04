@@ -1,7 +1,7 @@
 import styles from "@styles/common/page.module.scss";
-import { Title } from "@components/parts/Title/";
-import { Button } from "@components/parts/Button/";
-import { Footer } from "@components/Footer/";
+import { Title } from "@components/parts/Title";
+import { Button } from "@components/parts/Button";
+import { Footer } from "@components/Footer";
 import { Skill } from "@components/Skill";
 
 export default function profile() {
