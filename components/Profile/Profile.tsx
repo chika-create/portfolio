@@ -32,8 +32,8 @@ export const Profile = () => {
             </li>
           </ul>
           <ul>
-            {snsLinks.map((link) => (
-              <li>
+            {snsLinks.map((link, index) => (
+              <li key={index}>
                 <a href={link.url} target="_blank">
                   <img src={`/images/` + link.image} width="auto" height={16} />
                 </a>
