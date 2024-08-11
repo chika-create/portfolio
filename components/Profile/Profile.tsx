@@ -32,9 +32,9 @@ export const Profile = () => {
             </li>
           </ul>
           <ul>
-            {snsLinks.map((link, index) => (
-              <li key={index}>
-                <a href={link.url} target="_blank">
+            {snsLinks.map((link) => (
+              <li key={link.id}>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
                   <img src={`/images/` + link.image} width="auto" height={16} />
                 </a>
               </li>
@@ -76,7 +76,7 @@ export const Profile = () => {
         <div className={profileStyles[`profile__history--currentJob`]}>
           <p>株式会社エイチームライフデザイン（現職）</p>
           <p>
-            主にクレジットカードやFX、カードローンなど金融系アフィリエイトサイトの分析・改善を担当していました。
+            主にクレジットカードや証券口座、FX、カードローンなど金融系アフィリエイトサイトの分析・改善を担当していました。
           </p>
           <p>
             マーケティングの担当者と共にユーザー分析・サイト分析から改善案を考案、
@@ -84,7 +84,7 @@ export const Profile = () => {
             デザイナーで実装しABテストを行うことでサイト改善に取り組みました。
           </p>
           <p>
-            またReact Nativeを使用しFXのデモトレードアプリの制作に携わりました。
+            また React Native を使用し FX のデモトレードアプリの制作に携わりました。
             <br />
             制作以外では小規模デザイナーチームのマネジメントを担当し、育成に力を入れました。
           </p>

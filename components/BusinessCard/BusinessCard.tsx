@@ -11,11 +11,8 @@ export const BusinessCard = () => {
           <h1 className={businessCardStyles.businessCard__name}>本告 智香</h1>
           <p className={businessCardStyles.businessCard__ruby}>CHIKA MOTOORI</p>
           <ul className={businessCardStyles.businessCard__sns}>
-            {snsLinks.map((link, index) => (
-              <li
-                key={index}
-                className={businessCardStyles.businessCard__snsItem}
-              >
+            {snsLinks.map((link) => (
+              <li key={link.id} className={businessCardStyles.businessCard__snsItem}>
                 <a
                   href={link.url}
                   className={businessCardStyles.businessCard__snsItemLink}
