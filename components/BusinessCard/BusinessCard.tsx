@@ -12,7 +12,7 @@ export const BusinessCard = () => {
           <p className={businessCardStyles.businessCard__ruby}>CHIKA MOTOORI</p>
           <ul className={businessCardStyles.businessCard__sns}>
             {snsLinks.map((link) => (
-              <li className={businessCardStyles.businessCard__snsItem}>
+              <li key={link.id} className={businessCardStyles.businessCard__snsItem}>
                 <a
                   href={link.url}
                   className={businessCardStyles.businessCard__snsItemLink}
