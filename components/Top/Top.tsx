@@ -1,4 +1,4 @@
-import styles from "@styles/common/page.module.scss";
+import pageStyles from "@styles/common/page.module.scss";
 import topStyles from "@styles/top/top.module.scss";
 import { Title } from "@components/parts/Title";
 import { Button } from "@components/parts/Button";
@@ -14,17 +14,17 @@ export function Top() {
         <BusinessCard />
       </header>
 
-      <main className={styles.main}>
+      <main className={pageStyles.main}>
         <section>
           <Title level="h2">制作事例</Title>
-          <code className={styles.codeText}>const portfolio = () = </code>
+          <code className={pageStyles.codeText}>const portfolio = () = </code>
           <PortfolioList />
           <Button>return morePortfolio;</Button>
-          <code className={styles.codeText}>{"}"}</code>
+          <code className={pageStyles.codeText}>{"}"}</code>
         </section>
         <section>
           <Title level="h2">私について</Title>
-          <code className={styles.codeText}>const aboutMe = () =</code>
+          <code className={pageStyles.codeText}>const aboutMe = () =</code>
           <div className={topStyles.aboutText}>
             <p>
               1988年、兵庫在住のWeb制作者です。
@@ -47,7 +47,7 @@ export function Top() {
               <Button>return mySkillSet;</Button>
             </li>
           </ul>
-          <code className={styles.codeText}>{"}"}</code>
+          <code className={pageStyles.codeText}>{"}"}</code>
         </section>
       </main>
       <Footer />
