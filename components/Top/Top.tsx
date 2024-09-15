@@ -9,7 +9,11 @@ import { Footer } from "@components/Footer/";
 export function Top() {
   return (
     <>
-      <BusinessCard />
+      <header className={topStyles.header}>
+        <p className={topStyles.introduction}>Hello world</p>
+        <BusinessCard />
+      </header>
+
       <main className={styles.main}>
         <section>
           <Title level="h2">制作事例</Title>
