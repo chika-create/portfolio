@@ -31,15 +31,17 @@ export const Profile = () => {
               </a>
             </li>
           </ul>
-          <ul>
-            {snsLinks.map((link) => (
-              <li key={link.id}>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  <img src={`/images/` + link.image} width="auto" height={16} />
-                </a>
-              </li>
-            ))}
-          </ul>
+          {snsLinks.length > 0 && (
+            <ul>
+              {snsLinks.map((link) => (
+                <li key={link.id}>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    <img src={`/images/` + link.image} width="auto" height={16} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <div className={profileStyles[`profile__title--history`]}>
           <Title level="h3">History</Title>
