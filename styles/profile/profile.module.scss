@@ -2,22 +2,23 @@
 
 .profile {
   display: grid;
-  grid-template-columns: auto auo;
-  grid-template-rows: auto auto;
-  grid-column-gap: 30px;
+  grid-template-columns: repeat(2, 1fr) 3fr repeat(2, 0);
+  grid-template-rows: repeat(8, auto);
+  grid-column-gap: 0px;
   grid-row-gap: 0px;
   &__title {
-    &--personal {
+    &--basicInfo {
       grid-area: 1 / 1 / 2 / 3;
     }
     &--history {
       grid-area: 2 / 1 / 3 / 2;
     }
-  }
-  &--personal {
-    grid-area: 1 / 3 / 2 / 4;
-    margin-top: 1.25rem;
-    display: flex;
+    &--value {
+      grid-area: 5 / 1 / 6 / 2;
+    }
+    &--challenge {
+      grid-area: 7 / 1 / 8 / 2;
+    }
   }
   &__historyYear {
     &--student {
@@ -41,10 +42,49 @@
       grid-area: 4 / 3 / 5 / 4;
     }
   }
+  &__valueTitle {
+    &--business {
+      grid-area: 5 / 2 / 6 / 3;
+    }
+    &--create {
+      grid-area: 6 / 2 / 7 / 3;
+    }
+  }
+  &__challengeTitle {
+    &--business {
+      grid-area: 7 / 2 / 8 / 3;
+    }
+    &--create {
+      grid-area: 8 / 2 / 9 / 3;
+    }
+  }
+
+  &__value {
+    &--business {
+      grid-area: 5 / 3 / 6 / 4;
+    }
+    &--create {
+      grid-area: 6 / 3 / 7 / 4;
+    }
+  }
+  &__challenge {
+    &--business {
+      grid-area: 7 / 3 / 8 / 4;
+    }
+    &--create {
+      grid-area: 8 / 3 / 9 / 4;
+    }
+  }
 /*  &__title {
     font-size: 1.25rem;
     font-weight: normal;
   }*/
+}
+
+.basicInfo {
+  grid-area: 1 / 3 / 2 / 4;
+  margin-top: 1.25rem;
+  display: flex;
   &__list {
     margin: 0;
     padding: 0;
@@ -60,4 +100,8 @@
       }
     }
   }
+}
+
+.valuesAndChallenges {
+  background-color: pink;
 }
