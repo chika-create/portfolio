@@ -1,11 +1,13 @@
-import { Profile2 } from "@components/Profile/Profile2";
-import { Policy } from "@components/Profile/Policy";
+import { ProfileBasicInfo } from "@components/Profile/ProfileBasicInfo";
+import { ProfileExperience } from "@components/Profile/ProfileExperience";
+import { ProfileValuesAndChallenges } from "@components/Profile/ProfileValuesAndChallenges";
 
 export const Profile = () => {
   return (
     <>
-      <Profile2 />
-      <Policy />
+      <ProfileBasicInfo />
+      <ProfileExperience />
+      <ProfileValuesAndChallenges />
     </>
   );
 };

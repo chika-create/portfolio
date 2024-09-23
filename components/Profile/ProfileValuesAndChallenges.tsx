@@ -1,7 +1,7 @@
 import { Title } from "@components/parts/Title";
 import profileStyles from "@styles/profile/profile.module.scss";
 
-export const Policy = () => {
+export const ProfileValuesAndChallenges = () => {
   return (
     <section className={profileStyles.policy}>
       <div className={profileStyles.policy__title}>
