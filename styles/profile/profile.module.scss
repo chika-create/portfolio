@@ -20,6 +20,9 @@
       grid-area: 7 / 1 / 8 / 2;
     }
   }
+  &--basicInfo {
+    grid-area: 1 / 3 / 2 / 4;
+  }
   &__historyYear {
     &--student {
       grid-area: 2 / 2 / 3 / 3;
@@ -75,14 +78,9 @@
       grid-area: 8 / 3 / 9 / 4;
     }
   }
-/*  &__title {
-    font-size: 1.25rem;
-    font-weight: normal;
-  }*/
 }
 
 .basicInfo {
-  grid-area: 1 / 3 / 2 / 4;
   margin-top: 1.25rem;
   display: flex;
   &__list {
@@ -100,8 +98,4 @@
       }
     }
   }
-}
-
-.valuesAndChallenges {
-  background-color: pink;
 }

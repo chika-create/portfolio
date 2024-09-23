@@ -9,7 +9,7 @@ export const ProfileBasicInfo = () => {
         <div className={profileStyles[`profile__title--basicInfo`]}>
           <Title level="h3">Personal</Title>
         </div>
-        <div className={profileStyles.basicInfo}>
+        <div className={profileStyles[`profile--basicInfo`]}>
           <ul className={profileStyles.basicInfo__list}>
             <li className={profileStyles.basicInfo__listItem}>
               本告 智香（モトオリ チカ）
