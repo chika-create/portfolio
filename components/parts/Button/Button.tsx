@@ -1,6 +1,6 @@
-import { ButtonProps } from "types/types";
+import { ButtonInterface } from "types/types";
 import buttonStyles from "@styles/parts/button.module.scss";
 
-export const Button = ({ children }: ButtonProps) => {
+export const Button = ({ children }: ButtonInterface) => {
   return <button className={buttonStyles.Button}>{children}</button>;
 };

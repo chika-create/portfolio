@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 
-export interface TextData {
+export interface TextDataInterface {
   children: ReactNode;
 }
 
-export interface TitleProps extends TextData {
+export interface TitleInterface extends TextDataInterface {
   level: "h1" | "h2" | "h3";
 }
 
-export interface ButtonProps {
+export interface ButtonInterface {
   children: string;
 }

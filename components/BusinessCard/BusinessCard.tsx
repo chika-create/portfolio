@@ -3,13 +3,12 @@ import { snsLinks } from "@constants/snsLink";
 
 export const BusinessCard = () => {
   return (
-    <header className={businessCardStyles.header}>
-      <p className={businessCardStyles.introduction}>Hello world</p>
-      <section>
-        <div className={businessCardStyles.businessCard}>
-          <p className={businessCardStyles.businessCard__job}>Web Creator</p>
-          <h1 className={businessCardStyles.businessCard__name}>本告 智香</h1>
-          <p className={businessCardStyles.businessCard__ruby}>CHIKA MOTOORI</p>
+    <section>
+      <div className={businessCardStyles.businessCard}>
+        <p className={businessCardStyles.businessCard__job}>Web Creator</p>
+        <h1 className={businessCardStyles.businessCard__name}>本告 智香</h1>
+        <p className={businessCardStyles.businessCard__ruby}>CHIKA MOTOORI</p>
+        {snsLinks.length > 0 && (
           <ul className={businessCardStyles.businessCard__sns}>
             {snsLinks.map((link) => (
               <li key={link.id} className={businessCardStyles.businessCard__snsItem}>
@@ -28,8 +27,8 @@ export const BusinessCard = () => {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-    </header>
+        )}
+      </div>
+    </section>
   );
 };

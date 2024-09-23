@@ -1,3 +1,15 @@
+@use "../common/colors.scss" as *;
+
+.header {
+  background-color: map-get($gray, "100");
+  padding: 128px 0;
+  text-align: center;
+}
+
+.introduction {
+  font-size: 1.875rem;
+}
+
 .flexBox {
   display: flex;
   gap: 0 3rem;
