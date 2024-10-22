@@ -1,16 +1,6 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
-.header {
-  background-color: map-get($gray, "100");
-  padding: 128px 0;
-  text-align: center;
-}
-
-.introduction {
-  font-size: 1.875rem;
-}
-
 .businessCard {
   width: 36.125rem;
   margin: 5rem auto 0;
