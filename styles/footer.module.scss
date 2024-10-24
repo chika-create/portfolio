@@ -1,22 +1,44 @@
 @use "./common/colors.scss" as *;
+@import "./common/variables.scss";
 
 .footer {
   width: 1000px;
   background-color: white;
   margin: 8rem auto 0;
-  padding: 2.5rem 0;
+  padding: 2.5rem 1rem;
   border-top: 1px solid map-get($gray, "300");
 }
 
 .menuList {
   display: flex;
   gap: 3rem;
-  &__item {
-  }
+  /* &__item {
+  }*/
 }
 
 .copyright {
   color: map-get($gray, "400");
   font-size: 0.875rem;
   margin-top: 2.5rem;
+}
+
+@media (max-width: $breakpoint-sp) {
+  .footer {
+    width: 100%;
+  }
+
+  .menuList {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    &__item {
+      font-size: 0.875rem;
+    }
+    }
+  
+  .copyright {
+    margin-top: 2.5rem;
+    small {
+      font-size: 0.815rem;
+    }
+  }
 }

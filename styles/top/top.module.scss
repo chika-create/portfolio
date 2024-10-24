@@ -1,8 +1,9 @@
 @use "../common/colors.scss" as *;
+@import "../common/variables.scss";
 
 .header {
   background-color: map-get($gray, "100");
-  padding: 128px 0;
+  padding: 8rem 1rem;
   text-align: center;
 }
 
@@ -18,4 +19,14 @@
 
 .aboutText {
   margin-top: 2.5rem;
+}
+
+@media (max-width: $breakpoint-sp) {
+  .header {
+    padding: 4rem 1rem;
+  }
+  
+  .introduction {
+    font-size: 1.5rem;
+  }
 }

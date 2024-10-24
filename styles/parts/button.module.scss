@@ -6,7 +6,7 @@
   text-align: center;
   font-size: 1.125rem;
   line-height: 2;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   margin: 2.5rem auto 0;
   padding: 0.25rem 1rem;
   border: 1px solid #a1a1aa;
@@ -16,4 +16,12 @@
   -webkit-box-shadow: $shadow-base;
   -ms-box-shadow: $shadow-base;*/
   box-shadow: $shadow-base;
+}
+
+@media (max-width: $breakpoint-sp) {
+  .Button {
+    font-size: 0.875rem;
+    margin: 1.25rem auto 0;
+    padding: 0.125rem 0.5rem;
+    }
 }
