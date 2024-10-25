@@ -3,6 +3,7 @@
 
 .footer {
   width: 1000px;
+  box-sizing: border-box;
   background-color: white;
   margin: 8rem auto 0;
   padding: 2.5rem 1rem;
@@ -12,8 +13,10 @@
 .menuList {
   display: flex;
   gap: 3rem;
-  /* &__item {
-  }*/
+  padding-left: 0;
+  &__item {
+    list-style: none;
+  }
 }
 
 .copyright {

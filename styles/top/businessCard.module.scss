@@ -27,6 +27,7 @@
     gap: 1rem;
     margin-top: 2.75rem;
     &Item {
+      list-style: none;
       &Link {
         padding: 0.4rem;
         /* -moz-box-shadow: $shadow-base;
