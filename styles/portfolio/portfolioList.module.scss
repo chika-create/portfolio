@@ -1,3 +1,5 @@
+@import "../common/variables.scss";
+
 .box {
   display: flex;
   gap: 48px;
@@ -10,4 +12,10 @@
 
 .image {
   width: 100%;
+}
+
+@media (max-width: $breakpoint-sp) {
+  .box {
+    flex-flow: column;
+  }
 }
