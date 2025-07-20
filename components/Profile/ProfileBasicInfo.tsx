@@ -5,7 +5,7 @@ import profileStyles from "@styles/profile/profile.module.scss";
 export const ProfileBasicInfo = () => {
   return (
     <>
-      <div className={profileStyles.profile}>
+      <div className={profileStyles[`profile--personal`]}>
         <div className={profileStyles[`profile__title--basicInfo`]}>
           <Title level="h3">Personal</Title>
         </div>

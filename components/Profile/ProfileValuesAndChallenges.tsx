@@ -3,7 +3,7 @@ import profileStyles from "@styles/profile/profile.module.scss";
 
 export const ProfileValuesAndChallenges = () => {
   return (
-    <section className={profileStyles.profile}>
+    <section className={profileStyles[`profile--value`]}>
       <div className={profileStyles[`profile__title--value`]}>
         <Title level="h3">大切にしていること</Title>
       </div>

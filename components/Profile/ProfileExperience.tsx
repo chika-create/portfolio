@@ -4,7 +4,7 @@ import profileStyles from "@styles/profile/profile.module.scss";
 export const ProfileExperience = () => {
   return (
     <>
-      <div className={profileStyles.profile}>
+      <div className={profileStyles[`profile--history`]}>
         <div className={profileStyles[`profile__title--history`]}>
           <Title level="h3">History</Title>
         </div>
