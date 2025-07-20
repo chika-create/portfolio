@@ -6,7 +6,7 @@ export const ProfileBasicInfo = () => {
   return (
     <>
       <div className={profileStyles[`profile--personal`]}>
-        <div className={profileStyles[`profile__title--basicInfo`]}>
+        <div className={profileStyles[`profile--personal__titles`]}>
           <Title level="h3">Personal</Title>
         </div>
         <div className={profileStyles[`profile--basicInfo`]}>
