@@ -5,10 +5,10 @@ export const ProfileExperience = () => {
   return (
     <>
       <div className={profileStyles[`profile--history`]}>
-        <div className={profileStyles[`profile__title--history`]}>
+        <div className={profileStyles[`profile--history__title`]}>
           <Title level="h3">History</Title>
         </div>
-        <p className={profileStyles[`profile__historyYear--student`]}>
+        <p className={profileStyles[`profile--history__year--student`]}>
           <time dateTime="2007-04-01">2007年</time> -{" "}
           <time dateTime="2011-03-31">2011年</time>
         </p>
@@ -20,7 +20,7 @@ export const ProfileExperience = () => {
             基本情報技術者試験の資格取得やPHP、JavaScriptなどを使用しプログラミングの基礎などを学習しました。
           </p>
         </div>
-        <p className={profileStyles[`profile__historyYear--newGraduate`]}>
+        <p className={profileStyles[`profile--history__year--newGraduate`]}>
           <time dateTime="2011-04-01">2011年</time> -{" "}
           <time dateTime="2017-04-31">2017年</time>
         </p>
@@ -34,7 +34,7 @@ export const ProfileExperience = () => {
             後者では楽天やAmazonなどのモール運営、特集ページの企画、商品企画、広告など広く担当していました。
           </p>
         </div>
-        <p className={profileStyles[`profile__historyYear--currentJob`]}>
+        <p className={profileStyles[`profile--history__year--currentJob`]}>
           <time dateTime="2017-05-01">2017年</time> -
         </p>
         <div className={profileStyles[`profile__history--currentJob`]}>

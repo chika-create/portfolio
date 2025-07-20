@@ -29,7 +29,7 @@ export const ProfileValuesAndChallenges = () => {
         <ul className={profileStyles[`profile__challenge--business`]}>
           <li>ビジョンを描くこと</li>
         </ul>
-        <p className={profileStyles[`profile--challenge__yitle--create`]}>Create</p>
+        <p className={profileStyles[`profile--challenge__title--create`]}>Create</p>
         <ul className={profileStyles[`profile__challenge--create`]}>
           <li>デザイン</li>
         </ul>
