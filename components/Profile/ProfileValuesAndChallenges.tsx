@@ -21,16 +21,16 @@ export const ProfileValuesAndChallenges = () => {
         </ul>
       </section>
 
-      <section className={profileStyles[`profile--challenge`]}>
-        <div className={profileStyles[`profile--challenge__title--challenge`]}>
+      <section className={profileStyles[`challenge`]}>
+        <div className={profileStyles[`challenge__title--challenge`]}>
           <Title level="h3">苦手なこと</Title>
         </div>
-        <p className={profileStyles[`profile--challenge__title--business`]}>Business</p>
-        <ul className={profileStyles[`profile__challenge--business`]}>
+        <p className={profileStyles[`challenge__title--business`]}>Business</p>
+        <ul className={profileStyles[`challenge--business`]}>
           <li>ビジョンを描くこと</li>
         </ul>
-        <p className={profileStyles[`profile--challenge__title--create`]}>Create</p>
-        <ul className={profileStyles[`profile__challenge--create`]}>
+        <p className={profileStyles[`challenge__title--create`]}>Create</p>
+        <ul className={profileStyles[`challenge--create`]}>
           <li>デザイン</li>
         </ul>
       </section>
