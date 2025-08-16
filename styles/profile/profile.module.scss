@@ -55,6 +55,7 @@
       grid-area: 4 / 2 / 5 / 3;
     }
   }
+
   &--student {
     grid-area: 2 / 3 / 3 / 4;
   }
@@ -89,7 +90,6 @@
   &--create {
     grid-area: 6 / 3 / 7 / 4;
   }
-
 }
 
 .challenge {
@@ -108,14 +108,6 @@
 
   &__title {
     grid-area: 7 / 1 / 8 / 2;
-  }
-  &__challengeTitle {
-    &--business {
-      grid-area: 7 / 2 / 8 / 3;
-    }
-    &--create {
-      grid-area: 8 / 2 / 9 / 3;
-    }
   }
 }
 
