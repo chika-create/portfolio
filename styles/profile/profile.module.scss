@@ -1,22 +1,23 @@
 @use "../common/colors.scss" as *;
 
+.history {
+  &--student {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  &--newGraduate {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+  &--currentJob {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+}
+
 .profile {
   display: grid;
   grid-template-columns: repeat(2, 1fr) 3fr repeat(2, 0);
   grid-template-rows: repeat(8, auto);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  &__history {
-    &--student {
-      grid-area: 2 / 3 / 3 / 4;
-    }
-    &--newGraduate {
-      grid-area: 3 / 3 / 4 / 4;
-    }
-    &--currentJob {
-      grid-area: 4 / 3 / 5 / 4;
-    }
-  }
   
   &__valueTitle {
     &--business {
@@ -67,7 +68,7 @@
   }
 }
 
-.profile--history {
+.history {
   display: grid;
   grid-template-columns: repeat(2, 1fr) 3fr repeat(2, 0);
   grid-template-rows: repeat(8, auto);
