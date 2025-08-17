@@ -1,4 +1,6 @@
+/* メモ：このuseいる？ */
 @use "sass:map";
 
 $shadow-xl: 0px 20px 25px 0 rgba(0, 0, 0, 0.1);
 $shadow-base: 0px 1px 3px 0 rgba(0, 0, 0, 0.1);
+$breakpoint-sp: 768px;

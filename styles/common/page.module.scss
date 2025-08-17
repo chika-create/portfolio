@@ -1,15 +1,18 @@
 @use "../common/colors.scss" as *;
+@import "../common/variables.scss";
 
 .header {
   background-color: map-get($gray, "100");
-  padding: 128px 0;
+  padding: 8rem 0;
   text-align: center;
 }
 
 .main {
   width: 1000px;
+  box-sizing: border-box;
   background-color: white;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .codeText {
@@ -18,4 +21,16 @@
   font-size: 1.125rem;
   line-height: 2;
   margin-top: 1.125rem;
+}
+
+@media (max-width: $breakpoint-sp) {
+  .main {
+    width: 100%;
+  }  
+
+  .codeText {
+    font-size: 1rem;
+    line-height: 1;
+    margin-top: 1rem;
+  }  
 }

@@ -1,0 +1,45 @@
+@use "../common/colors.scss" as *;
+
+.value {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 3fr repeat(2, 0);
+  grid-template-rows: repeat(8, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  &__title {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  &__valueTitle {
+    &--business {
+      grid-area: 5 / 2 / 6 / 3;
+    }
+    &--create {
+      grid-area: 6 / 2 / 7 / 3;
+    }
+  }
+  &--business {
+    grid-area: 5 / 3 / 6 / 4;
+  }
+  &--create {
+    grid-area: 6 / 3 / 7 / 4;
+  }
+}
+
+.challenge {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 3fr repeat(2, 0);
+  grid-template-rows: repeat(8, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  &--business {
+    grid-area: 7 / 3 / 8 / 4;
+  }
+  &--create {
+    grid-area: 8 / 3 / 9 / 4;
+  }
+
+  &__title {
+    grid-area: 7 / 1 / 8 / 2;
+  }
+}
