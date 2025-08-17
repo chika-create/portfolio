@@ -1,0 +1,35 @@
+@use "../common/colors.scss" as *;
+
+.history {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 3fr repeat(2, 0);
+  grid-template-rows: repeat(8, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  &__title {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  
+  &__year {
+    &--student {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    &--newGraduate {
+      grid-area: 3 / 2 / 4 / 3;
+    }
+    &--currentJob {
+      grid-area: 4 / 2 / 5 / 3;
+    }
+  }
+  
+  &--student {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  &--newGraduate {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+  &--currentJob {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+}
