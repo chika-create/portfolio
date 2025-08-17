@@ -1,6 +1,6 @@
 import { Title } from "@components/parts/Title";
 import { snsLinks } from "@constants/snsLink";
-import profileStyles from "@styles/profile/profile.module.scss";
+import profileStyles from "@styles/profile/profileBasicInfo.module.scss";
 
 export const ProfileBasicInfo = () => {
   return (
