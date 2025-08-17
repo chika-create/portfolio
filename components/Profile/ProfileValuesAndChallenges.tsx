@@ -1,5 +1,5 @@
 import { Title } from "@components/parts/Title";
-import profileStyles from "@styles/profile/profile.module.scss";
+import profileStyles from "@styles/profile/profileValuesAndChallenges.module.scss";
 
 export const ProfileValuesAndChallenges = () => {
   return (
