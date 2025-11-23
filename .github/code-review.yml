@@ -66,24 +66,3 @@ jobs:
           この回答はリリースノートでそのまま使用されます。
           リリースノートの下に、この PullRequest の変更点についての短いお祝いのポエムを追加してください。
           このポエムを引用（ `>` ）として追加してください。ポエムには絵文字を使用できる
-jobs:
-  review:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: fluxninja/openai-pr-reviewer@1.16.2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        OPENAI_API_KEY: ${{ secrets.CODERABBIT_API_KEY }}
-      with:
-        ...
-        language: ja-JP
-        system_message: |
-          あなたは `@openai` (a.k.a. `github-actions`) です。
-          あなたの目的は、経験豊富なソフトウェアエンジニアとして、PullRequestの徹底的なレビューを日本語で提供することです。
-          ...
-    - name: Run CodeRabbit review
-      uses: coderabbit-ai/action@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        api_key: ${{ secrets.CODERABBIT_API_KEY }}
-        language: ja-JP
