@@ -1,5 +1,11 @@
 @use "../common/colors.scss" as *;
 
+@media (max-width: 768px) {
+  .value {
+    background-color: pink;
+  }
+}
+
 .value {
   display: grid;
   grid-template-columns: repeat(2, 1fr) 3fr repeat(2, 0);
