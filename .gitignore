@@ -9,6 +9,11 @@
 # testing
 /coverage
 
+# cursor (IDE設定)
+/.cursor/
+# cursor (生成ファイルの保存先)
+/cursor/
+
 # next.js
 /.next/
 /out/
