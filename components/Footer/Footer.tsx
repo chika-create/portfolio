@@ -11,7 +11,7 @@ export const Footer = () => {
       </ul>
       {/* TODO: 今いるメニューの箇所にmodifireを付与するロジックを追加する */}
       <p className={footerStyles.copyright}>
-        <small>&copy; CHIKA MOTOORI 2024</small>
+        <small>&copy; CHIKA MOTOORI {new Date().getFullYear()}</small>
       </p>
     </footer>
   );
