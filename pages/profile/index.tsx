@@ -11,7 +11,7 @@ export default function profile() {
       <main className={pageStyles.main}>
         <section>
           <Title level="h2">私について</Title>
-          <code className={pageStyles.codeText}>const AboutMe = () = </code>
+          <code className={pageStyles.codeText}>const AboutMe = () ={'>'} </code>
           <Profile />
           <Button>return morePortfolio;</Button>
           <code className={pageStyles.codeText}>{"}"}</code>
