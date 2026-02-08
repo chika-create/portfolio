@@ -16,6 +16,7 @@ export const BusinessCard = () => {
                   href={link.url}
                   className={businessCardStyles.businessCard__snsItemLink}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img
                     src={`/images/` + link.image}
