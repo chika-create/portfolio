@@ -8,7 +8,7 @@ export const PortfolioList = () => {
         <figure>
           <img
             src="https://placehold.jp/412x260.png"
-            alt=""
+            alt="hoge"
             className={portfolioListStyles.image}
           />
         </figure>
@@ -21,7 +21,7 @@ export const PortfolioList = () => {
         <figure>
           <img
             src="https://placehold.jp/412x260.png"
-            alt=""
+            alt="hoge"
             className={portfolioListStyles.image}
           />
         </figure>
