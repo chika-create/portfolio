@@ -4,7 +4,7 @@ import { Title } from "@components/parts/Title";
 import { Button } from "@components/parts/Button";
 import { BusinessCard } from "@components/BusinessCard";
 import { PortfolioList } from "@components/PortfolioList";
-import { Footer } from "@components/Footer/";
+import { Footer } from "@components/Footer";
 
 export function Top() {
   return (
