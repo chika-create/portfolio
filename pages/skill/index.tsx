@@ -4,16 +4,16 @@ import { Button } from "@components/parts/Button";
 import { Footer } from "@components/Footer";
 import { Skill } from "@components/Skill";
 
-export default function profile() {
+export default function skill() {
   return (
     <>
       <header className={pageStyles.header}>hoge</header>
       <main className={pageStyles.main}>
         <section>
-          <Title level="h2">私について</Title>
-          <code className={pageStyles.codeText}>const AboutMe = () = </code>
+          <Title level="h2">スキル</Title>
+          <code className={pageStyles.codeText}>const Skill = () ={'>'} </code>
           <Skill />
-          <Button>return morePortfolio;</Button>
+          <Button>return moreHoge;</Button>
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
       </main>
