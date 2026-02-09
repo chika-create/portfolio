@@ -13,7 +13,7 @@ export default function skill() {
           <Title level="h2">スキル</Title>
           <code className={pageStyles.codeText}>const Skill = () ={'>'} </code>
           <Skill />
-          <Button>return moreHoge;</Button>
+          <Button>return TOP;</Button>
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
       </main>
