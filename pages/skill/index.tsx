@@ -2,9 +2,9 @@ import pageStyles from "@styles/common/page.module.scss";
 import { Title } from "@components/parts/Title";
 import { Button } from "@components/parts/Button";
 import { Footer } from "@components/Footer";
-import { Skill } from "@components/Skill";
+import { Skill as SkillComponent } from "@components/Skill";
 
-export default function skill() {
+export default function Skill() {
   return (
     <>
       <header className={pageStyles.header}>hoge</header>
@@ -12,7 +12,7 @@ export default function skill() {
         <section>
           <Title level="h2">スキル</Title>
           <code className={pageStyles.codeText}>const Skill = () ={'>'} </code>
-          <Skill />
+          <SkillComponent />
           <Button>return TOP;</Button>
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
