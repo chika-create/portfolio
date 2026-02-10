@@ -11,3 +11,9 @@ export interface TitleInterface extends TextDataInterface {
 export interface ButtonInterface {
   children: string;
 }
+
+export interface SnsLink {
+  id: string;
+  url: string;
+  image: string;
+}
