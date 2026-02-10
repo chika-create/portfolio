@@ -19,7 +19,7 @@ export const BusinessCard = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src={`/images/` + link.image}
+                    src={`/images/${link.image}`}
                     className={businessCardStyles.businessCard__snsItemIcon}
                     width="auto"
                     height={16}
