@@ -4,7 +4,7 @@ import { Title } from "@components/parts/Title";
 import { Button } from "@components/parts/Button";
 import { BusinessCard } from "@components/BusinessCard";
 import { PortfolioList } from "@components/PortfolioList";
-import { Footer } from "@components/Footer/";
+import { Footer } from "@components/Footer";
 
 export function Top() {
   return (
@@ -17,14 +17,14 @@ export function Top() {
       <main className={pageStyles.main}>
         <section>
           <Title level="h2">制作事例</Title>
-          <code className={pageStyles.codeText}>const portfolio = () = </code>
+          <code className={pageStyles.codeText}>const portfolio = () ={'>'} </code>
           <PortfolioList />
           <Button>return morePortfolio;</Button>
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
         <section>
           <Title level="h2">私について</Title>
-          <code className={pageStyles.codeText}>const aboutMe = () =</code>
+          <code className={pageStyles.codeText}>const aboutMe = () ={'>'}</code>
           <div className={topStyles.aboutText}>
             <p>
               1988年、兵庫在住のWeb制作者です。

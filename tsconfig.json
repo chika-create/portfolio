@@ -22,7 +22,6 @@
       "@/*": ["./src/*"],
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
-      "@types/*": ["types/*"],
       "@constants/*": ["constants/*"]
     }
   },

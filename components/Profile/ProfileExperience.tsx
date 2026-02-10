@@ -22,7 +22,7 @@ export const ProfileExperience = () => {
         </div>
         <p className={profileStyles[`history__year--newGraduate`]}>
           <time dateTime="2011-04-01">2011年</time> -{" "}
-          <time dateTime="2017-04-31">2017年</time>
+          <time dateTime="2017-04-30">2017年</time>
         </p>
         <div className={profileStyles[`history--newGraduate`]}>
           <p>株式会社ドアズ</p>
