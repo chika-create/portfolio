@@ -5,18 +5,18 @@ export const Footer = () => {
   return (
     <footer className={footerStyles.footer}>
       <ul className={footerStyles.menuList}>
-        <Link href="/">
-          <li className={footerStyles.menuList__item}>TOP</li>
-        </Link>
-        <Link href="/portfolio">
-          <li className={footerStyles.menuList__item}>Portfolio</li>
-        </Link>
-        <Link href="/profile">
-          <li className={footerStyles.menuList__item}>AboutMe</li>
-        </Link>
-        <Link href="/skill">
-          <li className={footerStyles.menuList__item}>MySkillSet</li>
-        </Link>
+        <li className={footerStyles.menuList__item}>
+          <Link href="/">TOP</Link>
+        </li>
+        <li className={footerStyles.menuList__item}>
+          <Link href="/portfolio">Portfolio</Link>
+        </li>
+        <li className={footerStyles.menuList__item}>
+          <Link href="/profile">AboutMe</Link>
+        </li>
+        <li className={footerStyles.menuList__item}>
+          <Link href="/skill">MySkillSet</Link>
+        </li>
       </ul>
       {/* TODO: 今いるメニューの箇所にmodifireを付与するロジックを追加する */}
       <p className={footerStyles.copyright}>
