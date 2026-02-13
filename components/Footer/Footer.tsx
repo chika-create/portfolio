@@ -18,7 +18,7 @@ export const Footer = () => {
           <Link href="/skill">MySkillSet</Link>
         </li>
       </ul>
-      {/* TODO: 今いるメニューの箇所にmodifireを付与するロジックを追加する */}
+      {/* TODO: 今いるメニューの箇所にmodifireを付与するロジックを追加する？ */}
       <p className={footerStyles.copyright}>
         <small>&copy; CHIKA MOTOORI {new Date().getFullYear()}</small>
       </p>
