@@ -1,72 +1,202 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
+.pageTopComment {
+  color: map-get($gray, "500");
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+}
+
+.pageContent {
+  padding: 2.5rem 0 6rem;
+}
+
+.pageHeading {
+  max-width: 860px;
+  margin-bottom: 1.5rem;
+}
+
+.pageDescription {
+  margin-top: 0.75rem;
+  color: map-get($gray, "500");
+  line-height: 1.75;
+  max-width: 680px;
+}
+
 .skillRoot {
-  // ハイドレーション用の単一ルート（フラグメントだと section の一致でエラーになるため）
+  width: 100%;
+}
+
+.skillSummary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.75rem;
+  border: 1px solid map-get($gray, "200");
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: $shadow-base;
+}
+
+.skillSummary__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skillSummary__label {
+  color: map-get($gray, "500");
+  font-size: 0.875rem;
+}
+
+.skillSummary__text {
+  color: map-get($gray, "600");
+  line-height: 1.8;
+}
+
+.levelGuide {
+  border: 1px solid map-get($gray, "200");
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background-color: map-get($gray, "50");
+}
+
+.levelGuide__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.levelGuide__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.levelGuide__item {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.levelGuide__score {
+  font-weight: 700;
+}
+
+.levelGuide__itemTitle {
+  margin: 0;
+  font-weight: 600;
+  color: map-get($gray, "700");
+}
+
+.levelGuide__itemDescription {
+  margin: 0.25rem 0 0;
+  color: map-get($gray, "600");
+  line-height: 1.65;
 }
 
 .skillSection {
-  margin-top: 1.25rem;
+  margin-top: 2rem;
+}
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.skillSection__header {
+  margin-bottom: 1rem;
+}
 
-    &Item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-top: 0.5rem;
+.skillSection__title {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid map-get($gray, "200");
+  color: map-get($gray, "700");
+  font-size: 0.95rem;
+  font-weight: 600;
+}
 
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-  }
+.skillSection__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
 
-  &__itemName {
-    min-width: 0;
-  }
+.skillSection__listItem {
+  padding: 1.25rem;
+  border: 1px solid map-get($gray, "200");
+  border-radius: 1rem;
+  background-color: #ffffff;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.skillSection__itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.skillSection__itemName {
+  font-weight: 700;
+  color: map-get($gray, "900");
+  min-width: 0;
 }
 
 .skillLevel {
   display: flex;
-  gap: 0.25rem;
+  gap: 0.35rem;
   flex-shrink: 0;
-
-  &__dot,
-  &__dotFilled {
-    width: 0.75rem;
-    height: 0.75rem;
-    border: 1px solid map-get($gray, "300");
-    background-color: #fff;
-  }
-
-  &__dotFilled {
-    background-color: map-get($gray, "400");
-    border-color: map-get($gray, "400");
-  }
 }
 
-.categoryLabel {
-  color: map-get($gray, "400");
-  font-size: 0.875rem;
-  margin-top: 1.25rem;
-  margin-bottom: 0.25rem;
+.skillLevel__dot,
+.skillLevel__dotFilled {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid map-get($gray, "300");
+  background-color: #ffffff;
+}
 
-  &:first-of-type {
-    margin-top: 0;
-  }
+.skillLevel__dotFilled {
+  background-color: map-get($gray, "400");
+  border-color: map-get($gray, "400");
+}
+
+.skillSection__itemDescription {
+  margin: 0;
+  color: map-get($gray, "600");
+  line-height: 1.8;
 }
 
 @media (max-width: $breakpoint-sp) {
-  .skillSection {
-    margin-top: 1rem;
+  .skillSummary {
+    grid-template-columns: 1fr;
   }
 
-  .categoryLabel {
-    font-size: 0.8125rem;
-    margin-top: 1rem;
+  .pageContent {
+    padding: 1.5rem 0 4rem;
+  }
+
+  .skillSummary {
+    padding: 1.25rem;
+  }
+
+  .skillSection__listItem {
+    padding: 1rem;
+  }
+
+  .pageHeading {
+    margin-bottom: 1rem;
+  }
+
+  .skillSection__itemHeader {
+    justify-content: space-between;
   }
 }
