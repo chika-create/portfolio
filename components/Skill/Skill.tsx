@@ -1,5 +1,5 @@
-import skillStyles from "@styles/skill/skill.module.scss";
 import { SkillCategory } from "types/types";
+import skillStyles from "@styles/skill/skill.module.scss";
 
 const SKILL_MAX_LEVEL = 5;
 

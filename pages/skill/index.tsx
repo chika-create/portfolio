@@ -9,15 +9,12 @@ export default function Skill() {
   return (
     <>
       <header className={pageStyles.header}>
-        <p className={skillStyles.pageTopComment}>// スキルセット</p>
+        fuga
       </header>
       <main className={pageStyles.main}>
         <section className={skillStyles.pageContent}>
-          <Title level="h2">SkillSet</Title>
+          <Title level="h2">// スキルセット</Title>
           <code className={pageStyles.codeText}>const skillSet = () =&gt; {'{'}</code>
-          <p className={skillStyles.pageDescription}>
-            技術スタックとスキルレベルを一覧にまとめたページです。
-          </p>
           <SkillComponent />
           <code className={pageStyles.codeText}>{"}"}</code>
           <Button>return TOP;</Button>
