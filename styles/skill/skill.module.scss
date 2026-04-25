@@ -1,6 +1,26 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
+.skillLevel {
+  display: flex;
+  gap: 1px;
+  flex-shrink: 0;
+}
+
+.skillLevel__barOn,
+.skillLevel__barOff{
+  width: calc(100% / 5 - 0.2rem);
+  height: 2rem;
+  background-color: map-get($gray, "100");
+}
+
+.skillLevel__barOn {
+  background-color: map-get($gray, "300");
+}
+
+
+
+
 .pageTopComment {
   color: map-get($gray, "500");
   font-size: 0.875rem;
@@ -149,25 +169,7 @@
   min-width: 0;
 }
 
-.skillLevel {
-  display: flex;
-  gap: 0.35rem;
-  flex-shrink: 0;
-}
 
-.skillLevel__dot,
-.skillLevel__dotFilled {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 9999px;
-  border: 1px solid map-get($gray, "300");
-  background-color: #ffffff;
-}
-
-.skillLevel__dotFilled {
-  background-color: map-get($gray, "400");
-  border-color: map-get($gray, "400");
-}
 
 .skillSection__itemDescription {
   margin: 0;

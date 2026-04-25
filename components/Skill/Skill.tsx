@@ -167,8 +167,8 @@ export const Skill = () => {
                         key={i}
                         className={
                           i < item.level
-                            ? skillStyles.skillLevel__dotFilled
-                            : skillStyles.skillLevel__dot
+                            ? skillStyles.skillLevel__barOn
+                            : skillStyles.skillLevel__barOff
                         }
                       />
                     ))}
