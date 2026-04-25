@@ -132,16 +132,12 @@ const skillCategories: SkillCategory[] = [
 
 export const Skill = () => {
   return (
-    <div className={skillStyles.skillRoot}>
-      <div className={skillStyles.skillSummary}>
-        <div className={skillStyles.skillSummary__intro}>
-          <p className={skillStyles.skillSummary__label}># SkillSet</p>
-          <p className={skillStyles.skillSummary__text}>
+    <section>
+          <p># SkillSet</p>
+          <p>
             技術スタックと習熟度を紹介します。各スキルは5段階で評価しています。
           </p>
-        </div>
-        <div className={skillStyles.levelGuide}>
-          <p className={skillStyles.levelGuide__title}>5段階評価</p>
+          <p>5段階評価</p>
           <ul className={skillStyles.levelGuide__list}>
             {levelGuide.map((item) => (
               <li key={item.score} className={skillStyles.levelGuide__item}>
@@ -155,17 +151,12 @@ export const Skill = () => {
               </li>
             ))}
           </ul>
-        </div>
-      </div>
       {skillCategories.map((category) => (
         <section key={category.label} className={skillStyles.skillSection}>
-          <div className={skillStyles.skillSection__header}>
             <span className={skillStyles.skillSection__title}>{category.title}</span>
-          </div>
           <ul className={skillStyles.skillSection__list}>
             {category.items.map((item) => (
               <li key={item.name} className={skillStyles.skillSection__listItem}>
-                <div className={skillStyles.skillSection__itemHeader}>
                   <span className={skillStyles.skillSection__itemName}>{item.name}</span>
                   <span
                     className={skillStyles.skillLevel}
@@ -182,7 +173,6 @@ export const Skill = () => {
                       />
                     ))}
                   </span>
-                </div>
                 <p className={skillStyles.skillSection__itemDescription}>
                   {item.description}
                 </p>
@@ -191,6 +181,6 @@ export const Skill = () => {
           </ul>
         </section>
       ))}
-    </div>
+    </section>
   );
 };
