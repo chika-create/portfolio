@@ -154,10 +154,10 @@ export const Skill = () => {
       {skillCategories.map((category) => (
         <section key={category.label} className={skillStyles.skillSection}>
             <span className={skillStyles.skillSection__title}>{category.title}</span>
-          <ul className={skillStyles.skillSection__list}>
+          <ul className={skillStyles.skillList}>
             {category.items.map((item) => (
-              <li key={item.name} className={skillStyles.skillSection__listItem}>
-                  <span className={skillStyles.skillSection__itemName}>{item.name}</span>
+              <li key={item.name} className={skillStyles.skillList_item}>
+                  <span className={skillStyles.skillList_itemName}>{item.name}</span>
                   <span
                     className={skillStyles.skillLevel}
                     aria-label={`5段階中 ${item.level}`}
@@ -173,7 +173,7 @@ export const Skill = () => {
                       />
                     ))}
                   </span>
-                <p className={skillStyles.skillSection__itemDescription}>
+                <p className={skillStyles.skillList_itemDescription}>
                   {item.description}
                 </p>
               </li>

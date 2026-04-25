@@ -1,6 +1,35 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
+.skillList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.skillList_item {
+  padding: 1.25rem;
+  border: 1px solid map-get($gray, "200");
+  border-radius: 1rem;
+  background-color: #ffffff;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.skillList_itemName {
+  font-weight: 700;
+  color: map-get($gray, "900");
+  min-width: 0;
+}
+
+.skillList_itemDescription {
+  margin: 0;
+  color: map-get($gray, "600");
+  line-height: 1.8;
+}
+
 .skillLevel {
   display: flex;
   gap: 1px;
@@ -18,7 +47,7 @@
   background-color: map-get($gray, "300");
 }
 
-
+/*.↑ここまで手動調整済み・進行中のもの */
 
 
 .pageTopComment {
@@ -138,44 +167,7 @@
   font-weight: 600;
 }
 
-.skillSection__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 1rem;
-}
 
-.skillSection__listItem {
-  padding: 1.25rem;
-  border: 1px solid map-get($gray, "200");
-  border-radius: 1rem;
-  background-color: #ffffff;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.skillSection__itemHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.skillSection__itemName {
-  font-weight: 700;
-  color: map-get($gray, "900");
-  min-width: 0;
-}
-
-
-
-.skillSection__itemDescription {
-  margin: 0;
-  color: map-get($gray, "600");
-  line-height: 1.8;
-}
 
 @media (max-width: $breakpoint-sp) {
   .skillSummary {
@@ -190,7 +182,7 @@
     padding: 1.25rem;
   }
 
-  .skillSection__listItem {
+  .skillList_item {
     padding: 1rem;
   }
 
