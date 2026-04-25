@@ -1,18 +1,7 @@
 import skillStyles from "@styles/skill/skill.module.scss";
+import { SkillCategory } from "types/types";
 
 const SKILL_MAX_LEVEL = 5;
-
-type SkillItem = {
-  name: string;
-  level: number;
-  description: string;
-};
-
-type SkillCategory = {
-  label: string;
-  title: string;
-  items: SkillItem[];
-};
 
 const levelGuide = [
   {

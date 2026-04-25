@@ -17,3 +17,16 @@ export interface SnsLink {
   url: string;
   image: string;
 }
+
+export type SkillItem = {
+  name: string;
+  level: number;
+  description: string;
+};
+
+export type SkillCategory = {
+  label: string;
+  title: string;
+  items: SkillItem[];
+};
+

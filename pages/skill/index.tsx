@@ -13,13 +13,11 @@ export default function Skill() {
       </header>
       <main className={pageStyles.main}>
         <section className={skillStyles.pageContent}>
-          <div className={skillStyles.pageHeading}>
-            <Title level="h2">SkillSet</Title>
-            <p className={skillStyles.pageDescription}>
-              技術スタックとスキルレベルを一覧にまとめたページです。
-            </p>
-          </div>
+          <Title level="h2">SkillSet</Title>
           <code className={pageStyles.codeText}>const skillSet = () =&gt; {'{'}</code>
+          <p className={skillStyles.pageDescription}>
+            技術スタックとスキルレベルを一覧にまとめたページです。
+          </p>
           <SkillComponent />
           <code className={pageStyles.codeText}>{"}"}</code>
           <Button>return TOP;</Button>
