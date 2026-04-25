@@ -12,7 +12,7 @@ export default function Skill() {
         fuga
       </header>
       <main className={pageStyles.main}>
-        <section className={skillStyles.pageContent}>
+        <section>
           <Title level="h2">// スキルセット</Title>
           <code className={pageStyles.codeText}>const skillSet = () =&gt; {'{'}</code>
           <SkillComponent />

@@ -1,6 +1,58 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
+
+.levelGuideList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.levelGuideList__item {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.levelGuideList__itemScore {
+  font-weight: 700;
+}
+
+.levelGuideList__itemTitle {
+  margin: 0;
+  font-weight: 600;
+  color: map-get($gray, "700");
+}
+
+.levelGuideList__itemDescription {
+  margin: 0.25rem 0 0;
+  color: map-get($gray, "600");
+  line-height: 1.65;
+}
+
+
+
+.skillSection {
+  margin-top: 2rem;
+}
+
+
+.skillSection__title {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid map-get($gray, "200");
+  color: map-get($gray, "700");
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+
+
 .skillList {
   margin: 0;
   padding: 0;
@@ -9,7 +61,7 @@
   gap: 1rem;
 }
 
-.skillList_item {
+.skillList__item {
   padding: 1.25rem;
   border: 1px solid map-get($gray, "200");
   border-radius: 1rem;
@@ -18,13 +70,13 @@
   gap: 0.75rem;
 }
 
-.skillList_itemName {
+.skillList__itemName {
   font-weight: 700;
   color: map-get($gray, "900");
   min-width: 0;
 }
 
-.skillList_itemDescription {
+.skillList__itemDescription {
   margin: 0;
   color: map-get($gray, "600");
   line-height: 1.8;
@@ -47,150 +99,12 @@
   background-color: map-get($gray, "300");
 }
 
-/*.↑ここまで手動調整済み・進行中のもの */
-
-
-.pageTopComment {
-  color: map-get($gray, "500");
-  font-size: 0.875rem;
-  letter-spacing: 0.03em;
-}
-
-.pageContent {
-  padding: 2.5rem 0 6rem;
-}
-
-.pageHeading {
-  max-width: 860px;
-  margin-bottom: 1.5rem;
-}
-
-.pageDescription {
-  margin-top: 0.75rem;
-  color: map-get($gray, "500");
-  line-height: 1.75;
-  max-width: 680px;
-}
-
-.skillRoot {
-  width: 100%;
-}
-
-.skillSummary {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  padding: 1.75rem;
-  border: 1px solid map-get($gray, "200");
-  border-radius: 1rem;
-  background-color: #ffffff;
-  box-shadow: $shadow-base;
-}
-
-.skillSummary__intro {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.skillSummary__label {
-  color: map-get($gray, "500");
-  font-size: 0.875rem;
-}
-
-.skillSummary__text {
-  color: map-get($gray, "600");
-  line-height: 1.8;
-}
-
-.levelGuide {
-  border: 1px solid map-get($gray, "200");
-  border-radius: 0.75rem;
-  padding: 1rem;
-  background-color: map-get($gray, "50");
-}
-
-.levelGuide__title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.levelGuide__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.levelGuide__item {
-  display: grid;
-  grid-template-columns: 2rem 1fr;
-  gap: 0.75rem;
-  align-items: start;
-}
-
-.levelGuide__score {
-  font-weight: 700;
-}
-
-.levelGuide__itemTitle {
-  margin: 0;
-  font-weight: 600;
-  color: map-get($gray, "700");
-}
-
-.levelGuide__itemDescription {
-  margin: 0.25rem 0 0;
-  color: map-get($gray, "600");
-  line-height: 1.65;
-}
-
-.skillSection {
-  margin-top: 2rem;
-}
-
-.skillSection__header {
-  margin-bottom: 1rem;
-}
-
-.skillSection__title {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 0.75rem;
-  border-radius: 9999px;
-  border: 1px solid map-get($gray, "200");
-  color: map-get($gray, "700");
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-
-
 @media (max-width: $breakpoint-sp) {
-  .skillSummary {
-    grid-template-columns: 1fr;
-  }
-
   .pageContent {
     padding: 1.5rem 0 4rem;
   }
 
-  .skillSummary {
-    padding: 1.25rem;
-  }
-
-  .skillList_item {
+  .skillList__item {
     padding: 1rem;
-  }
-
-  .pageHeading {
-    margin-bottom: 1rem;
-  }
-
-  .skillSection__itemHeader {
-    justify-content: space-between;
   }
 }

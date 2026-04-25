@@ -133,31 +133,31 @@ const skillCategories: SkillCategory[] = [
 export const Skill = () => {
   return (
     <section>
-          <p># SkillSet</p>
-          <p>
-            技術スタックと習熟度を紹介します。各スキルは5段階で評価しています。
-          </p>
-          <p>5段階評価</p>
-          <ul className={skillStyles.levelGuide__list}>
-            {levelGuide.map((item) => (
-              <li key={item.score} className={skillStyles.levelGuide__item}>
-                <span className={skillStyles.levelGuide__score}>{item.score}.</span>
-                <div>
-                  <p className={skillStyles.levelGuide__itemTitle}>{item.title}</p>
-                  <p className={skillStyles.levelGuide__itemDescription}>
-                    {item.description}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
+      <p># SkillSet</p>
+      <p>
+        技術スタックと習熟度を紹介します。各スキルは5段階で評価しています。
+      </p>
+      <p>5段階評価</p>
+      <ul className={skillStyles.levelGuideList}>
+        {levelGuide.map((item) => (
+          <li key={item.score} className={skillStyles.levelGuideList__item}>
+            <span className={skillStyles.levelGuideList__itemScore}>{item.score}.</span>
+            <div>
+              <p className={skillStyles.levelGuideList__itemTitle}>{item.title}</p>
+              <p className={skillStyles.levelGuideList__itemDescription}>
+                {item.description}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
       {skillCategories.map((category) => (
         <section key={category.label} className={skillStyles.skillSection}>
             <span className={skillStyles.skillSection__title}>{category.title}</span>
           <ul className={skillStyles.skillList}>
             {category.items.map((item) => (
-              <li key={item.name} className={skillStyles.skillList_item}>
-                  <span className={skillStyles.skillList_itemName}>{item.name}</span>
+              <li key={item.name} className={skillStyles.skillList__item}>
+                  <span className={skillStyles.skillList__itemName}>{item.name}</span>
                   <span
                     className={skillStyles.skillLevel}
                     aria-label={`5段階中 ${item.level}`}
@@ -173,7 +173,7 @@ export const Skill = () => {
                       />
                     ))}
                   </span>
-                <p className={skillStyles.skillList_itemDescription}>
+                <p className={skillStyles.skillList__itemDescription}>
                   {item.description}
                 </p>
               </li>
