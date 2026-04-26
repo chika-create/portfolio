@@ -30,3 +30,9 @@ export type SkillCategory = {
   items: SkillItem[];
 };
 
+export type LevelGuideItem = {
+  score: number;
+  title: string;
+  description: string;
+};
+

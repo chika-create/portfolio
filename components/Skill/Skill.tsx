@@ -1,9 +1,9 @@
-import { SkillCategory } from "types/types";
+import { SkillCategory, LevelGuideItem } from "types/types";
+import { LevelGuide } from "./LevelGuide";
+import { SkillSection } from "./SkillSection";
 import skillStyles from "@styles/skill/skill.module.scss";
 
-const SKILL_MAX_LEVEL = 5;
-
-const levelGuide = [
+const levelGuide: LevelGuideItem[] = [
   {
     score: 5,
     title: "技術面にリードできる",
@@ -132,54 +132,19 @@ const skillCategories: SkillCategory[] = [
 
 export const Skill = () => {
   return (
-    <section>
-      <p># SkillSet</p>
-      <p>
-        技術スタックと習熟度を紹介します。各スキルは5段階で評価しています。
-      </p>
-      <p>5段階評価</p>
-      <ul className={skillStyles.levelGuideList}>
-        {levelGuide.map((item) => (
-          <li key={item.score} className={skillStyles.levelGuideList__item}>
-            <span className={skillStyles.levelGuideList__itemScore}>{item.score}.</span>
-            <div>
-              <p className={skillStyles.levelGuideList__itemTitle}>{item.title}</p>
-              <p className={skillStyles.levelGuideList__itemDescription}>
-                {item.description}
-              </p>
-            </div>
-          </li>
-        ))}
-      </ul>
+    <section className={skillStyles.skillRoot}>
+      <section className={skillStyles.skillSummary}>
+        <div className={skillStyles.skillSummary__intro}>
+          <p className={skillStyles.skillSummary__label}># SkillSet</p>
+          <p className={skillStyles.skillSummary__text}>
+            技術スタックと習熟度を紹介します。各スキルは5段階で評価しています。
+          </p>
+        </div>
+        <LevelGuide levelGuide={levelGuide} />
+      </section>
+
       {skillCategories.map((category) => (
-        <section key={category.label} className={skillStyles.skillSection}>
-            <span className={skillStyles.skillSection__title}>{category.title}</span>
-          <ul className={skillStyles.skillList}>
-            {category.items.map((item) => (
-              <li key={item.name} className={skillStyles.skillList__item}>
-                  <span className={skillStyles.skillList__itemName}>{item.name}</span>
-                  <span
-                    className={skillStyles.skillLevel}
-                    aria-label={`5段階中 ${item.level}`}
-                  >
-                    {Array.from({ length: SKILL_MAX_LEVEL }, (_, i) => (
-                      <span
-                        key={i}
-                        className={
-                          i < item.level
-                            ? skillStyles.skillLevel__barOn
-                            : skillStyles.skillLevel__barOff
-                        }
-                      />
-                    ))}
-                  </span>
-                <p className={skillStyles.skillList__itemDescription}>
-                  {item.description}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <SkillSection key={category.label} category={category} />
       ))}
     </section>
   );

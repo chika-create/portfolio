@@ -1,0 +1,46 @@
+@use "../common/colors.scss" as *;
+@import "../common/variables.scss";
+
+.levelGuide {
+  border: 1px solid map-get($gray, "200");
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background-color: map-get($gray, "50");
+}
+
+.levelGuide__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.levelGuideList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.levelGuideList__item {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.levelGuideList__itemScore {
+  font-weight: 700;
+}
+
+.levelGuideList__itemTitle {
+  margin: 0;
+  font-weight: 600;
+  color: map-get($gray, "700");
+}
+
+.levelGuideList__itemDescription {
+  margin: 0.25rem 0 0;
+  color: map-get($gray, "600");
+  line-height: 1.65;
+}

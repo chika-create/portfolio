@@ -1,0 +1,61 @@
+@use "../common/colors.scss" as *;
+@import "../common/variables.scss";
+
+.skillItem {
+  padding: 1.25rem;
+  border: 1px solid map-get($gray, "200");
+  border-radius: 1rem;
+  background-color: #ffffff;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.skillItem__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.skillItem__name {
+  font-weight: 700;
+  color: map-get($gray, "900");
+  min-width: 0;
+}
+
+.skillLevel {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.skillLevel__barOn,
+.skillLevel__barOff {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid map-get($gray, "300");
+  background-color: #ffffff;
+}
+
+.skillLevel__barOn {
+  background-color: map-get($gray, "400");
+  border-color: map-get($gray, "400");
+}
+
+.skillItem__description {
+  margin: 0;
+  color: map-get($gray, "600");
+  line-height: 1.8;
+}
+
+@media (max-width: $breakpoint-sp) {
+  .skillItem {
+    padding: 1rem;
+  }
+
+  .skillItem__header {
+    justify-content: space-between;
+  }
+}
