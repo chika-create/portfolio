@@ -1,4 +1,5 @@
 import { SkillCategory } from "types/types";
+import { Title } from "@components/parts/Title";
 import { SkillItem } from "./SkillItem";
 import skillSectionStyles from "@styles/skill/SkillSection.module.scss";
 
@@ -8,15 +9,15 @@ interface SkillSectionProps {
 
 export const SkillSection = ({ category }: SkillSectionProps) => {
   return (
-    <section className={skillSectionStyles.skillSection}>
+    <>
       <div className={skillSectionStyles.skillSection__header}>
-        <span className={skillSectionStyles.skillSection__title}>{category.title}</span>
+        <Title level="h2">{category.title}</Title>
       </div>
       <ul className={skillSectionStyles.skillList}>
         {category.items.map((item) => (
           <SkillItem key={item.name} item={item} />
         ))}
       </ul>
-    </section>
+    </>
   );
 };

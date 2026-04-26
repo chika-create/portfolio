@@ -1,4 +1,5 @@
 import { SkillCategory, LevelGuideItem } from "types/types";
+import { Title } from "@components/parts/Title";
 import { LevelGuide } from "./LevelGuide";
 import { SkillSection } from "./SkillSection";
 import skillStyles from "@styles/skill/skill.module.scss";
@@ -132,20 +133,20 @@ const skillCategories: SkillCategory[] = [
 
 export const Skill = () => {
   return (
-    <section className={skillStyles.skillRoot}>
-      <section className={skillStyles.skillSummary}>
-        <div className={skillStyles.skillSummary__intro}>
-          <p className={skillStyles.skillSummary__label}># SkillSet</p>
-          <p className={skillStyles.skillSummary__text}>
+    <>
+      <div className={skillStyles.skillSummary}>
+        <div>
+          <Title level="h2"># SkillSet</Title>
+          <p>
             技術スタックと習熟度を紹介します。各スキルは5段階で評価しています。
           </p>
         </div>
         <LevelGuide levelGuide={levelGuide} />
-      </section>
+      </div>
 
       {skillCategories.map((category) => (
         <SkillSection key={category.label} category={category} />
       ))}
-    </section>
+    </>
   );
 };

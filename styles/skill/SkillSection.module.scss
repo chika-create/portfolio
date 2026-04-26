@@ -1,23 +1,8 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
-.skillSection {
-  margin-top: 2rem;
-}
-
 .skillSection__header {
   margin-bottom: 1rem;
-}
-
-.skillSection__title {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 0.75rem;
-  border-radius: 9999px;
-  border: 1px solid map-get($gray, "200");
-  color: map-get($gray, "700");
-  font-size: 0.95rem;
-  font-weight: 600;
 }
 
 .skillList {

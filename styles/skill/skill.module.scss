@@ -1,10 +1,6 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
-.skillRoot {
-  width: 100%;
-}
-
 .skillSummary {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
@@ -17,30 +13,12 @@
   box-shadow: $shadow-base;
 }
 
-.skillSummary__intro {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.skillSummary__label {
-  color: map-get($gray, "500");
-  font-size: 0.875rem;
-}
-
-.skillSummary__text {
-  color: map-get($gray, "600");
-  line-height: 1.8;
-}
-
 @media (max-width: $breakpoint-sp) {
   .skillSummary {
     grid-template-columns: 1fr;
     padding: 1.25rem;
   }
-}
 
-@media (max-width: $breakpoint-sp) {
   .pageContent {
     padding: 1.5rem 0 4rem;
   }
