@@ -12,6 +12,9 @@ export const SkillItem = ({ item }: SkillItemProps) => {
     <li className={skillItemStyles.skillItem}>
       <div className={skillItemStyles.skillItem__header}>
         <span className={skillItemStyles.skillItem__name}>{item.name}</span>
+        <span>
+          {item.level}/{SKILL_MAX_LEVEL}
+        </span>
         <span
           className={skillItemStyles.skillLevel}
           aria-label={`5段階中 ${item.level}`}
