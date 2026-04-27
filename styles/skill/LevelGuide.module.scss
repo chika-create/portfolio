@@ -1,40 +1,40 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
-
-.levelGuide__title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
 .levelGuideList {
-  margin: 0;
-  padding: 0;
   list-style: none;
-  display: grid;
-  gap: 0.75rem;
-}
+  counter-reset: level 6;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 
-.levelGuideList__item {
-  display: grid;
-  grid-template-columns: 2rem 1fr;
-  gap: 0.75rem;
-  align-items: start;
-}
+  &__item {
+    counter-increment: level -1;
+    display: flex;
+    gap: 1rem;
 
-.levelGuideList__itemScore {
-  font-weight: 700;
-}
+    &::before {
+      content: counter(level) ".";
+      flex-basis: 1.5rem;
+      flex-shrink: 0;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: map-get($gray, "900");
+      text-align: right;
+    }
+  }
 
-.levelGuideList__itemTitle {
-  margin: 0;
-  font-weight: 600;
-  color: map-get($gray, "700");
-}
+  &__itemTitle {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1rem;
+    color: map-get($gray, "900");
+  }
 
-.levelGuideList__itemDescription {
-  margin: 0.25rem 0 0;
-  color: map-get($gray, "600");
-  line-height: 1.65;
+  &__itemDescription {
+    margin: 0.25rem 0 0;
+    color: map-get($gray, "600");
+    line-height: 1.6;
+  }
 }

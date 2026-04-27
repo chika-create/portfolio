@@ -7,10 +7,9 @@ interface LevelGuideProps {
 
 export const LevelGuide = ({ levelGuide }: LevelGuideProps) => {
   return (
-    <ul className={levelGuideStyles.levelGuideList}>
+    <ol className={levelGuideStyles.levelGuideList}>
       {levelGuide.map((item) => (
         <li key={item.score} className={levelGuideStyles.levelGuideList__item}>
-          <span className={levelGuideStyles.levelGuideList__itemScore}>{item.score}.</span>
           <div>
             <p className={levelGuideStyles.levelGuideList__itemTitle}>{item.title}</p>
             <p className={levelGuideStyles.levelGuideList__itemDescription}>
@@ -19,6 +18,6 @@ export const LevelGuide = ({ levelGuide }: LevelGuideProps) => {
           </div>
         </li>
       ))}
-    </ul>
+    </ol>
   );
 };
