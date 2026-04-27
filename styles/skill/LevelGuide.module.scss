@@ -1,12 +1,6 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
-.levelGuide {
-  border: 1px solid map-get($gray, "200");
-  border-radius: 0.75rem;
-  padding: 1rem;
-  background-color: map-get($gray, "50");
-}
 
 .levelGuide__title {
   font-size: 0.95rem;

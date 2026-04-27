@@ -9,15 +9,13 @@ interface SkillSectionProps {
 
 export const SkillSection = ({ category }: SkillSectionProps) => {
   return (
-    <>
-      <div className={skillSectionStyles.skillSection__header}>
-        <Title level="h2">{category.title}</Title>
-      </div>
+    <section className={skillSectionStyles.skillSection__header}>
+      <Title level="h2">{category.title}</Title>
       <ul className={skillSectionStyles.skillList}>
         {category.items.map((item) => (
           <SkillItem key={item.name} item={item} />
         ))}
       </ul>
-    </>
+    </section>
   );
 };
