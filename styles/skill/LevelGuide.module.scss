@@ -4,10 +4,12 @@
 .levelGuideList {
   list-style: none;
   counter-reset: level 6;
-  padding: 0;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  background-color: $white;
+  border-radius: 0.5rem;
 
   &__item {
     counter-increment: level -1;
