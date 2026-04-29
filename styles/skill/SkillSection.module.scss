@@ -1,14 +1,10 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
-.skillSection__header {
-  margin-bottom: 1rem;
+.skillSection {
+  margin-top: 5rem;
 }
 
 .skillList {
-  margin: 0;
-  padding: 0;
   list-style: none;
-  display: grid;
-  gap: 1rem;
 }
