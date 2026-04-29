@@ -9,14 +9,14 @@ interface SkillItemProps {
 
 export const SkillItem = ({ item }: SkillItemProps) => {
   return (
-    <li className={skillItemStyles.skillItem}>
-      <div className={skillItemStyles.skillItem__header}>
-        <span className={skillItemStyles.skillItem__name}>{item.name}</span>
+    <li className={skillItemStyles.skillListItem}>
+      <div className={skillItemStyles.skillListItem__header}>
+        <span className={skillItemStyles.skillListItem__name}>{item.name}</span>
         <span>
           {item.level}/{SKILL_MAX_LEVEL}
         </span>
         <span
-          className={skillItemStyles.skillLevel}
+          className={skillItemStyles.skillListItem__Level}
           aria-label={`5段階中 ${item.level}`}
         >
           {Array.from({ length: SKILL_MAX_LEVEL }, (_, i) => (
@@ -24,14 +24,14 @@ export const SkillItem = ({ item }: SkillItemProps) => {
               key={i}
               className={
                 i < item.level
-                  ? skillItemStyles.skillLevel__barOn
-                  : skillItemStyles.skillLevel__barOff
+                  ? skillItemStyles["skillListItem__Level--barOn"]
+                  : skillItemStyles["skillListItem__Level--barOff"]
               }
             />
           ))}
         </span>
       </div>
-      <p className={skillItemStyles.skillItem__description}>
+      <p className={skillItemStyles.skillListItem__description}>
         {item.description}
       </p>
     </li>

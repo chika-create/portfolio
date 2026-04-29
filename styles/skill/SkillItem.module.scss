@@ -1,7 +1,7 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
-.skillItem {
+.skillListItem {
   padding: 1.25rem;
   border: 1px solid map-get($gray, "200");
   border-radius: 1rem;
@@ -10,7 +10,7 @@
   gap: 0.75rem;
 }
 
-.skillItem__header {
+.skillListItem__header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -18,20 +18,20 @@
   flex-wrap: wrap;
 }
 
-.skillItem__name {
+.skillListItem__name {
   font-weight: 700;
   color: map-get($gray, "900");
   min-width: 0;
 }
 
-.skillLevel {
+.skillListItem__Level {
   display: flex;
   gap: 0.35rem;
   flex-shrink: 0;
 }
 
-.skillLevel__barOn,
-.skillLevel__barOff {
+.skillListItem__Level--barOn,
+.skillListItem__Level--barOff {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 9999px;
@@ -39,7 +39,7 @@
   background-color: #ffffff;
 }
 
-.skillLevel__barOn {
+.skillListItem__Level--barOn {
   background-color: map-get($gray, "400");
   border-color: map-get($gray, "400");
 }
@@ -51,11 +51,11 @@
 }
 
 @media (max-width: $breakpoint-sp) {
-  .skillItem {
+  .skillListItem {
     padding: 1rem;
   }
 
-  .skillItem__header {
+  .skillListItem__header {
     justify-content: space-between;
   }
 }
