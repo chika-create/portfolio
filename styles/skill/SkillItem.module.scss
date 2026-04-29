@@ -16,11 +16,13 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
+.skillListItemContents__head {
+  width: 15.625rem;
+}
 
 .skillListItemContents__name {
-  font-weight: 700;
-  color: map-get($gray, "900");
-  min-width: 0;
+  width: 8.75rem;
+  display: inline-block;
 }
 
 .skillListItemContents__levelbar {
@@ -33,9 +35,8 @@
 .skillListItemContents__levelbar--off {
   width: 0.75rem;
   height: 0.75rem;
-  border-radius: 9999px;
   border: 1px solid map-get($gray, "300");
-  background-color: #ffffff;
+  background-color: $white;
 }
 
 .skillListItemContents__levelbar--on {
@@ -43,9 +44,8 @@
   border-color: map-get($gray, "400");
 }
 
-.skillListItemContents__description {
+.skillListItemContents__text {
   margin: 0;
-  color: map-get($gray, "600");
   line-height: 1.8;
 }
 

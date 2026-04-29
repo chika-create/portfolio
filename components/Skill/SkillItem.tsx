@@ -11,7 +11,7 @@ export const SkillItem = ({ item }: SkillItemProps) => {
   return (
     <li className={skillItemStyles.skillListItem}>
       <dl className={skillItemStyles.skillListItemContents}>
-        <dt>
+        <dt className={skillItemStyles.skillListItemContents__header}>
           <span className={skillItemStyles.skillListItemContents__name}>
             {item.name}
           </span>
@@ -19,7 +19,7 @@ export const SkillItem = ({ item }: SkillItemProps) => {
             {item.level}/{SKILL_MAX_LEVEL}
           </span>
         </dt>
-        <dd>
+        <dd className={skillItemStyles.skillListItemContents__description}>
           <span
             className={skillItemStyles.skillListItemContents__levelbar}
             aria-label={`5段階中 ${item.level}`}
@@ -35,7 +35,7 @@ export const SkillItem = ({ item }: SkillItemProps) => {
               />
             ))}
           </span>
-          <p className={skillItemStyles.skillListItemContents__description}>
+          <p className={skillItemStyles.skillListItemContents__text}>
             {item.description}
           </p>
         </dd>
