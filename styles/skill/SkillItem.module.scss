@@ -2,15 +2,14 @@
 @import "../common/variables.scss";
 
 .skillListItem {
-  padding: 1.25rem;
-  border: 1px solid map-get($gray, "200");
-  border-radius: 1rem;
-  background-color: #ffffff;
-  display: grid;
-  gap: 0.75rem;
+/*  display: grid;
+  gap: 0.75rem;*/
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid map-get($gray, "200");
 }
 
-.skillListItem__header {
+.skillListItemContents {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -18,20 +17,20 @@
   flex-wrap: wrap;
 }
 
-.skillListItem__name {
+.skillListItemContents__name {
   font-weight: 700;
   color: map-get($gray, "900");
   min-width: 0;
 }
 
-.skillListItem__Level {
+.skillListItemContents__levelbar {
   display: flex;
   gap: 0.35rem;
   flex-shrink: 0;
 }
 
-.skillListItem__Level--barOn,
-.skillListItem__Level--barOff {
+.skillListItemContents__levelbar--on,
+.skillListItemContents__levelbar--off {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 9999px;
@@ -39,12 +38,12 @@
   background-color: #ffffff;
 }
 
-.skillListItem__Level--barOn {
+.skillListItemContents__levelbar--on {
   background-color: map-get($gray, "400");
   border-color: map-get($gray, "400");
 }
 
-.skillItem__description {
+.skillListItemContents__description {
   margin: 0;
   color: map-get($gray, "600");
   line-height: 1.8;
@@ -55,7 +54,7 @@
     padding: 1rem;
   }
 
-  .skillListItem__header {
+  .skillListItemContents {
     justify-content: space-between;
   }
 }

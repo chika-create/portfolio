@@ -10,30 +10,36 @@ interface SkillItemProps {
 export const SkillItem = ({ item }: SkillItemProps) => {
   return (
     <li className={skillItemStyles.skillListItem}>
-      <div className={skillItemStyles.skillListItem__header}>
-        <span className={skillItemStyles.skillListItem__name}>{item.name}</span>
-        <span>
-          {item.level}/{SKILL_MAX_LEVEL}
-        </span>
-        <span
-          className={skillItemStyles.skillListItem__Level}
-          aria-label={`5段階中 ${item.level}`}
-        >
-          {Array.from({ length: SKILL_MAX_LEVEL }, (_, i) => (
-            <span
-              key={i}
-              className={
-                i < item.level
-                  ? skillItemStyles["skillListItem__Level--barOn"]
-                  : skillItemStyles["skillListItem__Level--barOff"]
-              }
-            />
-          ))}
-        </span>
-      </div>
-      <p className={skillItemStyles.skillListItem__description}>
-        {item.description}
-      </p>
+      <dl className={skillItemStyles.skillListItemContents}>
+        <dt>
+          <span className={skillItemStyles.skillListItemContents__name}>
+            {item.name}
+          </span>
+          <span className={skillItemStyles.skillListItemContents__level}>
+            {item.level}/{SKILL_MAX_LEVEL}
+          </span>
+        </dt>
+        <dd>
+          <span
+            className={skillItemStyles.skillListItemContents__levelbar}
+            aria-label={`5段階中 ${item.level}`}
+          >
+            {Array.from({ length: SKILL_MAX_LEVEL }, (_, i) => (
+              <span
+                key={i}
+                className={
+                  i < item.level
+                    ? skillItemStyles["skillListItemContents__levelbar--on"]
+                    : skillItemStyles["skillListItemContents__levelbar--off"]
+                }
+              />
+            ))}
+          </span>
+          <p className={skillItemStyles.skillListItemContents__description}>
+            {item.description}
+          </p>
+        </dd>
+      </dl>
     </li>
   );
 };
