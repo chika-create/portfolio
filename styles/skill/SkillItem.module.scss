@@ -2,66 +2,81 @@
 @import "../common/variables.scss";
 
 .skillListItem {
-/*  display: grid;
-  gap: 0.75rem;*/
   margin-bottom: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid map-get($gray, "200");
-}
 
-.skillListItemContents {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.skillListItemTitle {
-  width: 15.625rem;
-}
-
-.skillListItemTitle__name {
-  width: 8.75rem;
-  display: inline-block;
-}
-
-.skillListItemTitle__level {
-  font-size: 1.125rem;
-}
-
-.skillListItemDescription {
-  background-color: antiquewhite;
-}
-
-.skillListItemDescription__levelbar {
-  display: flex;
-  gap: 0.35rem;
-  flex-shrink: 0;
-}
-
-.skillListItemDescription__levelbar--on,
-.skillListItemDescription__levelbar--off {
-  width: 0.75rem;
-  height: 0.75rem;
-  border: 1px solid map-get($gray, "300");
-  background-color: $white;
-}
-
-.skillListItemDescription__levelbar--on {
-  background-color: map-get($gray, "400");
-  border-color: map-get($gray, "400");
-}
-
-.skillListItemDescription__text {
-  margin: 0;
-  line-height: 1.8;
-}
-
-@media (max-width: $breakpoint-sp) {
-  .skillListItem {
-    padding: 1rem;
+  &:last-child {
+    border-bottom: none;
   }
 
-/*  .skillListItemContents {
-  }*/
+  &Contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  &Title {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+
+    &__name {
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: map-get($gray, "900");
+    }
+
+    &__level {
+      font-size: 1rem;
+      color: map-get($gray, "600");
+      font-weight: 500;
+    }
+  }
+
+  &Level {
+    display: flex;
+    gap: 0.35rem;
+    flex-shrink: 0;
+
+    &--barOn,
+    &--barOff {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 2px;
+      border: 1px solid map-get($gray, "300");
+    }
+
+    &--barOn {
+      background-color: map-get($gray, "800");
+      border-color: map-get($gray, "800");
+    }
+
+    &--barOff {
+      background-color: map-get($gray, "100");
+    }
+  }
+
+  &Description {
+    &__text {
+      margin: 0;
+      line-height: 1.8;
+      color: map-get($gray, "700");
+      font-size: 0.9375rem;
+    }
+  }
+
+  @media (max-width: $breakpoint-sp) {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+
+    &Contents {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
 }
