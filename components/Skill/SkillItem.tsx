@@ -11,17 +11,17 @@ export const SkillItem = ({ item }: SkillItemProps) => {
   return (
     <li className={skillItemStyles.skillListItem}>
       <dl className={skillItemStyles.skillListItemContents}>
-        <dt className={skillItemStyles.skillListItemContents__header}>
-          <span className={skillItemStyles.skillListItemContents__name}>
+        <dt className={skillItemStyles.skillListItemTitle}>
+          <span className={skillItemStyles.skillListItemTitle__name}>
             {item.name}
           </span>
-          <span className={skillItemStyles.skillListItemContents__level}>
+          <span className={skillItemStyles.skillListItemTitle__level}>
             {item.level}/{SKILL_MAX_LEVEL}
           </span>
         </dt>
-        <dd className={skillItemStyles.skillListItemContents__description}>
+        <dd className={skillItemStyles.skillListItemDescription}>
           <span
-            className={skillItemStyles.skillListItemContents__levelbar}
+            className={skillItemStyles.skillListItemDescription__levelbar}
             aria-label={`5段階中 ${item.level}`}
           >
             {Array.from({ length: SKILL_MAX_LEVEL }, (_, i) => (
@@ -29,13 +29,13 @@ export const SkillItem = ({ item }: SkillItemProps) => {
                 key={i}
                 className={
                   i < item.level
-                    ? skillItemStyles["skillListItemContents__levelbar--on"]
-                    : skillItemStyles["skillListItemContents__levelbar--off"]
+                    ? skillItemStyles["skillListItemDescription__levelbar--on"]
+                    : skillItemStyles["skillListItemDescription__levelbar--off"]
                 }
               />
             ))}
           </span>
-          <p className={skillItemStyles.skillListItemContents__text}>
+          <p className={skillItemStyles.skillListItemDescription__text}>
             {item.description}
           </p>
         </dd>

@@ -16,35 +16,43 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
-.skillListItemContents__head {
+.skillListItemTitle {
   width: 15.625rem;
 }
 
-.skillListItemContents__name {
+.skillListItemTitle__name {
   width: 8.75rem;
   display: inline-block;
 }
 
-.skillListItemContents__levelbar {
+.skillListItemTitle__level {
+  font-size: 1.125rem;
+}
+
+.skillListItemDescription {
+  background-color: antiquewhite;
+}
+
+.skillListItemDescription__levelbar {
   display: flex;
   gap: 0.35rem;
   flex-shrink: 0;
 }
 
-.skillListItemContents__levelbar--on,
-.skillListItemContents__levelbar--off {
+.skillListItemDescription__levelbar--on,
+.skillListItemDescription__levelbar--off {
   width: 0.75rem;
   height: 0.75rem;
   border: 1px solid map-get($gray, "300");
   background-color: $white;
 }
 
-.skillListItemContents__levelbar--on {
+.skillListItemDescription__levelbar--on {
   background-color: map-get($gray, "400");
   border-color: map-get($gray, "400");
 }
 
-.skillListItemContents__text {
+.skillListItemDescription__text {
   margin: 0;
   line-height: 1.8;
 }
@@ -54,7 +62,6 @@
     padding: 1rem;
   }
 
-  .skillListItemContents {
-    justify-content: space-between;
-  }
+/*  .skillListItemContents {
+  }*/
 }
