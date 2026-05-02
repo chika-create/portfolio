@@ -5,16 +5,15 @@ import {
   SiNextdotjs,
   SiJavascript,
   SiTypescript,
-  SiGithub,
+  SiGit,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiStorybook,
   SiEslint,
   SiPrettier,
   SiVercel,
   SiFigma,
   SiGoogleanalytics,
-  SiGit,
 } from "react-icons/si";
 import skillItemStyles from "@styles/skill/SkillItem.module.scss";
 
@@ -25,9 +24,9 @@ const skillIcons: Record<string, IconType> = {
   "Next.js": SiNextdotjs,
   JavaScript: SiJavascript,
   TypeScript: SiTypescript,
-  "Git / GitHub / GitLab": SiGithub,
+  "Git / GitHub / GitLab": SiGit,
   HTML: SiHtml5,
-  CSS: SiCss3,
+  CSS: SiCss,
   Storybook: SiStorybook,
   ESLint: SiEslint,
   Prettier: SiPrettier,
@@ -37,19 +36,37 @@ const skillIcons: Record<string, IconType> = {
   "Google Analytics": SiGoogleanalytics,
 };
 
+const skillIconColors: Record<string, string> = {
+  React: "#61DAFB",
+  "Next.js": "#111111",
+  JavaScript: "#F7DF1E",
+  TypeScript: "#3178C6",
+  "Git / GitHub / GitLab": "#F05032",
+  HTML: "#E34F26",
+  CSS: "#1572B6",
+  Storybook: "#FF4785",
+  ESLint: "#4B32C3",
+  Prettier: "#F7B93E",
+  Copilot: "#0EA5E9",
+  Vercel: "#111111",
+  Figma: "#F24E1E",
+  "Google Analytics": "#E37400",
+};
+
 interface SkillItemProps {
   item: SkillItemType;
 }
 
 export const SkillItem = ({ item }: SkillItemProps) => {
   const Icon = skillIcons[item.name] ?? SiGit;
+  const iconColor = skillIconColors[item.name] ?? "#4B5563";
 
   return (
     <li className={skillItemStyles.skillListItem}>
       <dl className={skillItemStyles.skillListItemContents}>
         <dt className={skillItemStyles.skillListItemTitle}>
           <span className={skillItemStyles.skillListItemIcon}>
-            <Icon />
+            <Icon color={iconColor} />
           </span>
           <span className={skillItemStyles.skillListItemTitle__name}>
             {item.name}
