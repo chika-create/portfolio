@@ -13,7 +13,7 @@ export default function Skill() {
       </header>
       <main className={pageStyles.main}>
         <section>
-          <Title level="h2">// スキルセット</Title>
+          <Title level="h2">スキルセット</Title>
           <code className={pageStyles.codeText}>const skillSet = () =&gt; {'{'}</code>
           <SkillComponent />
           <code className={pageStyles.codeText}>{"}"}</code>
