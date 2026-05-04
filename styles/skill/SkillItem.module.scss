@@ -47,30 +47,30 @@
     flex-shrink: 0;
   }
 
-  &Level {
-    display: flex;
-    gap: 0.35rem;
-    flex-shrink: 0;
+  &Description {
+    &__levelbar {
+      display: flex;
+      gap: 0.35rem;
+      flex-shrink: 0;
+    }
 
-    &--barOn,
-    &--barOff {
+    &__levelbar--on,
+    &__levelbar--off {
       width: 0.75rem;
       height: 0.75rem;
       border-radius: 2px;
       border: 1px solid map-get($gray, "300");
     }
 
-    &--barOn {
+    &__levelbar--on {
       background-color: map-get($gray, "800");
       border-color: map-get($gray, "800");
     }
 
-    &--barOff {
+    &__levelbar--off {
       background-color: map-get($gray, "100");
     }
-  }
 
-  &Description {
     &__text {
       margin: 0;
       line-height: 1.8;
