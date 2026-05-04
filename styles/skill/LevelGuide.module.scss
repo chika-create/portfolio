@@ -1,0 +1,36 @@
+@use "../common/colors.scss" as *;
+@import "../common/variables.scss";
+
+.levelGuideList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  counter-reset: level 6;
+  padding: 1.5rem;
+  background-color: $white;
+  border-radius: 0.5rem;
+
+  &__item {
+    display: flex;
+    gap: 0.5rem;
+    counter-increment: level -1;
+
+    &::before {
+      flex-basis: 1.5rem;
+      flex-shrink: 0;
+      content: counter(level) ".";
+      font-weight: 500;
+      text-align: right;
+    }
+  }
+
+  &__itemTitle {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  &__itemDescription {
+    margin: 0.25rem 0 0;
+  }
+}

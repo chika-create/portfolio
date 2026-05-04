@@ -1,0 +1,21 @@
+@use "../common/colors.scss" as *;
+@import "../common/variables.scss";
+
+.skillSummary {
+  display: flex;
+  gap: 2rem;
+  &__title {
+    width: 11.5rem;
+    flex-shrink: 0;
+  }
+  &__levelGuide {
+    flex: 1;
+    min-width: 0; /* 右側の中身がはみ出して、左を押し潰すのを防ぐおまじない */
+  }
+}
+
+@media (max-width: $breakpoint-sp) {
+  .skillSummary {
+    flex-direction: column;
+  }
+}

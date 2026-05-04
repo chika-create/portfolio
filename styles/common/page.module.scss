@@ -10,7 +10,7 @@
 .main {
   width: 1000px;
   box-sizing: border-box;
-  background-color: white;
+  background-color: map-get($gray, "50");
   margin: 0 auto;
   padding: 0 1rem;
 }
