@@ -20,12 +20,14 @@ export const SkillItem = ({ item }: SkillItemProps) => {
     <li className={skillItemStyles.skillListItem}>
       <dl className={skillItemStyles.skillListItemContents}>
         <dt className={skillItemStyles.skillListItemTitle}>
-          <span className={skillItemStyles.skillListItemIcon}>
-            <Icon color={iconColor} />
-          </span>
-          <span className={skillItemStyles.skillListItemTitle__name}>
-            {item.name}
-          </span>
+          <div className={skillItemStyles.skillListItemTitle__inner}>
+            <span className={skillItemStyles.skillListItemTitle__icon}>
+              <Icon color={iconColor} />
+            </span>
+            <span className={skillItemStyles.skillListItemTitle__name}>
+              {item.name}
+            </span>
+          </div>
           <span className={skillItemStyles.skillListItemTitle__level}>
             {item.level}/{SKILL_MAX_LEVEL}
           </span>
