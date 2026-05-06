@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "modern-normalize";
 import "../../styles/common/globals.scss";
 
 // const inter = Inter({ subsets: ["latin"] });
