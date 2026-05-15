@@ -8,7 +8,7 @@
   list-style: none;
   counter-reset: level 6;
   padding: 1.5rem;
-  background-color: map-get($gray, "50");
+  background-color: $white;
   border-radius: 0.5rem;
 
   &__item {
@@ -17,11 +17,9 @@
     counter-increment: level -1;
 
     &::before {
-      flex-basis: 1.5rem;
       flex-shrink: 0;
       content: counter(level) ".";
       font-weight: 500;
-      text-align: right;
     }
   }
 
