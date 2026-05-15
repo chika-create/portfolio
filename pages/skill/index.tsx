@@ -8,9 +8,6 @@ import { Skill as SkillComponent } from "@components/Skill";
 export default function Skill() {
   return (
     <>
-      <header className={pageStyles.header}>
-        fuga
-      </header>
       <main className={pageStyles.main}>
         <section>
           <Title level="h2">スキルセット</Title>
