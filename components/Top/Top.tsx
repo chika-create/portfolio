@@ -19,7 +19,6 @@ export function Top() {
           <Title level="h2">制作事例</Title>
           <code className={pageStyles.codeText}>const portfolio = () ={'>'} </code>
           <PortfolioList />
-          <Button>return morePortfolio;</Button>
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
         <section>
