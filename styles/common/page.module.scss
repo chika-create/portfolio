@@ -8,18 +8,16 @@
 }
 
 .main {
-  width: 1000px;
+  width: 1088px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .codeText {
   display: block;
-  color: #a1a1aa;
+  color: map-get($gray, "400");
   font-size: 1.125rem;
-  line-height: 2;
-  margin-top: 1.125rem;
+  margin-top: 1.5rem;
 }
 
 @media (max-width: $breakpoint-sp) {
