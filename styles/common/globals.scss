@@ -20,6 +20,14 @@ body {
   line-height: 1.5;
 }
 
+code,
+pre,
+kbd,
+samp {
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", Consolas,
+    "Liberation Mono", monospace;
+}
+
 h1, h2, h3, h4, h5, h6, ul, ol, p, figure {
   margin: 0;
 }
