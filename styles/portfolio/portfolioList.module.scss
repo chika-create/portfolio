@@ -2,8 +2,8 @@
 
 .box {
   display: flex;
-  gap: 48px;
-  margin-top: 2.5rem;
+  margin: 2rem 2.5rem 0;
+  gap: 5rem;
 }
 
 .content {
@@ -12,6 +12,15 @@
 
 .image {
   width: 100%;
+  display: block;
+}
+
+.text {
+  margin-top: 1rem;
+
+  &+ .text {
+    margin-top: 0.5rem;
+  }
 }
 
 @media (max-width: $breakpoint-sp) {

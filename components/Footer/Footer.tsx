@@ -9,13 +9,13 @@ export const Footer = () => {
           <Link href="/">TOP</Link>
         </li>
         <li className={footerStyles.menuList__item}>
-          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/portfolio">Projects</Link>
         </li>
         <li className={footerStyles.menuList__item}>
-          <Link href="/profile">AboutMe</Link>
+          <Link href="/profile">About</Link>
         </li>
         <li className={footerStyles.menuList__item}>
-          <Link href="/skill">MySkillSet</Link>
+          <Link href="/skill">SkillSet</Link>
         </li>
       </ul>
       {/* TODO: 今いるメニューの箇所にmodifireを付与するロジックを追加する？ */}

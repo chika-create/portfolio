@@ -16,35 +16,33 @@ export function Top() {
 
       <main className={pageStyles.main}>
         <section>
-          <Title level="h2">制作事例</Title>
-          <code className={pageStyles.codeText}>const portfolio = () ={'>'} </code>
+          <Title level="h2">プロジェクト</Title>
+          <code className={pageStyles.codeText}>const projects = () ={'>'} </code>
           <PortfolioList />
-          <Button>return morePortfolio;</Button>
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
         <section>
           <Title level="h2">私について</Title>
-          <code className={pageStyles.codeText}>const aboutMe = () ={'>'}</code>
-          <div className={topStyles.aboutText}>
-            <p>
-              1988年、兵庫在住のWeb制作者です。
-              2011年に神戸のweb制作会社に6年働き、その後エイチームに転職し2024年現在7年目です。
+          <code className={pageStyles.codeText}>const about = () ={'>'}</code>
+          <div className={topStyles.aboutBody}>
+            <p className={topStyles.aboutText}>
+              兵庫県在住、Web クリエイターの本告（もとおり）です。<br />
+              制作会社での多種多様なサイト制作を経て、現在はエイチームで「技術で事業を伸ばす」ことに挑戦しています。
             </p>
-            <p>
-              前職のweb制作会社では医療・食品・教育関連など様々なweb制作の制作の傍ら
-              自社シルバーアクセサリーのECサイトの企画・運営もしていました。
+            <p className={topStyles.aboutText}>
+              私の原動力は「人の役に立つこと」。React/Next.js を用いた開発に加え、GA 分析やユーザーインタビューに基づく UX 改善、PSI（PageSpeed Insights）改善など、ビジネスゴールを達成するための「一貫したモノづくり」を信条としています。<br />
+              また、社内もくもく会の企画やメンターなど、技術を共有しみんなで成長できる環境作りも大切にしています。
             </p>
-            <p>
-              エイチームではマーケッター・エンジニアと一緒にサイト改善を行なっています。
-              チームで働くこととフロントエンドが好きです。
+            <p className={topStyles.aboutText}>
+              私生活ではプログラミング講師の夫と 1 歳の息子、そして大ベテランのオカメインコと暮らしています。
             </p>
           </div>
           <ul className={topStyles.flexBox}>
             <li>
-              <Button>return moreAbout;</Button>
+              <Button>私について</Button>
             </li>
             <li>
-              <Button>return mySkillSet;</Button>
+              <Button>私について</Button>
             </li>
           </ul>
           <code className={pageStyles.codeText}>{"}"}</code>

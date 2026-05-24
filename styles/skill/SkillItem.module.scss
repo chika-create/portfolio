@@ -48,6 +48,7 @@
 
   &Description {
     flex: 1;
+    margin: 0;
 
     &__levelbar {
       display: flex;
@@ -79,6 +80,10 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 0.5rem;
+    }
+
+    &Title {
+      width: 100%;
     }
   }
 }

@@ -1,14 +1,12 @@
-@use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
 .header {
-  background-color: map-get($gray, "100");
-  padding: 8rem 1rem;
+  padding: 8rem 1rem 14rem;
   text-align: center;
 }
 
 .introduction {
-  font-size: 1.875rem;
+  font-size: 1.625rem;
 }
 
 .flexBox {
@@ -18,8 +16,12 @@
   list-style: none;
 }
 
+.aboutBody {
+  margin: 1.5rem 2.5rem 0;
+}
+
 .aboutText {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: $breakpoint-sp) {

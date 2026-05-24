@@ -1,3 +1,4 @@
+@use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
 .h1 {
@@ -6,15 +7,24 @@
 }
 
 .h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: normal;
-  margin-top: 8rem;
+  line-height: 1.2;
+  margin-top: 5rem;
+
+  &::before {
+    content: "\2f\2f";
+    color: map-get($gray, "400");
+    font-weight: 200;
+    margin-right: 0.5rem;
+  }
 }
 
 .h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: normal;
-  margin-top: 1.25rem;
+  line-height: 1.2;
+  margin-top: 1.5rem;
 }
 
 @media (max-width: $breakpoint-sp) {

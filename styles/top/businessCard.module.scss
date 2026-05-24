@@ -3,29 +3,29 @@
 
 .businessCard {
   max-width: 36.125rem;
-  margin: 5rem auto 0;
-  padding: 1.5rem;
+  margin: 6.5rem auto 0;
+  padding: 2rem;
   background-color: white;
-  /* -moz-box-shadow: $shadow-xl;
-  -webkit-box-shadow: $shadow-xl;
-  -ms-box-shadow: $shadow-xl;*/
   box-shadow: $shadow-xl;
   &__job {
     font-size: 1.5rem;
-    margin-top: 3.25rem;
+    margin-top: 3rem;
   }
   &__name {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: normal;
+    margin-top: 2.625rem;
   }
   &__ruby {
+    color: map-get($gray, "400");
     font-size: 1.125rem;
+    margin-top: 1.625rem;
   }
   &__sns {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
-    margin-top: 2.75rem;
+    margin-top: 3rem;
     &Item {
       list-style: none;
       &Link {
