@@ -40,10 +40,10 @@ export function Top() {
           </div>
           <ul className={topStyles.flexBox}>
             <li>
-              <Button>return moreAbout;</Button>
+              <Button>私について</Button>
             </li>
             <li>
-              <Button>return mySkillSet;</Button>
+              <Button>私について</Button>
             </li>
           </ul>
           <code className={pageStyles.codeText}>{"}"}</code>

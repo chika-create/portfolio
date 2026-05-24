@@ -1,21 +1,30 @@
+@use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
 .Button {
-  display: block;
-  color: #27272a;
+  font-size: 1rem;
   text-align: center;
-  font-size: 1.125rem;
-  line-height: 2;
-  /* vertical-align: middle; */
   margin: 2.5rem auto 0;
-  padding: 0.25rem 1rem;
-  border: 1px solid #a1a1aa;
+  padding: 0.5rem 2rem;
+  border: 1px solid map-get($gray, "200");
   border-radius: 0.25rem;
-  background-color: white;
-  /* -moz-box-shadow: $shadow-base;
-  -webkit-box-shadow: $shadow-base;
-  -ms-box-shadow: $shadow-base;*/
+  background-color: $white;
   box-shadow: $shadow-base;
+
+  &::before ,
+  &::after {
+    color: map-get($gray, "400");
+  }
+
+  &::before {
+    content: "\3c\60";
+    margin-right: 0.25rem;
+  }
+
+  &::after {
+    content: "\60\3e";
+    margin-left: 0.25rem;
+  }
 }
 
 @media (max-width: $breakpoint-sp) {
