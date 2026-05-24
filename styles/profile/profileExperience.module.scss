@@ -1,5 +1,3 @@
-@use "../common/colors.scss" as *;
-
 .history {
   display: grid;
   grid-template-columns: repeat(2, 1fr) 3fr repeat(2, 0);
