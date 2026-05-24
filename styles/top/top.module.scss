@@ -16,8 +16,12 @@
   list-style: none;
 }
 
-.aboutText {
+.aboutBody {
   margin: 1.5rem 2.5rem 0;
+}
+
+.aboutText {
+  margin-top: 1rem;
 }
 
 @media (max-width: $breakpoint-sp) {
