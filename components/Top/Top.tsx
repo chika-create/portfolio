@@ -16,14 +16,14 @@ export function Top() {
 
       <main className={pageStyles.main}>
         <section>
-          <Title level="h2">制作事例</Title>
-          <code className={pageStyles.codeText}>const portfolio = () ={'>'} </code>
+          <Title level="h2">プロジェクト</Title>
+          <code className={pageStyles.codeText}>const projects = () ={'>'} </code>
           <PortfolioList />
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
         <section>
           <Title level="h2">私について</Title>
-          <code className={pageStyles.codeText}>const aboutMe = () ={'>'}</code>
+          <code className={pageStyles.codeText}>const about = () ={'>'}</code>
           <div className={topStyles.aboutText}>
             <p>
               1988年、兵庫在住のWeb制作者です。
