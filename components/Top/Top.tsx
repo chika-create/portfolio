@@ -54,7 +54,7 @@ export function Top() {
                 <span className={topStyles.skillSetIcon}>
                   <skill.Icon color={skill.color} aria-hidden="true" />
                 </span>
-                <span>{skill.name}</span>
+                {skill.name}
               </li>
             ))}
           </ul>

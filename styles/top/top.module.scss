@@ -30,27 +30,21 @@
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
   margin: 1.5rem 2.5rem 0;
-  padding: 0;
-  list-style: none;
 }
 
 .skillSetItem {
   display: inline-flex;
   gap: 0.5rem;
-  align-items: center;
   padding: 0.5rem 0.875rem;
   border: 1px solid map-get($gray, "200");
   border-radius: 0.5rem;
-  background: #fff;
-  font-size: 1.125rem;
-  font-weight: 400;
+  background-color: $white;
   line-height: 1;
 }
 
 .skillSetIcon {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   font-size: 1rem;
 }
 
