@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+import type { IconType } from "react-icons";
 
 export interface TextDataInterface {
   children: ReactNode;
@@ -35,4 +36,10 @@ export type LevelGuideItem = {
   title: string;
   description: string;
 };
+
+export interface TopSkillItem {
+  name: string;
+  color: string;
+  Icon: IconType;
+}
 

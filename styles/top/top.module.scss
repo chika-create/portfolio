@@ -1,3 +1,4 @@
+@use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
 .header {
@@ -24,6 +25,29 @@
   margin-top: 1rem;
 }
 
+.skillSetList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 1.5rem 2.5rem 0;
+}
+
+.skillSetItem {
+  display: inline-flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid map-get($gray, "200");
+  border-radius: 0.5rem;
+  background-color: $white;
+  line-height: 1;
+}
+
+.skillSetIcon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
 @media (max-width: $breakpoint-sp) {
   .header {
     padding: 4rem 1rem;
@@ -32,4 +56,5 @@
   .introduction {
     font-size: 1.5rem;
   }
+
 }

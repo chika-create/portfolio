@@ -5,6 +5,7 @@ import { Button } from "@components/parts/Button";
 import { BusinessCard } from "@components/BusinessCard";
 import { PortfolioList } from "@components/PortfolioList";
 import { Footer } from "@components/Footer";
+import { topSkillSet } from "./topSkillData";
 
 export function Top() {
   return (
@@ -41,9 +42,21 @@ export function Top() {
             <li>
               <Button>私について</Button>
             </li>
-            <li>
-              <Button>私について</Button>
-            </li>
+          </ul>
+          <code className={pageStyles.codeText}>{"}"}</code>
+        </section>
+        <section aria-label="スキルセット">
+          <Title level="h2">スキルセット</Title>
+          <code className={pageStyles.codeText}>const skillSet = () ={'>'}</code>
+          <ul className={topStyles.skillSetList}>
+            {topSkillSet.map((skill) => (
+              <li className={topStyles.skillSetItem} key={skill.name}>
+                <span className={topStyles.skillSetIcon}>
+                  <skill.Icon color={skill.color} aria-hidden="true" />
+                </span>
+                {skill.name}
+              </li>
+            ))}
           </ul>
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
