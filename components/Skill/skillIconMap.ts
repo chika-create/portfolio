@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
-import { FaReact, FaRobot } from "react-icons/fa";
 import {
+  SiReact,
   SiNextdotjs,
   SiJavascript,
   SiTypescript,
@@ -12,13 +12,14 @@ import {
   SiPrettier,
   SiVercel,
   SiFigma,
+  SiGithubcopilot,
   SiGoogleanalytics,
 } from "react-icons/si";
 
 export const fallbackSkillIcon = SiGit;
 
 export const skillIcons: Record<string, IconType> = {
-  React: FaReact,
+  React: SiReact,
   "Next.js": SiNextdotjs,
   JavaScript: SiJavascript,
   TypeScript: SiTypescript,
@@ -28,7 +29,7 @@ export const skillIcons: Record<string, IconType> = {
   Storybook: SiStorybook,
   ESLint: SiEslint,
   Prettier: SiPrettier,
-  Copilot: FaRobot,
+  Copilot: SiGithubcopilot,
   Vercel: SiVercel,
   Figma: SiFigma,
   "Google Analytics": SiGoogleanalytics,
