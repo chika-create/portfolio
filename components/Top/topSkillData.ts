@@ -1,5 +1,5 @@
-import { TopSkillItem } from "types/types";
-import { skillIconColors, skillIcons } from "@components/Skill/skillIconMap";
+import type { TopSkillItem } from "types/types";
+import { fallbackSkillIcon, skillIconColors, skillIcons } from "@components/Skill/skillIconMap";
 
 const topSkillSourceNames = [
   "React",
@@ -26,6 +26,6 @@ const topSkillLabelOverrides: Partial<Record<TopSkillSourceName, string>> = {
 
 export const topSkillSet: TopSkillItem[] = topSkillSourceNames.map((sourceName) => ({
   name: topSkillLabelOverrides[sourceName] ?? sourceName,
-  color: skillIconColors[sourceName],
-  Icon: skillIcons[sourceName],
+  color: skillIconColors[sourceName] ?? "#a1a1aa",
+  Icon: skillIcons[sourceName] ?? fallbackSkillIcon,
 }));
