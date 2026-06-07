@@ -2,11 +2,15 @@
 @import "./common/variables.scss";
 
 .footer {
-  width: 1000px;
-  box-sizing: border-box;
-  margin: 8rem auto 0;
-  padding: 2.5rem 1rem;
+  margin-top: 8rem;
   border-top: 1px solid map-get($gray, "300");
+}
+
+.footerInner {
+  width: $main-content-width;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
 }
 
 .menuList {
