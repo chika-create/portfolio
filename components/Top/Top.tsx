@@ -38,7 +38,7 @@ export function Top() {
               私生活ではプログラミング講師の夫と 1 歳の息子、そして大ベテランのオカメインコと暮らしています。
             </p>
           </div>
-          <ul className={topStyles.flexBox}>
+          <ul className={topStyles.buttonList}>
             <li>
               <Button>私について</Button>
             </li>
@@ -57,6 +57,11 @@ export function Top() {
                 {skill.name}
               </li>
             ))}
+          </ul>
+          <ul className={topStyles.buttonList}>
+            <li>
+              <Button>スキルセット</Button>
+            </li>
           </ul>
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>

@@ -10,7 +10,7 @@
   font-size: 1.625rem;
 }
 
-.flexBox {
+.buttonList {
   display: flex;
   gap: 0 3rem;
   justify-content: center;
@@ -55,6 +55,18 @@
   
   .introduction {
     font-size: 1.5rem;
+  }
+
+  .aboutBody {
+    margin: 1.5rem 0 0;
+  }
+
+  .skillSetList {
+    margin: 1.5rem 0 0;
+  }
+
+  .skillSetItem {
+      font-size: 1rem;
   }
 
 }
