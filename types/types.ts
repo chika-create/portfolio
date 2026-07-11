@@ -10,7 +10,10 @@ export interface TitleInterface extends TextDataInterface {
 }
 
 export interface ButtonInterface {
-  children: string;
+  children: ReactNode;
+  href?: string;
+  onClick?: () => void;
+  className?: string;
 }
 
 export interface SnsLink {
