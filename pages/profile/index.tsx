@@ -13,7 +13,7 @@ export default function Profile() {
           <Title level="h2">私について</Title>
           <code className={pageStyles.codeText}>const AboutMe = () ={'>'} </code>
           <ProfileComponent />
-          <Button>return TOP;</Button>
+          <Button href="/">return TOP;</Button>
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
       </main>

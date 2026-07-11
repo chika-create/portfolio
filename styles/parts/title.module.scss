@@ -2,15 +2,9 @@
 @import "../common/variables.scss";
 
 .h1 {
-  font-size: 3rem;
-  font-weight: normal;
-}
-
-.h2 {
   font-size: 2rem;
-  font-weight: normal;
   line-height: 1.2;
-  margin-top: 5rem;
+  margin-top: 6.5rem;
 
   &::before {
     content: "\2f\2f";
@@ -20,25 +14,34 @@
   }
 }
 
-.h3 {
-  font-size: 1.5rem;
-  font-weight: normal;
+.h2 {
+  font-size: 1.75rem;
   line-height: 1.2;
-  margin-top: 1.5rem;
+
+  &::before {
+    content: "\0023";
+    color: map-get($gray, "400");
+    font-weight: 200;
+    margin-right: 0.5rem;
+  }
+}
+
+.h3 {
+  font-size: 1.625rem;
+  line-height: 1.2;
 }
 
 @media (max-width: $breakpoint-sp) {
   .h1 {
     font-size: 1.75rem;
+    margin-top: 3.5rem;
   }
   
   .h2 {
-    font-size: 1.5rem;
-    margin-top: 4rem;
+    font-size: 1.625rem;
   }
   
   .h3 {
-    font-size: 1.25rem;
-    margin-top: 1.25rem;
+    font-size: 1.5rem;
   }  
 }
