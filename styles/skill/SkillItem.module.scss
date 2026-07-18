@@ -6,6 +6,10 @@
   padding-bottom: 40px;
   border-bottom: 1px solid map-get($gray, "200");
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   &:last-child {
     border-bottom: none;
   }
@@ -14,17 +18,20 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    align-items: flex-start;
   }
 
   &Title {
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
+    align-items: center;
     width: 15.625rem;
 
     &__inner {
       display: flex;
       gap: 1rem;
+      align-items: center;
     }
 
     &__icon {
@@ -48,7 +55,7 @@
 
   &Description {
     flex: 1;
-    margin: 0;
+    margin-top: 0.25rem;
 
     &__levelbar {
       display: flex;
@@ -84,6 +91,10 @@
 
     &Title {
       width: 100%;
+    }
+
+    &Description {
+      margin-top: 0;
     }
   }
 }

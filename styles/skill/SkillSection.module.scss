@@ -1,10 +1,26 @@
 @import "../common/variables.scss";
 
 .skillSection {
+  display: flex;
+  gap: 2rem;
   margin-top: 5rem;
+
+  &__title {
+    width: 11.5rem;
+    flex-shrink: 0;
+  }
 }
 
 .skillList {
+  flex: 1;
+  min-width: 0; /* 右側の中身がはみ出して、左を押し潰すのを防ぐおまじない */
   list-style: none;
   padding: 0;
+}
+
+@media (max-width: $breakpoint-sp) {
+  .skillSection {
+    flex-direction: column;
+    margin-top: 4rem;
+  }
 }

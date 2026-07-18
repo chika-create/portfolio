@@ -1,9 +1,15 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
+.skillInner {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .skillSummary {
   display: flex;
   gap: 2rem;
+  margin-top: 2rem;
   &__title {
     width: 11.5rem;
     flex-shrink: 0;
@@ -15,6 +21,11 @@
 }
 
 @media (max-width: $breakpoint-sp) {
+  .skillInner {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .skillSummary {
     flex-direction: column;
   }

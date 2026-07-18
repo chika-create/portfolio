@@ -1,5 +1,4 @@
 import pageStyles from "@styles/common/page.module.scss";
-import skillStyles from "@styles/skill/skill.module.scss";
 import { Title } from "@components/parts/Title";
 import { Footer } from "@components/Footer";
 import { Skill as SkillComponent } from "@components/Skill";
