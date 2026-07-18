@@ -13,6 +13,10 @@
   margin: 0 auto;
 }
 
+.sectionInner {
+    margin-top: 10rem;
+}
+
 .codeText {
   display: block;
   color: map-get($gray, "400");
@@ -24,6 +28,10 @@
   .main {
     width: 100%;
     padding: 0 1rem;
+  }
+
+  .sectionInner {
+      margin-top: 8rem;
   }
 
   .codeText {

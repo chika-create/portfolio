@@ -7,6 +7,7 @@ export interface TextDataInterface {
 
 export interface TitleInterface extends TextDataInterface {
   level: "h1" | "h2" | "h3";
+  style?: "h1" | "h2" | "h3";
 }
 
 export interface ButtonInterface {
