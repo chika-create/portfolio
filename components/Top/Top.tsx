@@ -16,14 +16,15 @@ export function Top() {
       </header>
 
       <main className={pageStyles.main}>
-        <section>
-          <Title level="h2">プロジェクト</Title>
+        <section className={pageStyles.sectionInner}>
+          <Title level="h2" style="h1">プロジェクト</Title>
           <code className={pageStyles.codeText}>const projects = () ={'>'} </code>
           <PortfolioList />
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
-        <section>
-          <Title level="h2">私について</Title>
+
+        <section className={pageStyles.sectionInner}>
+          <Title level="h2" style="h1">私について</Title>
           <code className={pageStyles.codeText}>const about = () ={'>'}</code>
           <div className={topStyles.aboutBody}>
             <p className={topStyles.aboutText}>
@@ -45,8 +46,9 @@ export function Top() {
           </ul>
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
-        <section aria-label="スキルセット">
-          <Title level="h2">スキルセット</Title>
+
+        <section className={pageStyles.sectionInner}>
+          <Title level="h2" style="h1">スキルセット</Title>
           <code className={pageStyles.codeText}>const skillSet = () ={'>'}</code>
           <ul className={topStyles.skillSetList}>
             {topSkillSet.map((skill) => (

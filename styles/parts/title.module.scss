@@ -4,7 +4,6 @@
 .h1 {
   font-size: 2rem;
   line-height: 1.2;
-  margin-top: 6.5rem;
 
   &::before {
     content: "\2f\2f";
@@ -34,7 +33,6 @@
 @media (max-width: $breakpoint-sp) {
   .h1 {
     font-size: 1.75rem;
-    margin-top: 3.5rem;
   }
   
   .h2 {

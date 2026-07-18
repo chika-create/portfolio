@@ -6,7 +6,7 @@ import skillStyles from "@styles/skill/skill.module.scss";
 
 export const Skill = () => {
   return (
-    <>
+    <div className={skillStyles.skillInner}>
       <section className={skillStyles.skillSummary}>
         <div className={skillStyles.skillSummary__title}>
           <Title level="h2">SkillSet</Title>
@@ -23,6 +23,6 @@ export const Skill = () => {
       {skillCategories.map((category) => (
         <SkillSection key={category.label} category={category} />
       ))}
-    </>
+    </div>
   );
 };
