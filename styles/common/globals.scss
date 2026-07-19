@@ -1,4 +1,5 @@
 @use "../common/colors.scss" as *;
+@import "../common/variables.scss";
 
 * {
   box-sizing: border-box;
@@ -46,3 +47,10 @@ a {
 li {
   list-style: none;
 }
+
+@media (max-width: $breakpoint-sp) {
+  body {
+    font-size: 1rem;
+  }
+}
+

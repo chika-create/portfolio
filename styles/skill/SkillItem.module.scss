@@ -95,6 +95,9 @@
 
     &Description {
       margin-top: 0;
+      &__text {
+        margin-top: 1rem;
+      }
     }
   }
 }

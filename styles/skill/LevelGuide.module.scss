@@ -33,3 +33,9 @@
     margin: 0.25rem 0 0;
   }
 }
+
+@media (max-width: $breakpoint-sp) {
+  .levelGuideList {
+    padding: 1rem;
+  }
+}
