@@ -20,7 +20,7 @@
 .codeText {
   display: block;
   color: map-get($gray, "400");
-  font-size: 1rem;
+  font-size: 1.125rem;
   margin-top: 1.5rem;
 }
 
@@ -37,6 +37,6 @@
   .codeText {
     font-size: 1rem;
     line-height: 1;
-    margin-top: 1rem;
-  }  
+    margin-top: 1.5rem;
+  }
 }
