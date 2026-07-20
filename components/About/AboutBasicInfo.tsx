@@ -1,27 +1,27 @@
 import { Title } from "@components/parts/Title";
 import { snsLinks } from "@constants/snsLink";
-import profileStyles from "@styles/profile/profileBasicInfo.module.scss";
+import aboutStyles from "@styles/About/AboutBasicInfo.module.scss";
 
-export const ProfileBasicInfo = () => {
+export const AboutBasicInfo = () => {
   return (
     <>
-      <div className={profileStyles[`personal`]}>
-        <div className={profileStyles[`personal__title`]}>
+      <div className={aboutStyles[`personal`]}>
+        <div className={aboutStyles[`personal__title`]}>
           <Title level="h3">Personal</Title>
         </div>
-        <div className={profileStyles[`personal__basicInfo`]}>
-          <ul className={profileStyles[`personal__basicInfo__list`]}>
-            <li className={profileStyles[`personal__basicInfo__listItem`]}>
+        <div className={aboutStyles[`personal__basicInfo`]}>
+          <ul className={aboutStyles[`personal__basicInfo__list`]}>
+            <li className={aboutStyles[`personal__basicInfo__listItem`]}>
               本告 智香（モトオリ チカ）
             </li>
-            <li className={profileStyles[`personal__basicInfo__listItem`]}>兵庫県在住</li>
-            <li className={profileStyles[`personal__basicInfo__listItem`]}>
+            <li className={aboutStyles[`personal__basicInfo__listItem`]}>兵庫県在住</li>
+            <li className={aboutStyles[`personal__basicInfo__listItem`]}>
               1988年11月生まれ
             </li>
-            <li className={profileStyles[`personal__basicInfo__listItem`]}>
+            <li className={aboutStyles[`personal__basicInfo__listItem`]}>
               株式会社エイチームライフデザイン 所属
             </li>
-            <li className={profileStyles[`personal__basicInfo__listItem`]}>
+            <li className={aboutStyles[`personal__basicInfo__listItem`]}>
               <a
                 href="https://www.16personalities.com/ja/esfj%E5%9E%8B%E3%81%AE%E6%80%A7%E6%A0%BC"
                 target="_blank"

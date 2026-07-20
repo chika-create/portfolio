@@ -13,7 +13,7 @@ export const Footer = () => {
             <Link href="/portfolio">Projects</Link>
           </li>
           <li className={footerStyles.menuList__item}>
-            <Link href="/profile">About</Link>
+            <Link href="/about">About</Link>
           </li>
           <li className={footerStyles.menuList__item}>
             <Link href="/skill">SkillSet</Link>

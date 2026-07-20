@@ -41,7 +41,7 @@ export function Top() {
           </div>
           <ul className={topStyles.buttonList}>
             <li>
-              <Button href="/profile">私について</Button>
+              <Button href="/about">私について</Button>
             </li>
           </ul>
           <code className={pageStyles.codeText}>{"}"}</code>
