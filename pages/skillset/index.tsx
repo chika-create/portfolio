@@ -1,16 +1,16 @@
 import pageStyles from "@styles/common/page.module.scss";
 import { Title } from "@components/parts/Title";
 import { Footer } from "@components/Footer";
-import { Skill as SkillComponent } from "@components/Skill";
+import { SkillSet as SkillSetComponent } from "@components/SkillSet";
 
-export default function Skill() {
+export default function SkillSet() {
   return (
     <>
       <main className={pageStyles.main}>
         <section>
           <Title level="h1">スキルセット</Title>
           <code className={pageStyles.codeText}>const skillSet = () =&gt; {'{'}</code>
-          <SkillComponent />
+          <SkillSetComponent />
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
       </main>

@@ -2,17 +2,16 @@ import pageStyles from "@styles/common/page.module.scss";
 import { Title } from "@components/parts/Title";
 import { Button } from "@components/parts/Button";
 import { Footer } from "@components/Footer";
-import { Profile as ProfileComponent } from "@components/Profile";
+import { About as AboutComponent } from "@components/About";
 
-export default function Profile() {
+export default function About() {
   return (
     <>
-      <header className={pageStyles.header}>hoge</header>
       <main className={pageStyles.main}>
         <section>
-          <Title level="h2">私について</Title>
+          <Title level="h2">私について（工事中）</Title>
           <code className={pageStyles.codeText}>const AboutMe = () ={'>'} </code>
-          <ProfileComponent />
+          <AboutComponent />
           <Button href="/">return TOP;</Button>
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
