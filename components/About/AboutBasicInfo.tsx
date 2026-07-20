@@ -1,6 +1,6 @@
 import { Title } from "@components/parts/Title";
 import { snsLinks } from "@constants/snsLink";
-import aboutStyles from "@styles/About/aboutBasicInfo.module.scss";
+import aboutStyles from "@styles/about/aboutBasicInfo.module.scss";
 
 export const AboutBasicInfo = () => {
   return (
