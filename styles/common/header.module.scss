@@ -1,0 +1,119 @@
+@use "../common/colors.scss" as *;
+@import "../common/variables.scss";
+
+.header {
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 1px solid map-get($gray, "200");
+
+  &Inner {
+    max-width: $main-content-width;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.name {
+  display: flex;
+  align-items: center;
+
+  a {
+    transition: opacity 0.3s;
+    &:hover {
+        opacity: 0.7;
+    }
+  }
+}
+
+.enName {
+    display: inline-block;
+    margin-left: 1.5rem;
+    font-size: 0.875rem;
+    color: map-get($gray, "400");
+}
+
+.pcNav {
+  display: block;
+}
+
+.navList {
+  display: flex;
+  gap: 3rem;
+}
+
+.navItem {
+  font-size: 1rem;
+  
+  a {
+    transition: color 0.3s;
+    &:hover {
+      color: map-get($gray, "400");
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 110;
+  padding: 0.75rem 1rem;
+  color: map-get($gray, "800");
+}
+
+.spNav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100dvh;
+  background-color: $white;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 105;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &.isOpen {
+    right: 0;
+  }
+}
+
+.spNavList {
+  text-align: center;
+}
+
+.spNavItem {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  
+  a {
+    display: block;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: $breakpoint-sp) {
+  .header {
+    height: auto;
+    padding: 0 0 0 1rem;
+  }
+
+  .pcNav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

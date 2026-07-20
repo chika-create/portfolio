@@ -7,7 +7,6 @@ import { Profile as ProfileComponent } from "@components/Profile";
 export default function Profile() {
   return (
     <>
-      <header className={pageStyles.header}>hoge</header>
       <main className={pageStyles.main}>
         <section>
           <Title level="h2">私について</Title>
