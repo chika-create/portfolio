@@ -33,10 +33,10 @@ export const Header = () => {
               <Link href="/portfolio">Projects</Link>
             </li>
             <li className={headerStyles.navItem}>
-              <Link href="/about">About</Link>
+              <Link href="/">About</Link>
             </li>
             <li className={headerStyles.navItem}>
-              <Link href="/skill">SkillSet</Link>
+              <Link href="/skillset">SkillSet</Link>
             </li>
           </ul>
         </nav>
@@ -65,12 +65,12 @@ export const Header = () => {
               </Link>
             </li>
             <li className={headerStyles.spNavItem}>
-              <Link href="/about" onClick={closeMenu}>
+              <Link href="/" onClick={closeMenu}>
                 About
               </Link>
             </li>
             <li className={headerStyles.spNavItem}>
-              <Link href="/skill" onClick={closeMenu}>
+              <Link href="/skillset" onClick={closeMenu}>
                 SkillSet
               </Link>
             </li>

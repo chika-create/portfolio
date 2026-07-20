@@ -1,5 +1,5 @@
 import { SkillItem as SkillItemType } from "types/types";
-import skillItemStyles from "@styles/skill/SkillItem.module.scss";
+import skillItemStyles from "@styles/skillset/skillItem.module.scss";
 import {
   fallbackSkillIcon,
   skillIconColors,

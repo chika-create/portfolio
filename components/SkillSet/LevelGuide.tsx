@@ -1,5 +1,5 @@
 import { LevelGuideItem } from "types/types";
-import levelGuideStyles from "@styles/skill/LevelGuide.module.scss";
+import levelGuideStyles from "@styles/skillset/levelGuide.module.scss";
 
 interface LevelGuideProps {
   levelGuide: LevelGuideItem[];

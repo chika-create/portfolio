@@ -1,7 +1,7 @@
 import { SkillCategory } from "types/types";
 import { Title } from "@components/parts/Title";
 import { SkillItem } from "./SkillItem";
-import skillSectionStyles from "@styles/skill/SkillSection.module.scss";
+import skillSectionStyles from "@styles/skillset/skillSection.module.scss";
 
 interface SkillSectionProps {
   category: SkillCategory;
