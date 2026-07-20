@@ -59,6 +59,12 @@
       color: map-get($gray, "400");
     }
   }
+
+  &.active {
+    a {
+      font-weight: 500;
+    }
+  }
 }
 
 .hamburger {
@@ -100,6 +106,12 @@
   a {
     display: block;
     padding: 1rem;
+  }
+
+  &.active {
+    a {
+      font-weight: 500;
+    }
   }
 }
 

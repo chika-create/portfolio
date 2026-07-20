@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { FiMenu, FiX } from "react-icons/fi";
 import headerStyles from "@styles/common/header.module.scss";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -12,6 +14,10 @@ export const Header = () => {
 
   const closeMenu = () => {
     setIsOpen(false);
+  };
+
+  const isActive = (path: string) => {
+    return router.pathname === path;
   };
 
   return (
@@ -26,16 +32,16 @@ export const Header = () => {
 
         <nav className={headerStyles.pcNav}>
           <ul className={headerStyles.navList}>
-            <li className={headerStyles.navItem}>
+            <li className={`${headerStyles.navItem} ${isActive("/") ? headerStyles.active : ""}`}>
               <Link href="/">TOP</Link>
             </li>
-            <li className={headerStyles.navItem}>
+            <li className={`${headerStyles.navItem} ${isActive("/portfolio") ? headerStyles.active : ""}`}>
               <Link href="/portfolio">Projects</Link>
             </li>
-            <li className={headerStyles.navItem}>
-              <Link href="/">About</Link>
+            <li className={`${headerStyles.navItem} ${isActive("/about") ? headerStyles.active : ""}`}>
+              <Link href="/about">About</Link>
             </li>
-            <li className={headerStyles.navItem}>
+            <li className={`${headerStyles.navItem} ${isActive("/skillset") ? headerStyles.active : ""}`}>
               <Link href="/skillset">SkillSet</Link>
             </li>
           </ul>
@@ -54,22 +60,22 @@ export const Header = () => {
           className={`${headerStyles.spNav} ${isOpen ? headerStyles.isOpen : ""}`}
         >
           <ul className={headerStyles.spNavList}>
-            <li className={headerStyles.spNavItem}>
+            <li className={`${headerStyles.spNavItem} ${isActive("/") ? headerStyles.active : ""}`}>
               <Link href="/" onClick={closeMenu}>
                 TOP
               </Link>
             </li>
-            <li className={headerStyles.spNavItem}>
+            <li className={`${headerStyles.spNavItem} ${isActive("/portfolio") ? headerStyles.active : ""}`}>
               <Link href="/portfolio" onClick={closeMenu}>
                 Projects
               </Link>
             </li>
-            <li className={headerStyles.spNavItem}>
-              <Link href="/" onClick={closeMenu}>
+            <li className={`${headerStyles.spNavItem} ${isActive("/about") ? headerStyles.active : ""}`}>
+              <Link href="/about" onClick={closeMenu}>
                 About
               </Link>
             </li>
-            <li className={headerStyles.spNavItem}>
+            <li className={`${headerStyles.spNavItem} ${isActive("/skillset") ? headerStyles.active : ""}`}>
               <Link href="/skillset" onClick={closeMenu}>
                 SkillSet
               </Link>
