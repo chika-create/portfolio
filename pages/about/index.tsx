@@ -9,7 +9,7 @@ export default function About() {
     <>
       <main className={pageStyles.main}>
         <section>
-          <Title level="h2">私について（工事中）</Title>
+          <Title level="h2">私について</Title>
           <code className={pageStyles.codeText}>const AboutMe = () ={'>'} </code>
           <AboutComponent />
           <Button href="/">return TOP;</Button>
