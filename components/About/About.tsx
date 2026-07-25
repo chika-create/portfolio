@@ -1,88 +1,11 @@
 import aboutStyles from "@styles/about/about.module.scss";
 import { Title } from "@components/parts/Title";
+import { profileData, historyData, valueData } from "./aboutData";
+import { ProfileBox } from "./ProfileBox";
+import { HistoryItem } from "./HistoryItem";
+import { MindSetCard } from "./MindSetCard";
 
 export const About = () => {
-  const profileData = [
-    { key: "nameJP", value: '"本告 智香",' },
-    { key: "nameEn", value: '"Chika Motoori",' },
-    { key: "location", value: '"兵庫県西宮市",' },
-    { key: "birth", value: '"1988.11",' },
-    { key: "company", value: '"株式会社エイチームライフデザイン",' },
-    { key: "MBTI", value: '"ESFJ"' },
-  ];
-
-  const historyData = [
-    {
-      period: "2017 ー 現在",
-      company: "株式会社エイチームライフデザイン",
-      contents: [
-        {
-          title: "モダンフロントエンド開発と品質改善",
-          text: "React、Next.js、TypeScript、storybook 等を用いた機能実装。\nPSI 改善（表示速度改善）では、他職能との折衝を含めた計画立案・実行を主導し、UX 向上に貢献。",
-        },
-        {
-          title: "データとユーザー視点に基づくサイト改善",
-          text: "GA 分析やユーザーインタビュー、AB テストを通じた施策考案。\n金融系メディアにて、分析から実装まで一気通貫で行いチームの CVR 目標達成に寄与。",
-        },
-        {
-          title: "持続可能な運用設計と負債の解消",
-          text: "大規模な不要ファイルの削除やコード整理を主導。\n中長期的な運用を見据えた、メンテナンス性の高い設計・ドキュメント整備を徹底。",
-        },
-        {
-          title: "チームへの貢献と次世代育成",
-          text: "3 名規模のデザイナーチームのマネジメントや、新卒・中途含め累計 7 名のメンターを担当。\n社内外での勉強会登壇や「もくもく会」の企画運営など、組織全体の技術ボトムアップを推進。",
-        },
-      ],
-    },
-    {
-      period: "2011 ー 2017",
-      company: "株式会社ドアズ",
-      contents: [
-        {
-          title: "多種多様な Web サイト制作と技術的探求",
-          text: "医療・食品・自治体など幅広い業種のコーポレートサイトや EC サイトの立ち上げにおいて、コーディングやシステム実装を担当。\nメンター不在の環境下で自ら調査・習得しながらブログ読み込みシステムの構築などを完遂しました。\n運用フェーズでは顧客窓口や外部エンジニアとの技術連携を一手に担い、現場の魅力を引き出すための写真撮影や取材にも自ら足を運ぶなど、一貫したモノづくりに努めました。",
-        },
-        {
-          title: "自社 EC ブランドの戦略的運営とグロース",
-          text: "楽天や Amazon 等のモール運営において、SEO 研究やスクロール率分析に基づくページ改善、広告運用を主導。\n検索ワードを軸にした商品企画から季節ごとの販促計画、メルマガ配信まで、売上最大化に向けたビジネスサイクルを自走して回しました。\n実際のシルバーアクセサリー製作を通じた製品理解を深めるなど、「現場の事実」に基づいた運営を大切にしていました。",
-        },
-      ],
-    },
-    {
-      period: "2007 ー 2011",
-      company: "HAL大阪 Web開発学科 Webエンジニア専攻",
-      contents: [
-        {
-          title: "Web 開発の基礎習得と多角的なスキル研鑽",
-          text: "Web 開発学科にて、JavaScript や PHP を用いたシステム開発、インフラ基礎を網羅的に習得。\n在学中には「技能五輪全国大会」に大阪代表として出場したほか、IPA 主催の「セキュリティ・プログラミングキャンプ」に選抜されるなど、学外でも高度な技術研鑽に励みました。\n基本情報の取得や Web デザイン講座の受講を通じ、現在のゼネラリストとしての土台を築きました。",
-        },
-        {
-          title: "学生自治活動を通じたコミュニティ運営",
-          text: "学生自治組織に所属し、教職員も参加する学内行事や親睦会の企画・運営、体験入学のサポートに従事しました。\n多様なステークホルダーが参加する場の調整や、周囲を巻き込んだイベント運営の経験は、現在の「チームの一体感を大切にする」仕事スタイルの原点となっています。",
-        },
-      ],
-    },
-  ];
-
-  const valueData = [
-    {
-      title: "チームで一体感を持って仕事をする",
-      text: "制作を「自分一人」ではなく「チーム」で成し遂げることを大切にしています。\n他者の業務も自分ごととして捉え、周囲が円滑に動けるよう先回りした配慮やコミュニケーションを心がけています。\n互いを尊重し、一体感を持って取り組むことが、結果として最も高い品質を生むと考えています。",
-    },
-    {
-      title: "施策の「妥当性」を問い、目的を形にする",
-      text: "制作において、技術やデザインはあくまでビジネス課題を解決するための「手段」です。\n「なぜこの施策が必要なのか」という背景を常に意識し、手段が目的化しないようプロジェクトのゴールから逆算した最適な実装・設計を選択することを心がけています。",
-    },
-    {
-      title: "状況に応じた、最適な「品質とスピード」の選択",
-      text: "常に「今のプロジェクトに求められているものは何か」を判断軸に置いています。\n長期運用のための堅牢なコードはもちろん重要ですが、新規施策の検証などスピードが優先される局面では機動力を重視した開発を選択します。\nその時々の状況を冷静に見極め、プロジェクトの推進力を最大化するバランスを追求しています。",
-    },
-    {
-      title: "持続可能な開発と、職能を超えた連携",
-      text: "制作を「リリースして終わり」とは考えず、その後の運用や拡張性までを見据えた設計を心がけています。\n特に他職能とのスムーズな連携を重視し、誰が見ても理解しやすいドキュメント整備や、将来のカスタマイズに耐えうる柔軟なコンポーネント構成を追求しています。",
-    },
-  ];
-
   return (
     <div className={aboutStyles.about}>
       {/* Personal Section */}
@@ -92,18 +15,7 @@ export const About = () => {
             <div className={aboutStyles.headingWrapper}>
               <Title level="h2">Personal</Title>
             </div>
-            <div className={aboutStyles.profileBox}>
-              <code className={aboutStyles.codeLine}>const profile = {"{"}</code>
-              <ul className={aboutStyles.profileList}>
-                {profileData.map((item) => (
-                  <li key={item.key} className={aboutStyles.profileItem}>
-                    <span className={aboutStyles.key}>{item.key}:</span>
-                    <span className={aboutStyles.value}>{item.value}</span>
-                  </li>
-                ))}
-              </ul>
-              <code className={aboutStyles.codeLine}>{"}"}</code>
-            </div>
+            <ProfileBox profileData={profileData} />
           </div>
         </div>
       </section>
@@ -117,20 +29,7 @@ export const About = () => {
             </div>
             <div className={aboutStyles.historyList}>
               {historyData.map((item, index) => (
-                <div key={index} className={aboutStyles.historyItem}>
-                  <div className={aboutStyles.historyHeader}>
-                    <span className={aboutStyles.period}>{item.period}</span>
-                    <h3 className={aboutStyles.company}>{item.company}</h3>
-                  </div>
-                  <div className={aboutStyles.historyContents}>
-                    {item.contents.map((content, idx) => (
-                      <div key={idx} className={aboutStyles.contentBox}>
-                        <h4 className={aboutStyles.contentTitle}>{content.title}</h4>
-                        <p className={aboutStyles.contentText}>{content.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <HistoryItem key={index} item={item} />
               ))}
             </div>
           </div>
@@ -146,10 +45,7 @@ export const About = () => {
             </div>
             <div className={aboutStyles.valueList}>
               {valueData.map((value, index) => (
-                <div key={index} className={aboutStyles.valueCard}>
-                  <h3 className={aboutStyles.valueTitle}>{value.title}</h3>
-                  <p className={aboutStyles.valueText}>{value.text}</p>
-                </div>
+                <MindSetCard key={index} value={value} />
               ))}
             </div>
           </div>
@@ -158,3 +54,4 @@ export const About = () => {
     </div>
   );
 };
+
