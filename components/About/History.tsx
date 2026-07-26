@@ -1,25 +1,24 @@
 import historyStyles from "@styles/about/history.module.scss";
-import { HistoryData } from "./aboutData";
+import { Title } from "@components/parts/Title";
+import { historyData } from "./aboutData";
+import { HistoryItem } from "./HistoryItem";
 
-interface HistoryProps {
-  item: HistoryData;
-}
-
-export const History = ({ item }: HistoryProps) => {
+export const History = () => {
   return (
-    <div className={historyStyles.History}>
-      <div className={historyStyles.historyHeader}>
-        <span className={historyStyles.period}>{item.period}</span>
-        <h3 className={historyStyles.company}>{item.company}</h3>
-      </div>
-      <div className={historyStyles.historyContents}>
-        {item.contents.map((content, idx) => (
-          <div key={idx} className={historyStyles.contentBox}>
-            <h4 className={historyStyles.contentTitle}>{content.title}</h4>
-            <p className={historyStyles.contentText}>{content.text}</p>
+      <section className={historyStyles.section}>
+        <div className={historyStyles.container}>
+          <div className={historyStyles.sectionInner}>
+            <div className={historyStyles.headingWrapper}>
+              <Title level="h2">History</Title>
+            </div>
+            <div className={historyStyles.historyList}>
+              {historyData.map((item, index) => (
+                <HistoryItem key={index} item={item} />
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      </section>
+
   );
 };
