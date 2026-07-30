@@ -3,7 +3,7 @@ import { profileData } from "./aboutData";
 
 export const ProfileItem = () => {
   return (
-    <div className={profileStyles.Profile}>
+    <div className={profileStyles.profileBox}>
       <code className={profileStyles.codeLine}>const profile = {"{"}</code>
       <ul className={profileStyles.profileList}>
         {profileData.map((item) => (

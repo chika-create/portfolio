@@ -1,7 +1,7 @@
 import aboutStyles from "@styles/about/about.module.scss";
 import { Profile } from "./Profile";
 import { History } from "./History";
-import { MindSet} from "./MindSet";
+import { MindSet } from "./MindSet";
 
 export const About = () => {
   return (

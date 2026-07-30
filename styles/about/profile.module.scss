@@ -21,3 +21,37 @@
     padding-left: 1rem;
   }
 }
+
+.profileItem {
+  display: flex;
+  gap: 0.625rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: $breakpoint-sp) {
+    font-size: 1rem;
+  }
+}
+
+.key {
+  color: map-get($gray, "400");
+  min-width: 100px;
+
+  @media (max-width: $breakpoint-sp) {
+    min-width: 90px;
+  }
+}
+
+.value {
+  color: map-get($gray, "800");
+}
+
+.codeLine {
+  color: map-get($gray, "400");
+  font-size: 1.125rem;
+
+  @media (max-width: $breakpoint-sp) {
+    font-size: 1.125rem;
+  }
+}
