@@ -1,4 +1,4 @@
-import { LevelGuideItem, SkillCategory } from "types/types";
+import { LevelGuideItem, SkillCategory } from "@types/types";
 
 export const levelGuide: LevelGuideItem[] = [
   {

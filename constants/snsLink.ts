@@ -1,8 +1,8 @@
-import type { SnsLink } from "types/types";
+import type { SnsLink } from "@types/types";
 
 export const snsLinks: SnsLink[] = [
   { id: "x",
-    url: "https://twitter.com/chika_hoge",
+    url: "https://x.com/chika_create",
     image: "icon_x.png"
   },
   {
@@ -11,7 +11,7 @@ export const snsLinks: SnsLink[] = [
     image: "icon_github.svg",
   },
   { id: "qiita",
-    url: "https://qiita.com/chika_hoge",
+    url: "https://qiita.com/chika_create",
     image: "icon_qiita.png"
   }
 ];
