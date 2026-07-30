@@ -1,0 +1,45 @@
+@use "../common/colors.scss" as *;
+@import "../common/variables.scss";
+
+.container {
+  max-width: $main-content-width;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: $breakpoint-sp) {
+    padding: 0 1rem;
+  }
+}
+
+.section {
+  background-color: map-get($gray, "50");
+  padding: 5rem 0;
+  
+  &:nth-child(even) {
+    background-color: $white;
+  }
+
+  @media (max-width: $breakpoint-sp) {
+    padding: 3rem 0;
+  }
+}
+
+.sectionInner {
+  display: flex;
+  gap: 2rem;
+
+  @media (max-width: $breakpoint-sp) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.headingWrapper {
+  width: 182px;
+  flex-shrink: 0;
+
+  @media (max-width: $breakpoint-sp) {
+    width: 100%;
+  }
+}

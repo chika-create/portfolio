@@ -7,12 +7,12 @@ interface HistoryItemProps {
 
 export const HistoryItem = ({ item }: HistoryItemProps) => {
   return (
-    <div className={historyItemStyles.HistoryItem}>
-      <div className={historyItemStyles.HistoryItemHeader}>
+    <div className={historyItemStyles.historyItem}>
+      <div className={historyItemStyles.historyHeader}>
         <span className={historyItemStyles.period}>{item.period}</span>
         <h3 className={historyItemStyles.company}>{item.company}</h3>
       </div>
-      <div className={historyItemStyles.HistoryItemContents}>
+      <div className={historyItemStyles.historyContents}>
         {item.contents.map((content, idx) => (
           <div key={idx} className={historyItemStyles.contentBox}>
             <h4 className={historyItemStyles.contentTitle}>{content.title}</h4>

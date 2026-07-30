@@ -1,15 +1,15 @@
 import mindSetStyles from "@styles/about/mindSet.module.scss";
-import { MindSetData } from "./aboutData";
+import layoutStyles from "@styles/about/layout.module.scss";
 import { MindSetItem} from "./MindSetItem";
 import { valueData } from "./aboutData";
 import { Title } from "@components/parts/Title";
 
 export const MindSet = () => {
   return (
-      <section className={mindSetStyles.section}>
-        <div className={mindSetStyles.container}>
-          <div className={mindSetStyles.sectionInner}>
-            <div className={mindSetStyles.headingWrapper}>
+      <section className={layoutStyles.section}>
+        <div className={layoutStyles.container}>
+          <div className={layoutStyles.sectionInner}>
+            <div className={layoutStyles.headingWrapper}>
               <Title level="h2">MindSet</Title>
             </div>
             <div className={mindSetStyles.valueList}>
