@@ -3,43 +3,47 @@
 @use "../common/variables.scss" as *;
 
 .businessCard {
+  container-type: inline-size;
   max-width: 36.125rem;
+  width: 100%;
   margin: 6.5rem auto 0;
-  padding: 2rem 2.75rem;
+  padding: 5.5% 7.6%;
   background-color: white;
   box-shadow: $shadow-xl;
   &__job {
-    font-size: 1.5rem;
-    margin-top: 3rem;
+    font-size: 4.15cqi;
+    margin-top: 8.3%;
   }
   &__name {
-    font-size: 2rem;
+    font-size: 5.53cqi;
     font-weight: normal;
-    margin-top: 2.625rem;
+    margin-top: 7.27%;
   }
   &__ruby {
     color: map.get($gray, "400");
-    font-size: 1.125rem;
-    margin-top: 1.625rem;
+    font-size: 3.11cqi;
+    margin-top: 4.5%;
   }
   &__sns {
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
-    margin-top: 3rem;
+    gap: 2.77cqi;
+    margin-top: 8.3%;
     &Item {
       list-style: none;
       &Link {
-        padding: 0.4rem;
+        padding: 1.11cqi;
         box-shadow: $shadow-base;
         display: flex;
         align-items: center;
         &Icon {
+          width: 2.77cqi;
+          height: 2.77cqi;
           vertical-align: middle;
         }
       }
       &:nth-child(-n + 2) .businessCard__snsItemLink {
-        padding: 0.4rem 0.55rem;
+        padding: 1.11cqi 1.52cqi;
       }
     }
   }
@@ -48,21 +52,7 @@
 @media (max-width: $breakpoint-sp) {
   .businessCard {
     margin: 1.5rem auto 0;
-    padding: 1.5rem;
-    &__job {
-      font-size: 0.875rem;
-      margin-top: 1.25rem;
-    }
-    &__name {
-      font-size: 1.5rem;
-      margin-top: 0.5rem;
-    }
-    &__ruby {
-      font-size: 0.875rem;
-      margin-top: 0.5rem;
-    }
     &__sns {
-      margin-top: 1rem;
       justify-content: center;
     }
   }
