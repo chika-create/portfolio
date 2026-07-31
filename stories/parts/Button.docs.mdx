@@ -1,0 +1,60 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/addon-docs/blocks";
+import * as ButtonStories from "./Button.stories";
+
+<Meta of={ButtonStories} />
+
+# Button 運用ガイド
+
+このドキュメントは、共通部品 Button をポートフォリオサイト内で一貫して運用するためのガイドです。
+
+## 運用ルール
+
+- children には、操作の意図が伝わる短い文言を設定します。
+- 画面遷移が目的のときは href を使います（内部リンク前提）。
+- 単純なアクション実行時は href を使わず、onClick で処理します。
+- className は拡張用途に限定し、基本スタイルは Button 側に寄せます。
+- href と onClick の併用が必要な場合は、計測や補助処理のみを onClick に寄せます。
+
+## 使用例
+
+### 1. 遷移ボタン（推奨）
+
+```tsx
+<Button href="/portfolio">制作実績を見る</Button>
+```
+
+### 2. アクションボタン（推奨）
+
+```tsx
+<Button onClick={handleOpenModal}>お問い合わせ</Button>
+```
+
+### 3. 見た目の調整（必要時のみ）
+
+```tsx
+<Button className={styles.compactButton}>もっと見る</Button>
+```
+
+## Do / Don't
+
+| Do | Don't |
+| --- | --- |
+| 遷移目的なら href を使う | 遷移なのに onClick 内で router.push だけを行う |
+| テキストは具体的にする | 「こちら」「Click」など曖昧な文言にする |
+| className は最小限に使う | 画面ごとに大幅な上書きで見た目を分岐させる |
+
+## Story での確認
+
+<Canvas>
+  <Story of={ButtonStories.AsButton} />
+</Canvas>
+
+<Canvas>
+  <Story of={ButtonStories.AsLink} />
+</Canvas>
+
+<Canvas>
+  <Story of={ButtonStories.LongText} />
+</Canvas>
+
+<Controls of={ButtonStories.AsButton} />

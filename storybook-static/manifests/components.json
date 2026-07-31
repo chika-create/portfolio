@@ -1,0 +1,416 @@
+{
+  "v": 0,
+  "components": {
+    "example-button": {
+      "id": "example-button",
+      "name": "Button",
+      "path": "./stories/Button.stories.ts",
+      "jsDocTags": {},
+      "description": "Primary UI component for user interaction",
+      "reactDocgen": {
+        "description": "Primary UI component for user interaction",
+        "methods": [],
+        "displayName": "Button",
+        "definedInFile": "/Users/chika/chika_create/portfolio/stories/Button.tsx",
+        "actualName": "Button",
+        "exportName": "Button",
+        "props": {
+          "primary": {
+            "required": false,
+            "tsType": {
+              "name": "boolean"
+            },
+            "description": "Is this the principal call to action on the page?",
+            "defaultValue": {
+              "value": "false",
+              "computed": false
+            }
+          },
+          "backgroundColor": {
+            "required": false,
+            "tsType": {
+              "name": "string"
+            },
+            "description": "What background color to use"
+          },
+          "size": {
+            "required": false,
+            "tsType": {
+              "name": "union",
+              "raw": "'small' | 'medium' | 'large'",
+              "elements": [
+                {
+                  "name": "literal",
+                  "value": "'small'"
+                },
+                {
+                  "name": "literal",
+                  "value": "'medium'"
+                },
+                {
+                  "name": "literal",
+                  "value": "'large'"
+                }
+              ]
+            },
+            "description": "How large should the button be?",
+            "defaultValue": {
+              "value": "'medium'",
+              "computed": false
+            }
+          },
+          "label": {
+            "required": true,
+            "tsType": {
+              "name": "string"
+            },
+            "description": "Button contents"
+          },
+          "onClick": {
+            "required": false,
+            "tsType": {
+              "name": "signature",
+              "type": "function",
+              "raw": "() => void",
+              "signature": {
+                "arguments": [],
+                "return": {
+                  "name": "void"
+                }
+              }
+            },
+            "description": "Optional click handler"
+          }
+        }
+      },
+      "stories": [
+        {
+          "id": "example-button--primary",
+          "name": "Primary",
+          "snippet": "const Primary = () => <Button onClick={fn()} primary label=\"Button\" />;"
+        },
+        {
+          "id": "example-button--secondary",
+          "name": "Secondary",
+          "snippet": "const Secondary = () => <Button onClick={fn()} label=\"Button\" />;"
+        },
+        {
+          "id": "example-button--large",
+          "name": "Large",
+          "snippet": "const Large = () => <Button onClick={fn()} size=\"large\" label=\"Button\" />;"
+        },
+        {
+          "id": "example-button--small",
+          "name": "Small",
+          "snippet": "const Small = () => <Button onClick={fn()} size=\"small\" label=\"Button\" />;"
+        }
+      ],
+      "import": "import { Button } from \"portfolio\";"
+    },
+    "example-header": {
+      "id": "example-header",
+      "name": "Header",
+      "path": "./stories/Header.stories.ts",
+      "jsDocTags": {},
+      "reactDocgen": {
+        "description": "",
+        "methods": [],
+        "displayName": "Header",
+        "definedInFile": "/Users/chika/chika_create/portfolio/stories/Header.tsx",
+        "actualName": "Header",
+        "exportName": "Header",
+        "props": {
+          "user": {
+            "required": false,
+            "tsType": {
+              "name": "signature",
+              "type": "object",
+              "raw": "{\n  name: string;\n}",
+              "signature": {
+                "properties": [
+                  {
+                    "key": "name",
+                    "value": {
+                      "name": "string",
+                      "required": true
+                    }
+                  }
+                ]
+              }
+            },
+            "description": ""
+          },
+          "onLogin": {
+            "required": false,
+            "tsType": {
+              "name": "signature",
+              "type": "function",
+              "raw": "() => void",
+              "signature": {
+                "arguments": [],
+                "return": {
+                  "name": "void"
+                }
+              }
+            },
+            "description": ""
+          },
+          "onLogout": {
+            "required": false,
+            "tsType": {
+              "name": "signature",
+              "type": "function",
+              "raw": "() => void",
+              "signature": {
+                "arguments": [],
+                "return": {
+                  "name": "void"
+                }
+              }
+            },
+            "description": ""
+          },
+          "onCreateAccount": {
+            "required": false,
+            "tsType": {
+              "name": "signature",
+              "type": "function",
+              "raw": "() => void",
+              "signature": {
+                "arguments": [],
+                "return": {
+                  "name": "void"
+                }
+              }
+            },
+            "description": ""
+          }
+        }
+      },
+      "stories": [
+        {
+          "id": "example-header--logged-in",
+          "name": "Logged In",
+          "snippet": "const LoggedIn = () => <Header\n    onLogin={fn()}\n    onLogout={fn()}\n    onCreateAccount={fn()}\n    user={{\n      name: 'Jane Doe',\n    }} />;"
+        },
+        {
+          "id": "example-header--logged-out",
+          "name": "Logged Out",
+          "snippet": "const LoggedOut = () => <Header onLogin={fn()} onLogout={fn()} onCreateAccount={fn()} />;"
+        }
+      ],
+      "import": "import { Header } from \"portfolio\";"
+    },
+    "example-page": {
+      "id": "example-page",
+      "name": "Page",
+      "path": "./stories/Page.stories.ts",
+      "jsDocTags": {},
+      "reactDocgen": {
+        "description": "",
+        "methods": [],
+        "displayName": "Page",
+        "definedInFile": "/Users/chika/chika_create/portfolio/stories/Page.tsx",
+        "actualName": "Page",
+        "exportName": "Page"
+      },
+      "stories": [
+        {
+          "id": "example-page--logged-out",
+          "name": "Logged Out",
+          "snippet": "const LoggedOut = () => <Page />;"
+        },
+        {
+          "id": "example-page--logged-in",
+          "name": "Logged In",
+          "snippet": "const LoggedIn = () => <Page />;"
+        }
+      ],
+      "import": "import { Page } from \"portfolio\";"
+    },
+    "portfolio-parts-button": {
+      "id": "portfolio-parts-button",
+      "name": "Button",
+      "path": "./stories/parts/Button.stories.ts",
+      "jsDocTags": {},
+      "reactDocgen": {
+        "description": "",
+        "methods": [],
+        "displayName": "Button",
+        "definedInFile": "/Users/chika/chika_create/portfolio/components/parts/Button/Button.tsx",
+        "actualName": "Button",
+        "exportName": "Button",
+        "props": {
+          "children": {
+            "required": true,
+            "tsType": {
+              "name": "ReactNode"
+            },
+            "description": ""
+          },
+          "href": {
+            "required": false,
+            "tsType": {
+              "name": "string"
+            },
+            "description": ""
+          },
+          "onClick": {
+            "required": false,
+            "tsType": {
+              "name": "signature",
+              "type": "function",
+              "raw": "() => void",
+              "signature": {
+                "arguments": [],
+                "return": {
+                  "name": "void"
+                }
+              }
+            },
+            "description": ""
+          },
+          "className": {
+            "required": false,
+            "tsType": {
+              "name": "string"
+            },
+            "description": ""
+          }
+        }
+      },
+      "stories": [
+        {
+          "id": "portfolio-parts-button--as-button",
+          "name": "As Button",
+          "snippet": "const AsButton = () => <Button onClick={fn()} href={undefined}>お問い合わせ</Button>;"
+        },
+        {
+          "id": "portfolio-parts-button--as-link",
+          "name": "As Link",
+          "snippet": "const AsLink = () => <Button onClick={fn()} href=\"/portfolio\">制作実績を見る</Button>;"
+        },
+        {
+          "id": "portfolio-parts-button--long-text",
+          "name": "Long Text",
+          "snippet": "const LongText = () => <Button onClick={fn()}>スキルセットと制作実績をまとめて確認する</Button>;"
+        }
+      ],
+      "import": "import { Button } from \"portfolio\";",
+      "docs": {
+        "portfolio-parts-button--docs": {
+          "id": "portfolio-parts-button--docs",
+          "name": "Docs",
+          "path": "./stories/parts/Button.docs.mdx",
+          "title": "Portfolio/Parts/Button",
+          "content": "import { Meta, Canvas, Story, Controls } from \"@storybook/addon-docs/blocks\";\nimport * as ButtonStories from \"./Button.stories\";\n\n<Meta of={ButtonStories} />\n\n# Button 運用ガイド\n\nこのドキュメントは、共通部品 Button をポートフォリオサイト内で一貫して運用するためのガイドです。\n\n## 運用ルール\n\n- children には、操作の意図が伝わる短い文言を設定します。\n- 画面遷移が目的のときは href を使います（内部リンク前提）。\n- 単純なアクション実行時は href を使わず、onClick で処理します。\n- className は拡張用途に限定し、基本スタイルは Button 側に寄せます。\n- href と onClick の併用が必要な場合は、計測や補助処理のみを onClick に寄せます。\n\n## 使用例\n\n### 1. 遷移ボタン（推奨）\n\n```tsx\n<Button href=\"/portfolio\">制作実績を見る</Button>\n```\n\n### 2. アクションボタン（推奨）\n\n```tsx\n<Button onClick={handleOpenModal}>お問い合わせ</Button>\n```\n\n### 3. 見た目の調整（必要時のみ）\n\n```tsx\n<Button className={styles.compactButton}>もっと見る</Button>\n```\n\n## Do / Don't\n\n| Do | Don't |\n| --- | --- |\n| 遷移目的なら href を使う | 遷移なのに onClick 内で router.push だけを行う |\n| テキストは具体的にする | 「こちら」「Click」など曖昧な文言にする |\n| className は最小限に使う | 画面ごとに大幅な上書きで見た目を分岐させる |\n\n## Story での確認\n\n<Canvas>\n  <Story of={ButtonStories.AsButton} />\n</Canvas>\n\n<Canvas>\n  <Story of={ButtonStories.AsLink} />\n</Canvas>\n\n<Canvas>\n  <Story of={ButtonStories.LongText} />\n</Canvas>\n\n<Controls of={ButtonStories.AsButton} />\n",
+          "summary": "# Button 運用ガイド このドキュメントは、共通部品 Button をポートフォリオサイト内で一貫して運用するためのガイドです。 ## 運用ルール - children には..."
+        }
+      }
+    },
+    "portfolio-parts-title": {
+      "id": "portfolio-parts-title",
+      "name": "Title",
+      "path": "./stories/parts/Title.stories.ts",
+      "jsDocTags": {},
+      "reactDocgen": {
+        "description": "",
+        "methods": [],
+        "displayName": "Title",
+        "definedInFile": "/Users/chika/chika_create/portfolio/components/parts/Title/Title.tsx",
+        "actualName": "Title",
+        "exportName": "Title",
+        "props": {
+          "children": {
+            "required": true,
+            "tsType": {
+              "name": "ReactNode"
+            },
+            "description": ""
+          },
+          "level": {
+            "required": true,
+            "tsType": {
+              "name": "union",
+              "raw": "\"h1\" | \"h2\" | \"h3\"",
+              "elements": [
+                {
+                  "name": "literal",
+                  "value": "\"h1\""
+                },
+                {
+                  "name": "literal",
+                  "value": "\"h2\""
+                },
+                {
+                  "name": "literal",
+                  "value": "\"h3\""
+                }
+              ]
+            },
+            "description": ""
+          },
+          "style": {
+            "required": false,
+            "tsType": {
+              "name": "union",
+              "raw": "\"h1\" | \"h2\" | \"h3\"",
+              "elements": [
+                {
+                  "name": "literal",
+                  "value": "\"h1\""
+                },
+                {
+                  "name": "literal",
+                  "value": "\"h2\""
+                },
+                {
+                  "name": "literal",
+                  "value": "\"h3\""
+                }
+              ]
+            },
+            "description": ""
+          }
+        }
+      },
+      "stories": [
+        {
+          "id": "portfolio-parts-title--heading-1",
+          "name": "Heading 1",
+          "snippet": "const Heading1 = () => <Title level=\"h1\">About Me</Title>;"
+        },
+        {
+          "id": "portfolio-parts-title--heading-2",
+          "name": "Heading 2",
+          "snippet": "const Heading2 = () => <Title level=\"h2\">Skill Set</Title>;"
+        },
+        {
+          "id": "portfolio-parts-title--heading-3",
+          "name": "Heading 3",
+          "snippet": "const Heading3 = () => <Title level=\"h3\">Frontend</Title>;"
+        },
+        {
+          "id": "portfolio-parts-title--semantic-and-visual-separated",
+          "name": "Semantic And Visual Separated",
+          "snippet": "const SemanticAndVisualSeparated = () => <Title level=\"h1\" style=\"h2\">Semantics: h1 / Visual: h2</Title>;"
+        }
+      ],
+      "import": "import { Title } from \"portfolio\";",
+      "docs": {
+        "portfolio-parts-title--docs": {
+          "id": "portfolio-parts-title--docs",
+          "name": "Docs",
+          "path": "./stories/parts/Title.docs.mdx",
+          "title": "Portfolio/Parts/Title",
+          "content": "import { Meta, Canvas, Story, Controls } from \"@storybook/addon-docs/blocks\";\nimport * as TitleStories from \"./Title.stories\";\n\n<Meta of={TitleStories} />\n\n# Title 運用ガイド\n\nこのドキュメントは、共通部品 Title の見出し設計を統一するためのガイドです。\n\n## 運用ルール\n\n- level は文書構造に合わせて決めます（SEO/アクセシビリティ上の意味づけ）。\n- style は見た目調整のための任意指定です。必要な場合のみ使います。\n- ページ内で見出しレベルを飛ばしすぎないようにします（例: h1 の次に h3）。\n- children は短く、セクションの内容が伝わる語を使います。\n- デザイン都合で見た目を変えるときも、可能な限り level の意味は崩しません。\n\n## 使用例\n\n### 1. 通常の見出し（推奨）\n\n```tsx\n<Title level=\"h2\">Skill Set</Title>\n```\n\n### 2. 意味と見た目を分離するケース\n\n```tsx\n<Title level=\"h1\" style=\"h2\">About Me</Title>\n```\n\n## Do / Don't\n\n| Do | Don't |\n| --- | --- |\n| level を文書構造に合わせる | 見た目だけで level を選ぶ |\n| style は必要時のみ上書きする | すべての Title で style を強制指定する |\n| セクション名を具体的にする | 内容が分からない抽象見出しを使う |\n\n## Story での確認\n\n<Canvas>\n  <Story of={TitleStories.Heading1} />\n</Canvas>\n\n<Canvas>\n  <Story of={TitleStories.Heading2} />\n</Canvas>\n\n<Canvas>\n  <Story of={TitleStories.Heading3} />\n</Canvas>\n\n<Canvas>\n  <Story of={TitleStories.SemanticAndVisualSeparated} />\n</Canvas>\n\n<Controls of={TitleStories.Heading2} />\n",
+          "summary": "# Title 運用ガイド このドキュメントは、共通部品 Title の見出し設計を統一するためのガイドです。 ## 運用ルール - level は文書構造に合わせて決めます（SE..."
+        }
+      }
+    }
+  },
+  "meta": {
+    "docgen": "react-docgen",
+    "durationMs": 103
+  }
+}
