@@ -1,4 +1,4 @@
-import { SkillCategory } from "types/types";
+import { SkillCategory } from "@app-types/types";
 import { Title } from "@components/parts/Title";
 import { SkillItem } from "./SkillItem";
 import skillSectionStyles from "@styles/skillset/skillSection.module.scss";

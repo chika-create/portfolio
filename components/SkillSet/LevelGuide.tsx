@@ -1,4 +1,4 @@
-import { LevelGuideItem } from "types/types";
+import { LevelGuideItem } from "@app-types/types";
 import levelGuideStyles from "@styles/skillset/levelGuide.module.scss";
 
 interface LevelGuideProps {

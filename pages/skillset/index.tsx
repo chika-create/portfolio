@@ -1,20 +1,23 @@
 import pageStyles from "@styles/common/page.module.scss";
-import { Title } from "@components/parts/Title";
-import { Footer } from "@components/Footer";
 import { SkillSet as SkillSetComponent } from "@components/SkillSet";
+import { PageMeta } from "@components/PageMeta";
+import { CodeSection } from "@components/parts/CodeSection";
 
-export default function SkillSet() {
+export default function SkillSetPage() {
   return (
     <>
+      <PageMeta title="SkillSet | Chika Motoori" description="本告 智香のスキルセットを紹介するページです" />
       <main className={pageStyles.main}>
-        <section>
-          <Title level="h1">スキルセット</Title>
-          <code className={pageStyles.codeText}>const skillSet = () =&gt; {'{'}</code>
+        <CodeSection
+          title="スキルセット"
+          titleLevel="h1"
+          titleStyle="h1"
+          sectionClassName={pageStyles.sectionInner}
+          openingCode="const skillSet = () => {"
+        >
           <SkillSetComponent />
-          <code className={pageStyles.codeText}>{"}"}</code>
-        </section>
+        </CodeSection>
       </main>
-      <Footer />
     </>
   );
 }
