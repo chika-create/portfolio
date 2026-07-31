@@ -1,17 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import footerStyles from "@styles/footer.module.scss";
 
 export const Footer = () => {
-  const [currentPath, setCurrentPath] = useState("");
+  const pathname = usePathname();
 
-  useEffect(() => {
-    setCurrentPath(window.location.pathname);
-  }, []);
-
-  const isActive = (path: string) => currentPath === path;
+  const isActive = (path: string) => pathname === path;
 
   return (
     <footer className={footerStyles.footer}>

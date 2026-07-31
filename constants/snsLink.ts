@@ -1,4 +1,4 @@
-import type { SnsLink } from "types/types";
+import type { SnsLink } from "@app-types/types";
 
 export const snsLinks: SnsLink[] = [
   { id: "x",

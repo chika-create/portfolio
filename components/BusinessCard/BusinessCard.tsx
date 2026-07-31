@@ -20,6 +20,8 @@ export const BusinessCard = () => {
                 <img
                   src={`/images/${link.image}`}
                   className={businessCardStyles.businessCard__snsItemIcon}
+                  alt=""
+                  aria-hidden="true"
                   width="auto"
                   height={16}
                 />

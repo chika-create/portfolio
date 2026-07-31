@@ -4,7 +4,6 @@ import { Title } from "@components/parts/Title";
 import { Button } from "@components/parts/Button";
 import { BusinessCard } from "@components/BusinessCard";
 import { PortfolioList } from "@components/PortfolioList";
-import { Footer } from "@components/Footer";
 import { topSkillSet } from "./topSkillData";
 
 export function Top() {
@@ -16,7 +15,7 @@ export function Top() {
       </header>
 
       <main className={pageStyles.main}>
-        <section className={pageStyles.sectionInner}>
+        <section id="projects" className={pageStyles.sectionInner}>
           <Title level="h2" style="h1">プロジェクト</Title>
           <code className={pageStyles.codeText}>const projects = () ={'>'} </code>
           <PortfolioList />
@@ -68,7 +67,6 @@ export function Top() {
           <code className={pageStyles.codeText}>{"}"}</code>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

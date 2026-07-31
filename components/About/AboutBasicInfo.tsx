@@ -36,7 +36,12 @@ export const AboutBasicInfo = () => {
               {snsLinks.map((link) => (
                 <li key={link.id}>
                   <a href={link.url} target="_blank" rel="noopener noreferrer">
-                    <img src={`/images/${link.image}`} width="auto" height={16} />
+                    <img
+                      src={`/images/${link.image}`}
+                      alt={link.id}
+                      width="auto"
+                      height={16}
+                    />
                   </a>
                 </li>
               ))}

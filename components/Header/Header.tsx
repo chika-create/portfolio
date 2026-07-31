@@ -1,12 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
 import headerStyles from "@styles/common/header.module.scss";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -17,7 +19,7 @@ export const Header = () => {
   };
 
   const isActive = (path: string) => {
-    return router.pathname === path;
+    return pathname === path;
   };
 
   return (
