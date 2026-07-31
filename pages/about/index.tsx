@@ -1,8 +1,7 @@
-import pageStyles from "@styles/common/page.module.scss";
 import aboutStyles from "@styles/about/about.module.scss";
 import layoutStyles from "@styles/about/layout.module.scss";
-import { Title } from "@components/parts/Title";
 import { Button } from "@components/parts/Button";
+import { CodeSection } from "@components/parts/CodeSection";
 import { About as AboutComponent } from "@components/About";
 import { PageMeta } from "@components/PageMeta";
 
@@ -18,23 +17,26 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <section className={layoutStyles.container}>
-          <div className={aboutStyles.pageHeader}>
-            <Title level="h1">私について</Title>
-            <code className={pageStyles.codeText}>const about = () ={'>'} {"{"}</code>
-          </div>
-        </section>
+        <CodeSection
+          title="私について"
+          titleLevel="h1"
+          titleStyle="h1"
+          sectionClassName={layoutStyles.container}
+          innerClassName={aboutStyles.pageHeader}
+          openingCode="const about = () => {"
+        />
 
         <AboutComponent />
 
-        <section className={layoutStyles.container}>
-          <div className={aboutStyles.pageFooter}>
-            <code className={pageStyles.codeText}>{"}"}</code>
-            <div className={aboutStyles.returnButton}>
-              <Button href="/">return TOP;</Button>
-            </div>
+        <CodeSection
+          sectionClassName={layoutStyles.container}
+          innerClassName={aboutStyles.pageFooter}
+          closingCode="}"
+        >
+          <div className={aboutStyles.returnButton}>
+            <Button href="/">return TOP;</Button>
           </div>
-        </section>
+        </CodeSection>
       </main>
     </>
   );
