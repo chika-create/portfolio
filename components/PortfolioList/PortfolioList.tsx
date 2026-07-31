@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Title } from "@components/parts/Title";
 import portfolioListStyles from "@styles/portfolio/portfolioList.module.scss";
 
@@ -6,10 +7,12 @@ export const PortfolioList = () => {
     <div className={portfolioListStyles.box}>
       <div className={portfolioListStyles.content}>
         <figure>
-          <img
+          <Image
             src="https://placehold.jp/412x260.png"
             alt="ポートフォリオサイトのスクリーンショット"
             className={portfolioListStyles.image}
+            width={412}
+            height={260}
           />
         </figure>
         <div className={portfolioListStyles.textbox}>
@@ -27,10 +30,12 @@ export const PortfolioList = () => {
       </div>
       <div className={portfolioListStyles.content}>
         <figure>
-          <img
+          <Image
             src="https://placehold.jp/412x260.png"
             alt="おにぎり計算機のスクリーンショット"
             className={portfolioListStyles.image}
+            width={412}
+            height={260}
           />
         </figure>
         <div className={portfolioListStyles.textbox}>

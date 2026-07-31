@@ -22,7 +22,7 @@
       "@components/*": ["./components/*"],
       "@styles/*": ["./styles/*"],
       "@constants/*": ["./constants/*"],
-      "@types/*": ["./types/*"],
+      "@app-types/*": ["./types/*"],
       "types/*": ["./types/*"]
     }
   },

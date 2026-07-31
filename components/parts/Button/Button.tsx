@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ButtonInterface } from "@types/types";
+import { ButtonInterface } from "@app-types/types";
 import buttonStyles from "@styles/parts/button.module.scss";
 
 export const Button = ({ children, href, onClick, className }: ButtonInterface) => {

@@ -1,4 +1,4 @@
-import { TitleInterface } from "@types/types";
+import { TitleInterface } from "@app-types/types";
 import titleStyles from "@styles/parts/title.module.scss";
 
 export const Title = ({ 

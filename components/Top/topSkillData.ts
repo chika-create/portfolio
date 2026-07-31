@@ -1,4 +1,4 @@
-import type { TopSkillItem } from "@types/types";
+import type { TopSkillItem } from "types/types";
 import { fallbackSkillIcon, skillIconColors, skillIcons } from "@components/SkillSet/skillIconMap";
 
 const topSkillSourceNames = [
