@@ -1,5 +1,6 @@
+@use "sass:map";
 @use "../common/colors.scss" as *;
-@import "../common/variables.scss";
+@use "./variables.scss" as *;
 
 .main {
   width: $main-content-width;
@@ -17,7 +18,7 @@
 
 .codeText {
   display: block;
-  color: map-get($gray, "400");
+  color: map.get($gray, "400");
   font-size: 1.125rem;
   margin-top: 1.5rem;
 }

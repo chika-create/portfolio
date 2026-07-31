@@ -1,9 +1,10 @@
+@use "sass:map";
 @use "./common/colors.scss" as *;
-@import "./common/variables.scss";
+@use "./common/variables.scss" as *;
 
 .footer {
   margin-top: 8rem;
-  border-top: 1px solid map-get($gray, "300");
+  border-top: 1px solid map.get($gray, "300");
 }
 
 .footerInner {
@@ -29,7 +30,7 @@
 }
 
 .copyright {
-  color: map-get($gray, "400");
+  color: map.get($gray, "400");
   font-size: 0.875rem;
   margin-top: 2.5rem;
 }

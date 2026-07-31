@@ -1,5 +1,6 @@
+@use "sass:map";
 @use "../common/colors.scss" as *;
-@import "../common/variables.scss";
+@use "./variables.scss" as *;
 
 .header {
   background-color: $white;
@@ -10,7 +11,7 @@
   display: flex;
   align-items: center;
   z-index: 100;
-  border-bottom: 1px solid map-get($gray, "200");
+  border-bottom: 1px solid map.get($gray, "200");
 
   &Inner {
     max-width: $main-content-width;
@@ -38,7 +39,7 @@
     display: inline-block;
     margin-left: 1.5rem;
     font-size: 0.875rem;
-    color: map-get($gray, "400");
+    color: map.get($gray, "400");
 }
 
 .pcNav {
@@ -56,7 +57,7 @@
   a {
     transition: color 0.3s;
     &:hover {
-      color: map-get($gray, "400");
+      color: map.get($gray, "400");
     }
   }
 
@@ -74,7 +75,7 @@
   cursor: pointer;
   z-index: 110;
   padding: 0.75rem 1rem;
-  color: map-get($gray, "800");
+  color: map.get($gray, "800");
 }
 
 .spNav {
