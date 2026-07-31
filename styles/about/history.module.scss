@@ -1,0 +1,17 @@
+@use "../common/colors.scss" as *;
+@import "../common/variables.scss";
+
+.historyList {
+  flex-grow: 1;
+  border-left: 4px solid map-get($gray, "200");
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @media (max-width: $breakpoint-sp) {
+    padding-left: 0;
+    border-left: none;
+    gap: 3rem;
+  }
+}

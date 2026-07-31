@@ -1,13 +1,15 @@
-import { AboutBasicInfo } from "@components/About/AboutBasicInfo";
-import { AboutExperience } from "@components/About/AboutExperience";
-import { AboutValuesAndChallenges } from "@components/About/AboutValuesAndChallenges";
+import aboutStyles from "@styles/about/about.module.scss";
+import { Profile } from "./Profile";
+import { History } from "./History";
+import { MindSet } from "./MindSet";
 
 export const About = () => {
   return (
-    <>
-      <AboutBasicInfo />
-      <AboutExperience />
-      <AboutValuesAndChallenges />
-    </>
+    <div className={aboutStyles.about}>
+      <Profile />
+      <History />
+      <MindSet />
+    </div>
   );
 };
+

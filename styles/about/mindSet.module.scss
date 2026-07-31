@@ -1,0 +1,9 @@
+@use "../common/colors.scss" as *;
+@import "../common/variables.scss";
+
+.valueList {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
