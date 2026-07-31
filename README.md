@@ -1,30 +1,131 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
 
-## Getting Started
+Next.js（Pages Router）で構築したポートフォリオサイトです。  
+トップページ、自己紹介、スキルセット、制作実績の各ページを持ち、再利用可能なコンポーネントとSCSS Modulesで構成しています。
 
-First, run the development server:
+## 主な特徴
+
+- Pages Routerベースのシンプルな構成
+- セクションごとに分割した再利用可能コンポーネント
+- SCSS Modulesによるスタイルの局所化
+- TypeScriptによる型安全な実装
+- `eslint.config.mjs` を利用したESLint（Flat Config）
+
+## 技術スタック
+
+- Next.js 16
+- React 19
+- TypeScript
+- Sass（SCSS Modules）
+- ESLint 9
+
+## 動作環境
+
+- Node.js: `24.1.0`（`package.json` の `volta.node`）
+- npm
+
+Voltaを使っている場合は、リポジトリ直下で自動的にNode.jsバージョンが固定されます。
+
+## セットアップ
+
+1. 依存関係をインストールします。
+
+```bash
+npm install
+```
+
+2. 開発サーバーを起動します。
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. ブラウザで以下を開きます。
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 利用可能なスクリプト
 
-## Learn More
+- `npm run dev`  
+	開発サーバーを起動します。
+- `npm run build`  
+	本番ビルドを作成します。
+- `npm run start`  
+	本番ビルドを起動します。
+- `npm run lint`  
+	ESLintで静的解析を実行します。
 
-To learn more about Next.js, take a look at the following resources:
+## ルーティング
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Pages Routerを採用しています。主なページは以下です。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `/`（トップ）
+- `/about`
+- `/skillset`
+- `/portfolio`
 
-## Deploy on Vercel
+ページ実装は `pages/` 配下にあります。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ディレクトリ構成（抜粋）
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```text
+.
+├── components/      # 画面・機能ごとのUIコンポーネント
+├── constants/       # ナビゲーションなどの定数定義
+├── pages/           # Pages Routerの各ページ
+├── public/images/   # 画像アセット
+├── styles/          # SCSS Modules / 共通スタイル
+└── types/           # 型定義
+```
+
+## コンポーネント設計方針
+
+### 命名規則
+
+- コンポーネントファイルは `PascalCase` を使用します（例: `SkillItem.tsx`）。
+- コンポーネントディレクトリ名も `PascalCase` で統一します（例: `components/SkillSet/`）。
+- 補助データは `camelCase + Data` を基本とします（例: `skillData.ts`, `topSkillData.ts`）。
+- スタイルは `*.module.scss` を使用し、機能・ページ単位で配置します。
+- 再利用部品は `components/parts/` 配下に置き、抽象度の高い名前を付けます（例: `Button`, `Title`）。
+
+### 責務分割
+
+- `pages/`:
+	ルーティング単位のエントリーポイント。ページ構造の組み立てに集中し、複雑な表示ロジックは `components/` 側へ移譲します。
+- `components/`:
+	画面セクションや機能単位のUIを実装します。1コンポーネント1責務を基本にし、必要に応じて小さな子コンポーネントへ分割します。
+- `components/parts/`:
+	複数ページで再利用する共通UI部品を管理します。見た目と振る舞いをカプセル化し、ページ固有の文脈は持ち込まない方針です。
+- `constants/`:
+	ナビゲーションや外部リンクなど、アプリ全体で共有する定数を管理します。
+- `styles/`:
+	グローバルスタイルとモジュールスタイルを分離し、スタイルの影響範囲を明確化します。
+
+### 実装時のガイドライン
+
+- データ表示コンポーネントには、可能な限り表示用データをpropsで渡します。
+- ナビゲーションは `constants/siteNavigation.ts` を参照し、重複定義を避けます。
+- 大きなコンポーネントを作る場合は、先に「表示責務」「データ責務」「共通化可能部分」を切り分けてから実装します。
+- 型定義は `types/` またはコンポーネント近傍に配置し、責務境界を越える型は共通化します。
+
+## 開発時の補足
+
+- このプロジェクトはPages Routerを利用しているため、ページのメタ情報は `next/head` ベースで管理します。
+- ナビゲーション情報は `constants/siteNavigation.ts` を再利用し、ラベルとURLのズレを防いでください。
+- UI変更後は、`npm run lint && npm run build` の実行を推奨します。
+- Next.js 16では `next lint` ではなく `eslint .`（`npm run lint`）を利用しています。
+
+## デプロイ
+
+Vercelへのデプロイが簡単です。基本手順は以下です。
+
+1. リポジトリをVercelに接続
+2. ビルドコマンドに `npm run build` を設定
+3. Node.jsバージョンを必要に応じて `24.1.0` に合わせる
+
+詳細は以下を参照してください。
+
+- Next.js公式ドキュメント: https://nextjs.org/docs
+- Vercel公式ドキュメント: https://vercel.com/docs
