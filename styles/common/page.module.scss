@@ -1,12 +1,6 @@
 @use "../common/colors.scss" as *;
 @import "../common/variables.scss";
 
-.header {
-  background-color: map-get($gray, "100");
-  padding: 8rem 0;
-  text-align: center;
-}
-
 .main {
   width: $main-content-width;
   box-sizing: border-box;

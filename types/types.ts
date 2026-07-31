@@ -21,6 +21,7 @@ export interface SnsLink {
   id: string;
   url: string;
   image: string;
+  alt: string;
 }
 
 export type SkillItem = {

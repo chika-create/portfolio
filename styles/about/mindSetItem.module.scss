@@ -1,0 +1,32 @@
+@use "../common/colors.scss" as *;
+@import "../common/variables.scss";
+
+.valueCard {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.valueTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: map-get($gray, "800");
+
+  @media (max-width: $breakpoint-sp) {
+    font-size: 1.25rem;
+  }
+}
+
+.valueText {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: map-get($gray, "800");
+  white-space: pre-wrap;
+
+  @media (max-width: $breakpoint-sp) {
+    font-size: 1rem;
+  }
+}

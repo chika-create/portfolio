@@ -1,0 +1,52 @@
+@use "../common/colors.scss" as *;
+@import "../common/variables.scss";
+
+.main {
+  width: 100%;
+  padding: 60px 0 0;
+}
+
+.about {
+  width: 100%;
+}
+
+.pageHeader {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.pageFooter {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.returnButton {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.mv {
+  width: 100%;
+  aspect-ratio: 1280 / 800;
+  background-color: map-get($gray, "100");
+  border: 1px dashed map-get($gray, "300");
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: map-get($gray, "400");
+  font-size: 1.125rem;
+  margin-bottom: 4rem;
+  
+  &::before {
+    content: "[ Main Visual ]";
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: $breakpoint-sp) {
+    aspect-ratio: 375 / 234;
+  }
+}

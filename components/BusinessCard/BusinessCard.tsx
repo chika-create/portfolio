@@ -1,3 +1,4 @@
+import Image from "next/image";
 import businessCardStyles from "@styles/top/businessCard.module.scss";
 import { snsLinks } from "@constants/snsLink";
 
@@ -17,10 +18,11 @@ export const BusinessCard = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src={`/images/${link.image}`}
                   className={businessCardStyles.businessCard__snsItemIcon}
-                  width="auto"
+                  alt={link.alt}
+                  width={16}
                   height={16}
                 />
               </a>
