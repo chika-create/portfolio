@@ -10,6 +10,7 @@ Next.js（Pages Router）で構築したポートフォリオサイトです。
 - SCSS Modulesによるスタイルの局所化
 - TypeScriptによる型安全な実装
 - `eslint.config.mjs` を利用したESLint（Flat Config）
+- Storybook 10によるUIコンポーネントのカタログ化
 
 ## 技術スタック
 
@@ -18,6 +19,8 @@ Next.js（Pages Router）で構築したポートフォリオサイトです。
 - TypeScript
 - Sass（SCSS Modules）
 - ESLint 9
+- Storybook 10（`@storybook/nextjs-vite`）
+- Vitest（Storybook addon用設定）
 
 ## 動作環境
 
@@ -56,6 +59,10 @@ http://localhost:3000
 	本番ビルドを起動します。
 - `npm run lint`  
 	ESLintで静的解析を実行します。
+- `npm run storybook`  
+	Storybook開発サーバーを起動します（`http://localhost:6006`）。
+- `npm run build-storybook`  
+	Storybookの静的ビルドを作成します。
 
 ## ルーティング
 
@@ -116,6 +123,7 @@ Pages Routerを採用しています。主なページは以下です。
 - ナビゲーション情報は `constants/siteNavigation.ts` を再利用し、ラベルとURLのズレを防いでください。
 - UI変更後は、`npm run lint && npm run build` の実行を推奨します。
 - Next.js 16では `next lint` ではなく `eslint .`（`npm run lint`）を利用しています。
+- Storybookは `@storybook/nextjs-vite` 構成で導入済みです。UI確認時は `npm run storybook` を利用してください。
 
 ## デプロイ
 
