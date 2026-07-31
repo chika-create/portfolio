@@ -1,5 +1,6 @@
+@use "sass:map";
 @use "../common/colors.scss" as *;
-@import "../common/variables.scss";
+@use "../common/variables.scss" as *;
 
 .Button {
   font-size: 1rem;
@@ -8,14 +9,14 @@
   line-height: 1.5;
   margin: 2.5rem auto 0;
   padding: 0.5rem 2rem;
-  border: 1px solid map-get($gray, "200");
+  border: 1px solid map.get($gray, "200");
   border-radius: 0.25rem;
   background-color: $white;
   box-shadow: $shadow-base;
 
   &::before ,
   &::after {
-    color: map-get($gray, "400");
+    color: map.get($gray, "400");
   }
 
   &::before {

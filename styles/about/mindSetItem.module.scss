@@ -1,5 +1,6 @@
+@use "sass:map";
 @use "../common/colors.scss" as *;
-@import "../common/variables.scss";
+@use "../common/variables.scss" as *;
 
 .valueCard {
   background-color: #ffffff;
@@ -13,7 +14,7 @@
 .valueTitle {
   font-size: 1.25rem;
   font-weight: 500;
-  color: map-get($gray, "800");
+  color: map.get($gray, "800");
 
   @media (max-width: $breakpoint-sp) {
     font-size: 1.25rem;
@@ -23,7 +24,7 @@
 .valueText {
   font-size: 1.125rem;
   line-height: 1.5;
-  color: map-get($gray, "800");
+  color: map.get($gray, "800");
   white-space: pre-wrap;
 
   @media (max-width: $breakpoint-sp) {

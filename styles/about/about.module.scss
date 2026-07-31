@@ -1,5 +1,6 @@
+@use "sass:map";
 @use "../common/colors.scss" as *;
-@import "../common/variables.scss";
+@use "../common/variables.scss" as *;
 
 .main {
   width: 100%;
@@ -29,14 +30,14 @@
 .mv {
   width: 100%;
   aspect-ratio: 1280 / 800;
-  background-color: map-get($gray, "100");
-  border: 1px dashed map-get($gray, "300");
+  background-color: map.get($gray, "100");
+  border: 1px dashed map.get($gray, "300");
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: map-get($gray, "400");
+  color: map.get($gray, "400");
   font-size: 1.125rem;
   margin-bottom: 4rem;
   

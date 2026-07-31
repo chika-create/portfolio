@@ -1,9 +1,10 @@
+@use "sass:map";
 @use "../common/colors.scss" as *;
-@import "../common/variables.scss";
+@use "../common/variables.scss" as *;
 
 .historyList {
   flex-grow: 1;
-  border-left: 4px solid map-get($gray, "200");
+  border-left: 4px solid map.get($gray, "200");
   padding-left: 2rem;
   display: flex;
   flex-direction: column;

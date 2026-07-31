@@ -1,10 +1,11 @@
+@use "sass:map";
 @use "../common/colors.scss" as *;
-@import "../common/variables.scss";
+@use "../common/variables.scss" as *;
 
 .skillListItem {
   margin-top: 40px;
   padding-bottom: 40px;
-  border-bottom: 1px solid map-get($gray, "200");
+  border-bottom: 1px solid map.get($gray, "200");
 
   &:first-child {
     margin-top: 0;
@@ -40,7 +41,7 @@
       justify-content: center;
       width: 2.5rem;
       height: 2.5rem;
-      background-color: map-get($gray, "100");
+      background-color: map.get($gray, "100");
       flex-shrink: 0;
     }
 
@@ -70,11 +71,11 @@
     }
 
     &__levelbar--on {
-      background-color: map-get($gray, "300");
+      background-color: map.get($gray, "300");
     }
 
     &__levelbar--off {
-      background-color: map-get($gray, "100");
+      background-color: map.get($gray, "100");
     }
 
     &__text {

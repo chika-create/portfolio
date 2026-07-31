@@ -1,5 +1,6 @@
+@use "sass:map";
 @use "../common/colors.scss" as *;
-@import "../common/variables.scss";
+@use "../common/variables.scss" as *;
 
 .businessCard {
   max-width: 36.125rem;
@@ -17,7 +18,7 @@
     margin-top: 2.625rem;
   }
   &__ruby {
-    color: map-get($gray, "400");
+    color: map.get($gray, "400");
     font-size: 1.125rem;
     margin-top: 1.625rem;
   }

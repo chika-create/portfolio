@@ -1,5 +1,6 @@
+@use "sass:map";
 @use "../common/colors.scss" as *;
-@import "../common/variables.scss";
+@use "../common/variables.scss" as *;
 
 .container {
   max-width: $main-content-width;
@@ -13,7 +14,7 @@
 }
 
 .section {
-  background-color: map-get($gray, "50");
+  background-color: map.get($gray, "50");
   padding: 5rem 0;
   
   &:nth-child(even) {

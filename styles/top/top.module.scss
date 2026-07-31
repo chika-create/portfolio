@@ -1,5 +1,6 @@
+@use "sass:map";
 @use "../common/colors.scss" as *;
-@import "../common/variables.scss";
+@use "../common/variables.scss" as *;
 
 .header {
   padding: 8rem 1rem 9rem;
@@ -36,7 +37,7 @@
   display: inline-flex;
   gap: 0.5rem;
   padding: 0.5rem 0.875rem;
-  border: 1px solid map-get($gray, "200");
+  border: 1px solid map.get($gray, "200");
   border-radius: 0.5rem;
   background-color: $white;
   line-height: 1;
