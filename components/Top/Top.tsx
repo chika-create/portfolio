@@ -1,7 +1,7 @@
 import pageStyles from "@styles/common/page.module.scss";
 import topStyles from "@styles/top/top.module.scss";
-import { Title } from "@components/parts/Title";
 import { Button } from "@components/parts/Button";
+import { CodeSection } from "@components/parts/CodeSection";
 import { BusinessCard } from "@components/BusinessCard";
 import { PortfolioList } from "@components/PortfolioList";
 import { topSkillSet } from "./topSkillData";
@@ -15,16 +15,20 @@ export function Top() {
       </header>
 
       <main className={pageStyles.main}>
-        <section id="projects" className={pageStyles.sectionInner}>
-          <Title level="h2" style="h1">プロジェクト</Title>
-          <code className={pageStyles.codeText}>const projects = () ={'>'} </code>
+        <CodeSection
+          title="プロジェクト"
+          sectionId="projects"
+          sectionClassName={pageStyles.sectionInner}
+          openingCode="const projects = () => "
+        >
           <PortfolioList />
-          <code className={pageStyles.codeText}>{"}"}</code>
-        </section>
+        </CodeSection>
 
-        <section className={pageStyles.sectionInner}>
-          <Title level="h2" style="h1">私について</Title>
-          <code className={pageStyles.codeText}>const about = () ={'>'}</code>
+        <CodeSection
+          title="私について"
+          sectionClassName={pageStyles.sectionInner}
+          openingCode="const about = () => "
+        >
           <div className={topStyles.aboutBody}>
             <p className={topStyles.aboutText}>
               兵庫県在住、Web クリエイターの本告（もとおり）です。<br />
@@ -43,12 +47,13 @@ export function Top() {
               <Button href="/about">私について</Button>
             </li>
           </ul>
-          <code className={pageStyles.codeText}>{"}"}</code>
-        </section>
+        </CodeSection>
 
-        <section className={pageStyles.sectionInner}>
-          <Title level="h2" style="h1">スキルセット</Title>
-          <code className={pageStyles.codeText}>const skillSet = () ={'>'}</code>
+        <CodeSection
+          title="スキルセット"
+          sectionClassName={pageStyles.sectionInner}
+          openingCode="const skillSet = () => "
+        >
           <ul className={topStyles.skillSetList}>
             {topSkillSet.map((skill) => (
               <li className={topStyles.skillSetItem} key={skill.name}>
@@ -61,11 +66,10 @@ export function Top() {
           </ul>
           <ul className={topStyles.buttonList}>
             <li>
-              <Button href="/skill">スキルセット</Button>
+              <Button href="/skillset">スキルセット</Button>
             </li>
           </ul>
-          <code className={pageStyles.codeText}>{"}"}</code>
-        </section>
+        </CodeSection>
       </main>
     </>
   );

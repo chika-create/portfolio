@@ -1,20 +1,15 @@
-import type { Metadata } from "next";
 import pageStyles from "@styles/common/page.module.scss";
 import aboutStyles from "@styles/about/about.module.scss";
 import layoutStyles from "@styles/about/layout.module.scss";
 import { Title } from "@components/parts/Title";
 import { Button } from "@components/parts/Button";
 import { About as AboutComponent } from "@components/About";
-import { Footer } from "@components/Footer";
-
-export const metadata: Metadata = {
-  title: "About | Chika Motoori",
-  description: "本告 智香についての紹介ページです",
-};
+import { PageMeta } from "@components/PageMeta";
 
 export default function AboutPage() {
   return (
     <>
+      <PageMeta title="About | Chika Motoori" description="本告 智香についての紹介ページです" />
       <main className={aboutStyles.main}>
         {/* メインビジュアル枠 */}
         <div className={layoutStyles.container}>
@@ -41,7 +36,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

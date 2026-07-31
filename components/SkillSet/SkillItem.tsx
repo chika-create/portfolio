@@ -1,4 +1,4 @@
-import { SkillItem as SkillItemType } from "types/types";
+import { SkillItem as SkillItemType } from "@app-types/types";
 import skillItemStyles from "@styles/skillset/skillItem.module.scss";
 import {
   fallbackSkillIcon,

@@ -5,13 +5,14 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
 import headerStyles from "@styles/common/header.module.scss";
+import { siteNavigation } from "@constants/siteNavigation";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
   const closeMenu = () => {
@@ -34,18 +35,11 @@ export const Header = () => {
 
         <nav className={headerStyles.pcNav}>
           <ul className={headerStyles.navList}>
-            <li className={`${headerStyles.navItem} ${isActive("/") ? headerStyles.active : ""}`}>
-              <Link href="/">TOP</Link>
-            </li>
-            <li className={`${headerStyles.navItem} ${isActive("/portfolio") ? headerStyles.active : ""}`}>
-              <Link href="/portfolio">Projects</Link>
-            </li>
-            <li className={`${headerStyles.navItem} ${isActive("/about") ? headerStyles.active : ""}`}>
-              <Link href="/about">About</Link>
-            </li>
-            <li className={`${headerStyles.navItem} ${isActive("/skillset") ? headerStyles.active : ""}`}>
-              <Link href="/skillset">SkillSet</Link>
-            </li>
+            {siteNavigation.map((item) => (
+              <li key={item.href} className={`${headerStyles.navItem} ${isActive(item.href) ? headerStyles.active : ""}`}>
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
@@ -62,26 +56,13 @@ export const Header = () => {
           className={`${headerStyles.spNav} ${isOpen ? headerStyles.isOpen : ""}`}
         >
           <ul className={headerStyles.spNavList}>
-            <li className={`${headerStyles.spNavItem} ${isActive("/") ? headerStyles.active : ""}`}>
-              <Link href="/" onClick={closeMenu}>
-                TOP
-              </Link>
-            </li>
-            <li className={`${headerStyles.spNavItem} ${isActive("/portfolio") ? headerStyles.active : ""}`}>
-              <Link href="/portfolio" onClick={closeMenu}>
-                Projects
-              </Link>
-            </li>
-            <li className={`${headerStyles.spNavItem} ${isActive("/about") ? headerStyles.active : ""}`}>
-              <Link href="/about" onClick={closeMenu}>
-                About
-              </Link>
-            </li>
-            <li className={`${headerStyles.spNavItem} ${isActive("/skillset") ? headerStyles.active : ""}`}>
-              <Link href="/skillset" onClick={closeMenu}>
-                SkillSet
-              </Link>
-            </li>
+            {siteNavigation.map((item) => (
+              <li key={item.href} className={`${headerStyles.spNavItem} ${isActive(item.href) ? headerStyles.active : ""}`}>
+                <Link href={item.href} onClick={closeMenu}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
