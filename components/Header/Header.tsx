@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
 import headerStyles from "@styles/common/header.module.scss";
 import { siteNavigation } from "@constants/siteNavigation";
+import { getNavItemClassName, isActivePath } from "@constants/navigationUi";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,10 +18,6 @@ export const Header = () => {
 
   const closeMenu = () => {
     setIsOpen(false);
-  };
-
-  const isActive = (path: string) => {
-    return pathname === path;
   };
 
   return (
@@ -36,7 +33,14 @@ export const Header = () => {
         <nav className={headerStyles.pcNav}>
           <ul className={headerStyles.navList}>
             {siteNavigation.map((item) => (
-              <li key={item.href} className={`${headerStyles.navItem} ${isActive(item.href) ? headerStyles.active : ""}`}>
+              <li
+                key={item.href}
+                className={getNavItemClassName(
+                  headerStyles.navItem,
+                  headerStyles.active,
+                  isActivePath(pathname, item.href),
+                )}
+              >
                 <Link href={item.href}>{item.label}</Link>
               </li>
             ))}
@@ -57,7 +61,14 @@ export const Header = () => {
         >
           <ul className={headerStyles.spNavList}>
             {siteNavigation.map((item) => (
-              <li key={item.href} className={`${headerStyles.spNavItem} ${isActive(item.href) ? headerStyles.active : ""}`}>
+              <li
+                key={item.href}
+                className={getNavItemClassName(
+                  headerStyles.spNavItem,
+                  headerStyles.active,
+                  isActivePath(pathname, item.href),
+                )}
+              >
                 <Link href={item.href} onClick={closeMenu}>
                   {item.label}
                 </Link>

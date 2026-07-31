@@ -4,18 +4,24 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import footerStyles from "@styles/footer.module.scss";
 import { siteNavigation } from "@constants/siteNavigation";
+import { getNavItemClassName, isActivePath } from "@constants/navigationUi";
 
 export const Footer = () => {
   const pathname = usePathname();
-
-  const isActive = (path: string) => pathname === path;
 
   return (
     <footer className={footerStyles.footer}>
       <div className={footerStyles.footerInner}>
         <ul className={footerStyles.menuList}>
           {siteNavigation.map((item) => (
-            <li key={item.href} className={`${footerStyles.menuList__item} ${isActive(item.href) ? footerStyles.active : ""}`}>
+            <li
+              key={item.href}
+              className={getNavItemClassName(
+                footerStyles.menuList__item,
+                footerStyles.active,
+                isActivePath(pathname, item.href),
+              )}
+            >
               <Link href={item.href}>{item.label}</Link>
             </li>
           ))}

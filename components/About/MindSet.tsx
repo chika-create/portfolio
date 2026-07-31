@@ -1,24 +1,14 @@
 import mindSetStyles from "@styles/about/mindSet.module.scss";
-import layoutStyles from "@styles/about/layout.module.scss";
-import { MindSetItem} from "./MindSetItem";
+import { MindSetItem } from "./MindSetItem";
 import { valueData } from "./aboutData";
-import { Title } from "@components/parts/Title";
+import { AboutSection } from "./AboutSection";
 
 export const MindSet = () => {
   return (
-      <section className={layoutStyles.section}>
-        <div className={layoutStyles.container}>
-          <div className={layoutStyles.sectionInner}>
-            <div className={layoutStyles.headingWrapper}>
-              <Title level="h2">MindSet</Title>
-            </div>
-            <div className={mindSetStyles.valueList}>
-              {valueData.map((value, index) => (
-                <MindSetItem key={index} value={value} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+    <AboutSection title="MindSet" contentClassName={mindSetStyles.valueList}>
+      {valueData.map((value) => (
+        <MindSetItem key={value.title} value={value} />
+      ))}
+    </AboutSection>
   );
 };
