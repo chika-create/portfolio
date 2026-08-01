@@ -1,0 +1,67 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/addon-docs/blocks";
+import * as CodeSectionStories from "./CodeSection.stories";
+
+<Meta of={CodeSectionStories} />
+
+# CodeSection 運用ガイド
+
+このドキュメントは、ページ内の大きなセクションを統一した見た目で構成するためのガイドです。
+
+## 運用ルール
+
+- title はセクションの意味を端的に示す文言を使います。
+- titleLevel は文書構造に合わせて選び、見た目調整は titleStyle で行います。
+- sectionId はページ内リンクが必要なセクションにのみ付与します。
+- sectionClassName はセクション間余白など外側レイアウトの責務に限定します。
+- innerClassName は内側コンテンツの幅制御など、必要な場合にのみ使います。
+- openingCode と closingCode は演出用途なので、多用しすぎないようにします。
+
+## 使用例
+
+### 1. 基本利用
+
+```tsx
+<CodeSection title="プロジェクト" openingCode="const projects = () => ">
+  <PortfolioList />
+</CodeSection>
+```
+
+### 2. セマンティクスと見た目の分離
+
+```tsx
+<CodeSection title="私について" titleLevel="h2" titleStyle="h1">
+  <AboutContent />
+</CodeSection>
+```
+
+### 3. 内側ラッパーで幅を揃える
+
+```tsx
+<CodeSection innerClassName={pageStyles.main}>
+  <Content />
+</CodeSection>
+```
+
+## Do / Don't
+
+| Do | Don't |
+| --- | --- |
+| 見出し階層は titleLevel で正しく管理する | 見た目の都合だけで見出し階層を変更する |
+| レイアウト責務を sectionClassName と innerClassName で分離する | 1つの className に余白・幅・装飾を過剰に詰め込む |
+| sectionId はアンカー導線が必要な箇所に限定する | 全セクションに機械的に sectionId を振る |
+
+## Story での確認
+
+<Canvas>
+  <Story of={CodeSectionStories.Basic} />
+</Canvas>
+
+<Canvas>
+  <Story of={CodeSectionStories.WithInnerWrapper} />
+</Canvas>
+
+<Canvas>
+  <Story of={CodeSectionStories.WithClosingCode} />
+</Canvas>
+
+<Controls of={CodeSectionStories.Basic} />

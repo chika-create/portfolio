@@ -1,0 +1,19 @@
+[23:55:48.848] [INFO] storybook v10.5.5
+[23:55:49.394] [DEBUG] Getting package.json info for /Users/chika/chika_create/portfolio/package.json...
+[23:55:49.954] [DEBUG] Could not determine @babel/preset-env version in use. In case of runtime errors with @babel/preset-env, you may need to set the babelRemoveBugfixes feature flag in your `main.ts` file.
+[23:55:50.185] [WARN] 🚨 Unable to index files:
+- ./stories/parts/Button.docs.mdx,./stories/parts/Button.stories.ts: You created a component docs page for 'Portfolio/Parts/Button', but also tagged the CSF file with 'autodocs'. This is probably a mistake.
+- ./stories/parts/Title.docs.mdx,./stories/parts/Title.stories.ts: You created a component docs page for 'Portfolio/Parts/Title', but also tagged the CSF file with 'autodocs'. This is probably a mistake.
+[23:55:50.189] [ERROR] Error: [38;2;241;97;97mUnable to index files:
+- ./stories/parts/Button.docs.mdx,./stories/parts/Button.stories.ts: You created a component docs page for 'Portfolio/Parts/Button', but also tagged the CSF file with 'autodocs'. This is probably a mistake.
+- ./stories/parts/Title.docs.mdx,./stories/parts/Title.stories.ts: You created a component docs page for 'Portfolio/Parts/Title', but also tagged the CSF file with 'autodocs'. This is probably a mistake.[39m
+    at _StoryIndexGenerator.getIndexAndStats (file://./node_modules/storybook/dist/core-server/index.js:19426:15)
+    at async _StoryIndexGenerator.getIndex (file://./node_modules/storybook/dist/core-server/index.js:19405:13)
+    at async Object.experimental_serverChannel (file://./node_modules/@storybook/addon-vitest/dist/preset.js:463:14)
+    at async buildDevStandalone (file://./node_modules/storybook/dist/core-server/index.js:11984:72)
+    at async withTelemetry (file://./node_modules/storybook/dist/_node-chunks/chunk-EIY3KIFG.js:1785:12)
+    at async dev (file://./node_modules/storybook/dist/bin/core.js:3850:3)
+    at async _Command.<anonymous> (file://./node_modules/storybook/dist/bin/core.js:3958:3)
+[23:55:50.190] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.
+[00:01:11.348] [PROMPT] Would you like to send anonymous crash reports to improve Storybook and fix bugs faster? {"choice":false}

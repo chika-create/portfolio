@@ -1,0 +1,58 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/addon-docs/blocks";
+import * as TitleStories from "./Title.stories";
+
+<Meta of={TitleStories} />
+
+# Title 運用ガイド
+
+このドキュメントは、共通部品 Title の見出し設計を統一するためのガイドです。
+
+## 運用ルール
+
+- level は文書構造に合わせて決めます（SEO/アクセシビリティ上の意味づけ）。
+- style は見た目調整のための任意指定です。必要な場合のみ使います。
+- ページ内で見出しレベルを飛ばしすぎないようにします（例: h1 の次に h3）。
+- children は短く、セクションの内容が伝わる語を使います。
+- デザイン都合で見た目を変えるときも、可能な限り level の意味は崩しません。
+
+## 使用例
+
+### 1. 通常の見出し（推奨）
+
+```tsx
+<Title level="h2">Skill Set</Title>
+```
+
+### 2. 意味と見た目を分離するケース
+
+```tsx
+<Title level="h1" style="h2">About Me</Title>
+```
+
+## Do / Don't
+
+| Do | Don't |
+| --- | --- |
+| level を文書構造に合わせる | 見た目だけで level を選ぶ |
+| style は必要時のみ上書きする | すべての Title で style を強制指定する |
+| セクション名を具体的にする | 内容が分からない抽象見出しを使う |
+
+## Story での確認
+
+<Canvas>
+  <Story of={TitleStories.Heading1} />
+</Canvas>
+
+<Canvas>
+  <Story of={TitleStories.Heading2} />
+</Canvas>
+
+<Canvas>
+  <Story of={TitleStories.Heading3} />
+</Canvas>
+
+<Canvas>
+  <Story of={TitleStories.SemanticAndVisualSeparated} />
+</Canvas>
+
+<Controls of={TitleStories.Heading2} />
