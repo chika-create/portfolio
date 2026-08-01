@@ -1,1 +1,6 @@
-yarn test
+#!/bin/sh
+# nodenv のパスを通す
+export PATH="$HOME/.anyenv/envs/nodenv/shims:$PATH"
+
+# コミットされたファイルの Lint チェック
+corepack yarn lint-staged
