@@ -124,6 +124,7 @@ Pages Routerを採用しています。主なページは以下です。
 - UI変更後は、`npm run lint && npm run build` の実行を推奨します。
 - Next.js 16では `next lint` ではなく `eslint .`（`npm run lint`）を利用しています。
 - Storybookは `@storybook/nextjs-vite` 構成で導入済みです。UI確認時は `npm run storybook` を利用してください。
+- Storybookカタログの管理対象は `stories/parts/` 配下のみです。
 
 ## デプロイ
 

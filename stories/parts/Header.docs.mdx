@@ -1,0 +1,64 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/addon-docs/blocks";
+import * as HeaderStories from "./Header.stories";
+
+<Meta of={HeaderStories} />
+
+# Header 運用ガイド
+
+このドキュメントは、共通ヘッダーのナビゲーション運用を統一するためのガイドです。
+
+## 運用ルール
+
+- ナビゲーション項目は constants/siteNavigation.ts を唯一の定義元として管理します。
+- アクティブ状態判定は navigationUi のユーティリティを使い、コンポーネント内で独自判定を増やしません。
+- ヘッダー内リンクは原則として Next.js の Link を使います。
+- モバイルメニューの開閉状態は Header 内に閉じ、外部状態に依存させません。
+- ラベル文言を変更する際は、Header と Footer の整合を同時に確認します。
+
+## 使用例
+
+### 1. 標準表示
+
+```tsx
+<Header />
+```
+
+### 2. 現在ページに応じたアクティブ表示
+
+```tsx
+// usePathname() の結果に応じて active class を付与
+```
+
+## Do / Don't
+
+| Do | Don't |
+| --- | --- |
+| ナビゲーション定義を constants に集約する | Header 内にリンク配列をハードコードする |
+| active 判定を共通関数で行う | コンポーネントごとに判定条件を複製する |
+| 変更時はモバイル表示も確認する | PC表示だけ確認してリリースする |
+
+## 回帰テストとしての運用
+
+- このページに掲載している Story は、`play` 関数による interaction test を兼ねています。
+- ナビゲーション定義・active判定・メニュー開閉の変更時は、該当 Story のテスト結果を必ず確認してください。
+- 最低限 `TopActive` / `ProjectsActive` / `AboutActive` / `MobileMenuToggle` が通ることをマージ条件にします。
+
+## Story での確認
+
+<Canvas>
+  <Story of={HeaderStories.TopActive} />
+</Canvas>
+
+<Canvas>
+  <Story of={HeaderStories.ProjectsActive} />
+</Canvas>
+
+<Canvas>
+  <Story of={HeaderStories.AboutActive} />
+</Canvas>
+
+<Canvas>
+  <Story of={HeaderStories.MobileMenuToggle} />
+</Canvas>
+
+<Controls of={HeaderStories.TopActive} />

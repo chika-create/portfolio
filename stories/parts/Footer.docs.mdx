@@ -1,0 +1,55 @@
+import { Meta, Canvas, Story, Controls } from "@storybook/addon-docs/blocks";
+import * as FooterStories from "./Footer.stories";
+
+<Meta of={FooterStories} />
+
+# Footer 運用ガイド
+
+このドキュメントは、共通フッターのリンク構造と表示ルールを維持するためのガイドです。
+
+## 運用ルール
+
+- フッターのメニュー項目は Header と同じく constants/siteNavigation.ts を参照します。
+- active 状態の見た目は navigationUi ユーティリティを経由して統一します。
+- コピーライト年は実行時の年を自動表示し、手書き更新はしません。
+- フッターの余白と罫線は footer.module.scss 側で管理し、ページごとの上書きは最小限にします。
+
+## 使用例
+
+### 1. 標準表示
+
+```tsx
+<Footer />
+```
+
+### 2. 現在ページに応じたアクティブ表示
+
+```tsx
+// usePathname() の結果に応じて active class を付与
+```
+
+## Do / Don't
+
+| Do | Don't |
+| --- | --- |
+| Header と同じ navigation 定義を使う | Footer 専用に別のリンク定義を持つ |
+| コピーライト年を自動算出する | 年を固定文字列で管理する |
+| 余白調整は共通スタイルから行う | 個別ページで都度 margin を上書きする |
+
+## 回帰テストとしての運用
+
+- このページに掲載している Story は、`play` 関数による interaction test を兼ねています。
+- ナビゲーション変更時は `TopActive` と `SkillSetActive` が通ることを必ず確認してください。
+- Header 側の Story とセットで確認し、ヘッダー/フッター間の active 表示不整合を防ぎます。
+
+## Story での確認
+
+<Canvas>
+  <Story of={FooterStories.TopActive} />
+</Canvas>
+
+<Canvas>
+  <Story of={FooterStories.SkillSetActive} />
+</Canvas>
+
+<Controls of={FooterStories.TopActive} />
