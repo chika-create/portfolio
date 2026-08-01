@@ -13,8 +13,7 @@ export const SkillSet = () => {
         </div>
         <div className={skillsetStyles.skillSummary__levelGuide}>
           <p>
-            技術スタックと習熟度を紹介します。<br />
-            各スキルは5段階で評価しています。
+            技術スタックと習熟度を紹介します。<br />各スキルは5段階で評価しています。
           </p>
           <LevelGuide levelGuide={levelGuide} />
         </div>
