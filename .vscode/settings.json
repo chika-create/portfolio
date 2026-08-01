@@ -1,9 +1,12 @@
 {
-  "cSpell.words": [
-    "CHIKA",
-    "MOTOORI"
-  ],
+  "cSpell.words": ["CHIKA", "MOTOORI"],
   "chat.tools.terminal.autoApprove": {
     "npx tsc": true
-  }
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.packageManager": "yarn"
 }
