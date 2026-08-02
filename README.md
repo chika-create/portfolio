@@ -11,6 +11,8 @@ Next.js（Pages Router）で構築したポートフォリオサイトです。
 - TypeScriptによる型安全な実装
 - `eslint.config.mjs` を利用したESLint（Flat Config）
 - Storybook 10によるUIコンポーネントのカタログ化
+- `@next/third-parties` を利用した Google Analytics 4 (GA4) の導入
+- Dependabotによる依存ライブラリの自動更新（毎週金曜 21:00 JST）
 
 ## 技術スタック
 
@@ -52,17 +54,17 @@ http://localhost:3000
 ## 利用可能なスクリプト
 
 - `npm run dev`  
-	開発サーバーを起動します。
+  開発サーバーを起動します。
 - `npm run build`  
-	本番ビルドを作成します。
+  本番ビルドを作成します。
 - `npm run start`  
-	本番ビルドを起動します。
+  本番ビルドを起動します。
 - `npm run lint`  
-	ESLintで静的解析を実行します。
+  ESLintで静的解析を実行します。
 - `npm run storybook`  
-	Storybook開発サーバーを起動します（`http://localhost:6006`）。
+  Storybook開発サーバーを起動します（`http://localhost:6006`）。
 - `npm run build-storybook`  
-	Storybookの静的ビルドを作成します。
+  Storybookの静的ビルドを作成します。
 
 ## ルーティング
 
@@ -79,12 +81,14 @@ Pages Routerを採用しています。主なページは以下です。
 
 ```text
 .
-├── components/      # 画面・機能ごとのUIコンポーネント
-├── constants/       # ナビゲーションなどの定数定義
-├── pages/           # Pages Routerの各ページ
-├── public/images/   # 画像アセット
-├── styles/          # SCSS Modules / 共通スタイル
-└── types/           # 型定義
+├── .github/           # Dependabot・CIなどのGitHub設定
+│   └── dependabot.yml
+├── components/        # 画面・機能ごとのUIコンポーネント
+├── constants/         # ナビゲーションなどの定数定義
+├── pages/             # Pages Routerの各ページ
+├── public/images/     # 画像アセット
+├── styles/            # SCSS Modules / 共通スタイル
+└── types/             # 型定義
 ```
 
 ## コンポーネント設計方針
@@ -100,15 +104,15 @@ Pages Routerを採用しています。主なページは以下です。
 ### 責務分割
 
 - `pages/`:
-	ルーティング単位のエントリーポイント。ページ構造の組み立てに集中し、複雑な表示ロジックは `components/` 側へ移譲します。
+  ルーティング単位のエントリーポイント。ページ構造の組み立てに集中し、複雑な表示ロジックは `components/` 側へ移譲します。
 - `components/`:
-	画面セクションや機能単位のUIを実装します。1コンポーネント1責務を基本にし、必要に応じて小さな子コンポーネントへ分割します。
+  画面セクションや機能単位のUIを実装します。1コンポーネント1責務を基本にし、必要に応じて小さな子コンポーネントへ分割します。
 - `components/parts/`:
-	複数ページで再利用する共通UI部品を管理します。見た目と振る舞いをカプセル化し、ページ固有の文脈は持ち込まない方針です。
+  複数ページで再利用する共通UI部品を管理します。見た目と振る舞いをカプセル化し、ページ固有の文脈は持ち込まない方針です。
 - `constants/`:
-	ナビゲーションや外部リンクなど、アプリ全体で共有する定数を管理します。
+  ナビゲーションや外部リンクなど、アプリ全体で共有する定数を管理します。
 - `styles/`:
-	グローバルスタイルとモジュールスタイルを分離し、スタイルの影響範囲を明確化します。
+  グローバルスタイルとモジュールスタイルを分離し、スタイルの影響範囲を明確化します。
 
 ### 実装時のガイドライン
 
@@ -123,8 +127,16 @@ Pages Routerを採用しています。主なページは以下です。
 - ナビゲーション情報は `constants/siteNavigation.ts` を再利用し、ラベルとURLのズレを防いでください。
 - UI変更後は、`npm run lint && npm run build` の実行を推奨します。
 - Next.js 16では `next lint` ではなく `eslint .`（`npm run lint`）を利用しています。
-- Storybookは `@storybook/nextjs-vite` 構成で導入済みです。UI確認時は `npm run storybook` を利用してください。
-- Storybookカタログの管理対象は `stories/parts/` 配下のみです。
+- Storybook:
+  - `@storybook/nextjs-vite` 構成で導入済みです。
+  - UI確認時は `npm run storybook` を利用してください。
+  - カタログの管理対象は `stories/parts/` 配下のみです。
+- アクセス解析 (GA4):
+  - `@next/third-parties/google` を使用して Google Analytics 4 を導入しています。
+  - 環境変数 `NEXT_PUBLIC_GA_ID` で測定IDを管理しています。
+- 依存関係の自動更新:
+  - `.github/dependabot.yml` により、依存ライブラリやGitHub Actionsの更新PRが毎週金曜日 21:00（JST）に自動作成されます。
+  - 各種ライブラリ（React/Next.js、Storybook、テストツール、リンター等）はカテゴリごとにまとめられてPRが起票されます。
 
 ## デプロイ
 
