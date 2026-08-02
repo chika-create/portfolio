@@ -33,6 +33,7 @@ updates:
           - 'prettier*'
           - 'husky'
           - 'lint-staged'
+          - 'typescript'
 
     commit-message:
       prefix: 'chore(deps)'
