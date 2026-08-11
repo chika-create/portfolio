@@ -7,7 +7,7 @@ type PageMetaProps = {
 
 export const PageMeta = ({ title, description }: PageMetaProps) => {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  const ogImage = `${siteUrl}/ogp.jpg`;
+  const ogImage = `${siteUrl}/ogp.png`;
 
   return (
     <Head>
